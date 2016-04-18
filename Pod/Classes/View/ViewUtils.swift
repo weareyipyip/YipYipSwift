@@ -17,7 +17,7 @@ public class ViewUtils
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-	var singlePixelSizeInPoints:CGFloat
+	public var singlePixelSizeInPoints:CGFloat
 	{
 		return CGFloat(1.0 / UIScreen.mainScreen().nativeScale)
 	}
@@ -33,7 +33,7 @@ public class ViewUtils
 	// MARK: Hairlines
 	// -----------------------------------------------------------
 	
-	func addHairlineToTopOfView(view:UIView, hairlineColor:UIColor)
+	public func addHairlineToTopOfView(view:UIView, hairlineColor:UIColor)
 	{
 		let dividerHeight = self.singlePixelSizeInPoints
 		let newHairline = UIView(frame:CGRectMake(0, 0, view.frame.size.width, dividerHeight))
@@ -41,7 +41,7 @@ public class ViewUtils
 		view.addSubview(newHairline)
 	}
 	
-	func addHairlineToBottomOfView(view:UIView, color:UIColor)
+	public func addHairlineToBottomOfView(view:UIView, color:UIColor)
 	{
 		let dividerHeight:CGFloat = self.singlePixelSizeInPoints
 		let newHairline = UIView(frame:CGRectMake(0, view.frame.size.height - dividerHeight, view.frame.size.width, dividerHeight))
@@ -49,7 +49,7 @@ public class ViewUtils
 		view.addSubview(newHairline)
 	}
 	
-	func removeHairlineFromView(view:UIView)->Bool
+	public func removeHairlineFromView(view:UIView)->Bool
 	{
 		if (view is UIImageView && view.bounds.size.height <= 1.0)
 		{
@@ -71,7 +71,7 @@ public class ViewUtils
 	// MARK: Attributed text
 	// -----------------------------------------------------------
 	
-	func setLabelAttributedTextUsingExistingAttributes(label label:UILabel, text:String)
+	public func setLabelAttributedTextUsingExistingAttributes(label label:UILabel, text:String)
 	{
 		var attributes:[String:AnyObject]?
 		if let text = label.text
@@ -88,7 +88,7 @@ public class ViewUtils
 		label.attributedText = NSAttributedString(string: text, attributes: attributes)
 	}
     
-    func setLabelTextWithCustomLineSpacing(label label:UILabel, text:String, lineSpacing:CGFloat)
+    public func setLabelTextWithCustomLineSpacing(label label:UILabel, text:String, lineSpacing:CGFloat)
     {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing
@@ -103,7 +103,7 @@ public class ViewUtils
 	// MARK: Indicating activity
 	// -----------------------------------------------------------
 	
-	func indicateActivity(imageView imageView:UIImageView, button:UIButton? = nil)
+	public func indicateActivity(imageView imageView:UIImageView, button:UIButton? = nil)
 	{
 		var animation:CAAnimation
 		
@@ -123,7 +123,7 @@ public class ViewUtils
 		imageView.hidden = false
 	}
 	
-	func stopIndicatingActivity(imageView imageView:UIImageView, button:UIButton? = nil, buttonTitle:String? = nil)
+	public func stopIndicatingActivity(imageView imageView:UIImageView, button:UIButton? = nil, buttonTitle:String? = nil)
 	{
 		imageView.hidden = true
 		imageView.layer.removeAllAnimations()
@@ -140,7 +140,7 @@ public class ViewUtils
     // -- Loading of images
     // -----------------------------------------------------------
     
-    func loadRemoteImageFromURLString(urlString:String, inImageView imageView:UIImageView)->NSURLSessionDataTask?
+    public func loadRemoteImageFromURLString(urlString:String, inImageView imageView:UIImageView)->NSURLSessionDataTask?
 	{
 		var imageDownloadTask:NSURLSessionDataTask?
 		
@@ -180,7 +180,7 @@ public class ViewUtils
     // -- Badges
     // -----------------------------------------------------------
     
-    func numberBadgeWithNumber(number:Int, badgeColor:UIColor = UIColor.redColor())->UIView
+    public func numberBadgeWithNumber(number:Int, badgeColor:UIColor = UIColor.redColor())->UIView
     {
         // Panel
         let view = UIView()
