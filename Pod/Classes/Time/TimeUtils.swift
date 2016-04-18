@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TimeUtils
+public class TimeUtils
 {
 	private var _cachedDateFormatter:NSDateFormatter?
     
@@ -42,7 +42,7 @@ class TimeUtils
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-	func dateFromISO8601TimeString(string:String)->NSDate?
+	public func dateFromISO8601TimeString(string:String)->NSDate?
 	{
 		return self.iso8601DateFormatter.dateFromString(string)
 	}

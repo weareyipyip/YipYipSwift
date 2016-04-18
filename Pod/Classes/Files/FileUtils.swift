@@ -8,15 +8,15 @@
 
 import Foundation
 
-class FileUtils
+public class FileUtils
 {
-	func getDocumentsDirectoryPath()->String
+	public func getDocumentsDirectoryPath()->String
 	{
 		let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
 		return paths[0]
 	}
     
-    func deleteDirectory(directoryPath:String)
+    public func deleteDirectory(directoryPath:String)
     {
         if let url = NSURL(string: directoryPath)
         {

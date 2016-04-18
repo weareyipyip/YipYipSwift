@@ -9,9 +9,9 @@
 
 import Foundation
 
-class JSONUtils
+public class JSONUtils
 {
-	func dictionaryFromData(data:NSData)->[String:AnyObject]?
+	public func dictionaryFromData(data:NSData)->[String:AnyObject]?
 	{
 		var dictionary:[String:AnyObject]?
 		
@@ -31,7 +31,7 @@ class JSONUtils
 		return dictionary
 	}
 	
-	func dataFromDictionary(dictionary:[String:AnyObject])->NSData?
+	public func dataFromDictionary(dictionary:[String:AnyObject])->NSData?
 	{
 		var data:NSData?
 		
@@ -51,7 +51,7 @@ class JSONUtils
 		return data
 	}
 	
-	func readDictionaryFromJSONFileAtPath(path:String)->[String:AnyObject]?
+	public func readDictionaryFromJSONFileAtPath(path:String)->[String:AnyObject]?
 	{
 		if let data = NSData(contentsOfFile: path)
 		{
@@ -60,7 +60,7 @@ class JSONUtils
 		return nil
 	}
 	
-	func writeDictionaryToJSONFile(dictionary dictionary:[String:AnyObject], destinationPath:String)->Bool
+	public func writeDictionaryToJSONFile(dictionary dictionary:[String:AnyObject], destinationPath:String)->Bool
 	{
 		if let data = self.dataFromDictionary(dictionary)
 		{
