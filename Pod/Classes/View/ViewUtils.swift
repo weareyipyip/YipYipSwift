@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewUtils
+public class ViewUtils
 {
 	// -----------------------------------------------------------------------------------------------------------------------
 	//
