@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIImage
+public extension UIImage
 {
 	public func imageWithTintColor(color: UIColor) -> UIImage
 	{
