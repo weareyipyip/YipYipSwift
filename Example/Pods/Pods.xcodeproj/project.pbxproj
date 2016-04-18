@@ -9,12 +9,8 @@
 /* Begin PBXBuildFile section */
 		13D2895A68585E44B1EACCA0090FC0B9 /* YipYipSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B41A140F09A72ADAF9F8965453ED7C3 /* YipYipSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25933DBD580D7B83CEC92E04361CD176 /* YipYipSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F443A1727C583C218EEDF19393567AC0 /* YipYipSwift-dummy.m */; };
-		48186EEFBAC2E7341EB339128BB15781 /* Pods-YipYipSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DF886206C3A7831C0C55A8AA27FF5E /* Pods-YipYipSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C9AC7DB7FBDF057722447EBC043AF15 /* Pods-YipYipSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B52680C36DB008748B1B57FDE5A88B9 /* Pods-YipYipSwift_Tests-dummy.m */; };
-		813DEA69DEF655480C3B1EDDB64CF4D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		E281E32D57E10C697DBD6EA539A00426 /* YipYipSwift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 761994702682FF68A215E0A8F60A5457 /* YipYipSwift.bundle */; };
 		E476BB6D4EADA40C7BF8733717A9A471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		F756C5AD1CC1028C00B8556B /* YipYipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5AC1CC1028C00B8556B /* YipYipUtils.swift */; };
 		F756C5B21CC10AFE00B8556B /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5B11CC10AFE00B8556B /* ViewUtils.swift */; };
 		F756C5B61CC1188C00B8556B /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5B41CC1188C00B8556B /* LayoutManager.swift */; };
 		F756C5B71CC1188C00B8556B /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5B51CC1188C00B8556B /* OptionalViewDescriptor.swift */; };
@@ -24,13 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02ECA3D424DB384A14D4DEA253E866AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF1E03192B1A4307237C4D8810D42C1C;
-			remoteInfo = YipYipSwift;
-		};
 		9431FDD6A9BD5BC485142BE4713C9825 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -41,26 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A03234C27EEAA3DF186FDED1337E42F /* Pods-YipYipSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YipYipSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1A86BB18621E1AD7849D0857772626ED /* Pods-YipYipSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YipYipSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F2AE913FC6FC3EE8549AB0317D6AA32 /* Pods-YipYipSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YipYipSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2B52680C36DB008748B1B57FDE5A88B9 /* Pods-YipYipSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YipYipSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		3B41A140F09A72ADAF9F8965453ED7C3 /* YipYipSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-umbrella.h"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		519F041B237068284C2CD4CC5B290127 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580A7304D22E7CA1145C1A77D0945B6F /* YipYipSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YipYipSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		761994702682FF68A215E0A8F60A5457 /* YipYipSwift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		85DF886206C3A7831C0C55A8AA27FF5E /* Pods-YipYipSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YipYipSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		93A862104597C92429B7AC8BB39ED79E /* Pods-YipYipSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YipYipSwift_Tests.modulemap"; sourceTree = "<group>"; };
-		A8A2BBEE87EFB13E8F4BD686A3E3A40E /* Pods-YipYipSwift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YipYipSwift_Tests-resources.sh"; sourceTree = "<group>"; };
-		A9933F47DDC5C71591A854C0D4D96C29 /* Pods-YipYipSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YipYipSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B55F3DDEDA726E169CCE1663B910EC9E /* Pods_YipYipSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YipYipSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B735E6B3D1F9AE3C85BDA13F8A281EAF /* YipYipSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YipYipSwift.modulemap; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CBC79E0346DDEB78238E6327FB67CC75 /* YipYipSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.xcconfig; sourceTree = "<group>"; };
 		DC5425BFAB97F0398019585316F2999C /* YipYipSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-prefix.pch"; sourceTree = "<group>"; };
-		E6553E18650F29E302D8AC88061E2D17 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2F2C44A0F40A2B611E8AF3CB5DE7368 /* Pods-YipYipSwift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YipYipSwift_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F443A1727C583C218EEDF19393567AC0 /* YipYipSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YipYipSwift-dummy.m"; sourceTree = "<group>"; };
 		F756C5AC1CC1028C00B8556B /* YipYipUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YipYipUtils.swift; sourceTree = "<group>"; };
 		F756C5B11CC10AFE00B8556B /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
@@ -87,14 +65,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C144BD96144121C09328BA6E6F2A3FAE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				813DEA69DEF655480C3B1EDDB64CF4D5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,28 +80,9 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		412192FE5A1C31B15877ABA45EF3E912 /* Pods-YipYipSwift_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E6553E18650F29E302D8AC88061E2D17 /* Info.plist */,
-				93A862104597C92429B7AC8BB39ED79E /* Pods-YipYipSwift_Tests.modulemap */,
-				1A03234C27EEAA3DF186FDED1337E42F /* Pods-YipYipSwift_Tests-acknowledgements.markdown */,
-				A9933F47DDC5C71591A854C0D4D96C29 /* Pods-YipYipSwift_Tests-acknowledgements.plist */,
-				2B52680C36DB008748B1B57FDE5A88B9 /* Pods-YipYipSwift_Tests-dummy.m */,
-				F2F2C44A0F40A2B611E8AF3CB5DE7368 /* Pods-YipYipSwift_Tests-frameworks.sh */,
-				A8A2BBEE87EFB13E8F4BD686A3E3A40E /* Pods-YipYipSwift_Tests-resources.sh */,
-				85DF886206C3A7831C0C55A8AA27FF5E /* Pods-YipYipSwift_Tests-umbrella.h */,
-				1A86BB18621E1AD7849D0857772626ED /* Pods-YipYipSwift_Tests.debug.xcconfig */,
-				1F2AE913FC6FC3EE8549AB0317D6AA32 /* Pods-YipYipSwift_Tests.release.xcconfig */,
-			);
-			name = "Pods-YipYipSwift_Tests";
-			path = "Target Support Files/Pods-YipYipSwift_Tests";
-			sourceTree = "<group>";
-		};
 		44427416EA33CAEFF4F7DAB5C1269CB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B55F3DDEDA726E169CCE1663B910EC9E /* Pods_YipYipSwift_Tests.framework */,
 				761994702682FF68A215E0A8F60A5457 /* YipYipSwift.bundle */,
 				580A7304D22E7CA1145C1A77D0945B6F /* YipYipSwift.framework */,
 			);
@@ -141,7 +92,6 @@
 		6823DD0E47D8D50A1407BE4D70E28F87 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				412192FE5A1C31B15877ABA45EF3E912 /* Pods-YipYipSwift_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -258,14 +208,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		32084030AE2C738974EFF113393AB210 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48186EEFBAC2E7341EB339128BB15781 /* Pods-YipYipSwift_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7646B484D4E49082D380B6904A7E5DAE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,24 +255,6 @@
 			productReference = 761994702682FF68A215E0A8F60A5457 /* YipYipSwift.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		F6376927AB0F4DBB33A0E0609564E59F /* Pods-YipYipSwift_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5A54A263CCB088EC8CA927442AD55C9 /* Build configuration list for PBXNativeTarget "Pods-YipYipSwift_Tests" */;
-			buildPhases = (
-				F2F9766D31A0AAF192589D58DC0F9D8B /* Sources */,
-				C144BD96144121C09328BA6E6F2A3FAE /* Frameworks */,
-				32084030AE2C738974EFF113393AB210 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				797F9F4C0A0910C5A0F26310942FBBD6 /* PBXTargetDependency */,
-			);
-			name = "Pods-YipYipSwift_Tests";
-			productName = "Pods-YipYipSwift_Tests";
-			productReference = B55F3DDEDA726E169CCE1663B910EC9E /* Pods_YipYipSwift_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -352,7 +276,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6376927AB0F4DBB33A0E0609564E59F /* Pods-YipYipSwift_Tests */,
 				BF1E03192B1A4307237C4D8810D42C1C /* YipYipSwift */,
 				F2223A070DF3E0EA218D744B1DB360F3 /* YipYipSwift-YipYipSwift */,
 			);
@@ -392,15 +315,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2F9766D31A0AAF192589D58DC0F9D8B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C9AC7DB7FBDF057722447EBC043AF15 /* Pods-YipYipSwift_Tests-dummy.m in Sources */,
-				F756C5AD1CC1028C00B8556B /* YipYipUtils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F95339040E1994B401CE2F807EC86F71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,12 +325,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		797F9F4C0A0910C5A0F26310942FBBD6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YipYipSwift;
-			target = BF1E03192B1A4307237C4D8810D42C1C /* YipYipSwift */;
-			targetProxy = 02ECA3D424DB384A14D4DEA253E866AD /* PBXContainerItemProxy */;
-		};
 		E965B2ACEA52BF41B0783646D67EF68B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "YipYipSwift-YipYipSwift";
@@ -457,38 +365,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1A810F99C1C7F18AC036B0E3D34FFB33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F2AE913FC6FC3EE8549AB0317D6AA32 /* Pods-YipYipSwift_Tests.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-YipYipSwift_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.Pods-YipYipSwift-Tests";
-				PRODUCT_NAME = Pods_YipYipSwift_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -600,39 +476,6 @@
 			};
 			name = Release;
 		};
-		B3F0501A836853156EAC245716C7DC14 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A86BB18621E1AD7849D0857772626ED /* Pods-YipYipSwift_Tests.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-YipYipSwift_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.Pods-YipYipSwift-Tests";
-				PRODUCT_NAME = Pods_YipYipSwift_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		F829664DE1ABAC44F401717D04C9944B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBC79E0346DDEB78238E6327FB67CC75 /* YipYipSwift.xcconfig */;
@@ -671,15 +514,6 @@
 			buildConfigurations = (
 				1B08EF5E546D0AF0F903A15ED5096040 /* Debug */,
 				620B60F7D3649AD3E63F789D65BC6177 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5A54A263CCB088EC8CA927442AD55C9 /* Build configuration list for PBXNativeTarget "Pods-YipYipSwift_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3F0501A836853156EAC245716C7DC14 /* Debug */,
-				1A810F99C1C7F18AC036B0E3D34FFB33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
