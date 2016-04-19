@@ -136,6 +136,23 @@ public class ViewUtils
 		}
 	}
 	
+	// -----------------------------------------------------------
+	// MARK: Moving views to clear the keyboard
+	// -----------------------------------------------------------
+	
+	public func scrollChild(child:UIView, ofScrollView scrollView:UIScrollView, clearOfKeyboardWithDidChangeFrameNotification notification:NSNotification, andMargin margin:CGFloat)
+	{
+		if let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue()
+		{
+			let keyboardTop = keyboardFrame.minY
+			let desiredChildScreenBottomY = keyboardTop - margin
+			
+			let childScreenBottomY = child.frame.maxY - scrollView.contentOffset.y
+			let additionalContentOffsetY = childScreenBottomY - desiredChildScreenBottomY
+			scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y + additionalContentOffsetY), animated: true)
+		}
+	}
+	
     // -----------------------------------------------------------
     // -- Loading of images
     // -----------------------------------------------------------
