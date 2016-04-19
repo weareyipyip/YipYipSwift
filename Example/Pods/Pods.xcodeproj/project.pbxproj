@@ -17,7 +17,6 @@
 		F756C5BC1CC11CA100B8556B /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5B91CC11CA100B8556B /* FileUtils.swift */; };
 		F756C5BD1CC11CA100B8556B /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5BB1CC11CA100B8556B /* TimeUtils.swift */; };
 		F756C5C01CC11EB800B8556B /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756C5BF1CC11EB800B8556B /* JSONUtils.swift */; };
-		F7C21F391CC63FA40096BB6A /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C21F381CC63FA40096BB6A /* ExtendedButton.swift */; };
 		F7ED9E341CC522FD00446050 /* UIColor+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED9E321CC522FD00446050 /* UIColor+HexInit.swift */; };
 		F7ED9E351CC522FD00446050 /* UIImage+ImageWithTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED9E331CC522FD00446050 /* UIImage+ImageWithTintColor.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		F756C5B91CC11CA100B8556B /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		F756C5BB1CC11CA100B8556B /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		F756C5BF1CC11EB800B8556B /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
-		F7C21F381CC63FA40096BB6A /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		F7ED9E321CC522FD00446050 /* UIColor+HexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexInit.swift"; sourceTree = "<group>"; };
 		F7ED9E331CC522FD00446050 /* UIImage+ImageWithTintColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageWithTintColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,7 +171,6 @@
 		F756C5B01CC10AFE00B8556B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F7C21F371CC63FA40096BB6A /* Components */,
 				F756C5B31CC1188C00B8556B /* LayoutManager */,
 				F756C5B11CC10AFE00B8556B /* ViewUtils.swift */,
 			);
@@ -211,14 +208,6 @@
 				F756C5BF1CC11EB800B8556B /* JSONUtils.swift */,
 			);
 			path = JSON;
-			sourceTree = "<group>";
-		};
-		F7C21F371CC63FA40096BB6A /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				F7C21F381CC63FA40096BB6A /* ExtendedButton.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		F7ED9E311CC522FD00446050 /* Extensions */ = {
@@ -338,7 +327,6 @@
 				F756C5B61CC1188C00B8556B /* LayoutManager.swift in Sources */,
 				F756C5B71CC1188C00B8556B /* OptionalViewDescriptor.swift in Sources */,
 				F756C5BC1CC11CA100B8556B /* FileUtils.swift in Sources */,
-				F7C21F391CC63FA40096BB6A /* ExtendedButton.swift in Sources */,
 				F756C5C01CC11EB800B8556B /* JSONUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
