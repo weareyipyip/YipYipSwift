@@ -150,7 +150,10 @@ public class ViewUtils
             
             let childScreenBottomY = childFrame.maxY
             let additionalContentOffsetY = childScreenBottomY - desiredChildScreenBottomY
-            scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y + additionalContentOffsetY), animated: true)
+            if additionalContentOffsetY < 0
+            {
+                scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y + additionalContentOffsetY), animated: true)
+            }
         }
 	}
 	
