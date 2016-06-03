@@ -40,9 +40,14 @@ public class LayoutManager
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-	public func addOptionalView(view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?)
+    public func addOptionalView(view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, hideInitially:Bool)
 	{
 		self._optionalViewsByID[id] = OptionalViewDescriptor(view: view, optionalityDirection: optionalityDirection, spacingConstraints: spacingConstraints)
+        
+        if hideInitially
+        {
+            self.setOptionalViewPresent(id, present: false)
+        }
 	}
 	
 	public func setOptionalViewPresent(viewID:String, present:Bool)
