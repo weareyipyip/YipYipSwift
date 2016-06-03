@@ -224,4 +224,48 @@ public class ViewUtils
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label(18)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
         return view
     }
+    
+    // -----------------------------------------------------------
+    // -- Measuring views
+    // -----------------------------------------------------------
+    
+    public func measureHeightOfView(view:UIView, withFixedWidth width:CGFloat)->CGFloat
+    {
+        var widthConstraint:NSLayoutConstraint?
+        var originalWidthConstraintConstant:CGFloat?
+        
+        // Find dimensional constraint in specified direction
+        for constraint in view.constraints
+        {
+            if constraint.firstAttribute == .Width && constraint.secondItem == nil
+            {
+                originalWidthConstraintConstant = constraint.constant
+                widthConstraint = constraint
+                constraint.constant = width
+                break
+            }
+        }
+        
+        // Add new width constraint if none was found
+        if widthConstraint == nil
+        {
+            widthConstraint = NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0.0, constant: width)
+            view.addConstraint(widthConstraint!)
+        }
+        
+        // Measure the height
+        let height = view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        
+        // Restore view to its original state
+        if originalWidthConstraintConstant == nil
+        {
+            view.removeConstraint(widthConstraint!)
+        }
+        else
+        {
+            widthConstraint!.constant = originalWidthConstraintConstant!
+        }
+        
+        return height
+    }
 }
