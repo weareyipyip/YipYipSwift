@@ -161,41 +161,46 @@ public class ViewUtils
     // -- Loading of images
     // -----------------------------------------------------------
     
-    public func loadRemoteImageFromURLString(urlString:String, inImageView imageView:UIImageView)->NSURLSessionDataTask?
-	{
-		var imageDownloadTask:NSURLSessionDataTask?
-		
-		// Download (and set) image if one is specified
-		if let url = NSURL(string: urlString)
-		{
-			// Load image in background
-			let urlRequest = NSMutableURLRequest(URL: url)
-			let urlSession = NSURLSession.sharedSession()
-			imageDownloadTask = urlSession.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) -> Void in
-				var success = false
-				if error == nil
-				{
-					if let httpResponse = response as? NSHTTPURLResponse
-					{
-						if httpResponse.statusCode == 200
-						{
-							success = true
-							dispatch_async(dispatch_get_main_queue(), { () -> Void in
-								let image = UIImage(data: data!)
-								imageView.image = image
-							})
-						}
-					}
-				}
-				if !success
-				{
-					// TODO: set image placeholder
-				}
-			})
-			imageDownloadTask!.resume()
-		}
-		return imageDownloadTask
-	}
+    public func loadRemoteImageFromURLString(urlString:String, inImageView imageView:UIImageView, completion:((Bool)->())? = nil)->NSURLSessionDataTask?
+    {
+        var imageDownloadTask:NSURLSessionDataTask?
+        
+        // Download (and set) image if one is specified
+        if let url = NSURL(string: urlString)
+        {
+            // Load image in background
+            let urlRequest = NSMutableURLRequest(URL: url)
+            let urlSession = NSURLSession.sharedSession()
+            imageDownloadTask = urlSession.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) -> Void in
+                var success = false
+                if error == nil
+                {
+                    if let httpResponse = response as? NSHTTPURLResponse
+                    {
+                        if httpResponse.statusCode == 200
+                        {
+                            if let image = UIImage(data: data!)
+                            {
+                                success = true
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                    imageView.image = image
+                                    completion?(true)
+                                })
+                            }
+                        }
+                    }
+                }
+                if !success
+                {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        completion?(success)
+                    })
+                }
+            })
+            imageDownloadTask!.resume()
+        }
+        return imageDownloadTask
+    }
     
     // -----------------------------------------------------------
     // -- Badges
