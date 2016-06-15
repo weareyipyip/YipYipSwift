@@ -206,10 +206,11 @@ public class ViewUtils
     // -- Badges
     // -----------------------------------------------------------
     
-    public func numberBadgeWithNumber(number:Int, badgeColor:UIColor = UIColor.redColor())->UIView
+    public func numberBadgeWithNumber(number:Int, textColor:UIColor = UIColor.whiteColor(), badgeColor:UIColor = UIColor.redColor(), height:CGFloat = 18.0)->UIView
     {
         // Panel
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 9
         view.backgroundColor = badgeColor
         view.userInteractionEnabled = false
@@ -225,8 +226,9 @@ public class ViewUtils
         
         // Layout
         let views = ["label":label]
+        let metrics = ["height": height]
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|->=5-[label(>=8)]->=5-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label(18)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label(18)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
         return view
     }
     
