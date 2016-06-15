@@ -206,12 +206,12 @@ public class ViewUtils
     // -- Badges
     // -----------------------------------------------------------
     
-    public func numberBadgeWithNumber(number:Int, textColor:UIColor = UIColor.whiteColor(), badgeColor:UIColor = UIColor.redColor(), height:CGFloat = 18.0)->UIView
+    public func numberBadgeWithNumber(number:Int, textColor:UIColor = UIColor.whiteColor(), badgeColor:UIColor = UIColor.redColor(), font:UIFont = UIFont.systemFontOfSize(12.0), height:CGFloat = 18.0)->UIView
     {
         // Panel
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 9
+        view.layer.cornerRadius = height * 0.5
         view.backgroundColor = badgeColor
         view.userInteractionEnabled = false
         
@@ -219,16 +219,17 @@ public class ViewUtils
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.boldSystemFontOfSize(12)
+        label.font = font
         label.textColor = UIColor.whiteColor()
         label.text = "\(number)"
         view.addSubview(label)
         
         // Layout
         let views = ["label":label]
-        let metrics = ["height": height]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|->=5-[label(>=8)]->=5-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label(18)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        let metrics = ["height": height, "margin": (height - font.pointSize) * 0.5]
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|->=margin-[label(>=8)]->=margin-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label(height)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .GreaterThanOrEqual, toItem: view, attribute: .Height, multiplier: 1.0, constant: 0.0))
         return view
     }
     
