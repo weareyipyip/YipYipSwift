@@ -136,6 +136,21 @@ public class ViewUtils
 		}
 	}
 	
+    // -----------------------------------------------------------
+    // -- Feedback animations
+    // -----------------------------------------------------------
+    
+    public func shakeView(view:UIView)
+    {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.05
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.fromValue = NSValue(CGPoint:CGPoint(x: view.center.x - 10.0, y: view.center.y))
+        animation.toValue = NSValue(CGPoint:CGPoint(x: view.center.x + 10.0, y: view.center.y))
+        view.layer.addAnimation(animation, forKey: "position")
+    }
+    
 	// -----------------------------------------------------------
 	// MARK: Moving views to clear the keyboard
 	// -----------------------------------------------------------
