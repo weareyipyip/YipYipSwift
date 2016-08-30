@@ -13,14 +13,13 @@ class OptionalViewDescriptor
 {
 	private (set) var view:UIView
 	private (set) var optionalityDirection:OptionalViewOptionalityDirection
-	private (set) var spacingConstraints = [NSLayoutConstraint]()
+	private (set) var spacingConstraints = [ConstraintDescriptor]()
 	
-	private var _originalWidthConstraintConstant:CGFloat?
-	private var _originalHeightConstraintConstant:CGFloat?
+	private var _originalWidthConstraints = [ConstraintDescriptor]()
+	private var _originalHeightConstraints = [ConstraintDescriptor]()
 	private var _widthConstraint:NSLayoutConstraint?
 	private var _heightConstraint:NSLayoutConstraint?
 	private var _present = true
-	private var _originalSpacingConstraintsConstants = [CGFloat]()
 	
 	
 	// -----------------------------------------------------------------------------------------------------------------------
@@ -43,46 +42,25 @@ class OptionalViewDescriptor
 			case .Horizontal:
 				if constraint.firstAttribute == .Width
 				{
-					self._widthConstraint = constraint
-					break outerLoop
+					self._originalWidthConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
-				
 				
 			case .Vertical:
 				if constraint.firstAttribute == .Height
 				{
-					self._heightConstraint = constraint
-					break outerLoop
+					self._originalHeightConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
 				
 			case .HorizontalAndVertical:
 				if constraint.firstAttribute == .Width
 				{
-					self._widthConstraint = constraint
-					if self._heightConstraint != nil
-					{
-						break outerLoop
-					}
+					self._originalWidthConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
 				else if constraint.firstAttribute == .Height
 				{
-					self._heightConstraint = constraint
-					if self._widthConstraint != nil
-					{
-						break outerLoop
-					}
+					self._originalHeightConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
 			}
-		}
-		
-		// Set original constants if needed
-		if let widthConstraint = self._widthConstraint
-		{
-			self._originalWidthConstraintConstant = widthConstraint.constant
-		}
-		if let heightConstraint = self._heightConstraint
-		{
-			self._originalHeightConstraintConstant = heightConstraint.constant
 		}
 		
 		// Store and set orignal constants for spacing constraints
@@ -90,8 +68,7 @@ class OptionalViewDescriptor
 		{
 			for spacingConstraint in spacingConstraints!
 			{
-				self.spacingConstraints.append(spacingConstraint)
-				self._originalSpacingConstraintsConstants.append(spacingConstraint.constant)
+				self.spacingConstraints.append(ConstraintDescriptor(constraint: spacingConstraint))
 			}
 		}
 	}
@@ -104,7 +81,7 @@ class OptionalViewDescriptor
 	// -----------------------------------------------------------------------------------------------------------------------
 	
 	var present:Bool
-	{
+		{
 		set(newValue)
 		{
 			if self._present != newValue
@@ -128,10 +105,9 @@ class OptionalViewDescriptor
 					self.view.hidden = false
 					
 					// Expand spacingConstraints
-					let numSpacingConstraints = self.spacingConstraints.count
-					for index in 0..<numSpacingConstraints
+					for constraintDescriptor in self.spacingConstraints
 					{
-						self.spacingConstraints[index].constant = self._originalSpacingConstraintsConstants[index]
+						constraintDescriptor.constraint.constant = constraintDescriptor.originalConstant
 					}
 				}
 				else
@@ -152,9 +128,9 @@ class OptionalViewDescriptor
 					self.view.hidden = true
 					
 					// Collapse spacing constraints
-					for spacingConstraint in self.spacingConstraints
+					for constraintDescriptor in self.spacingConstraints
 					{
-						spacingConstraint.constant = 0.0
+						constraintDescriptor.constraint.constant = 0.0
 					}
 				}
 			}
@@ -175,9 +151,11 @@ class OptionalViewDescriptor
 	
 	private func collapseHorizontally()
 	{
-		if self._originalWidthConstraintConstant != nil
+		if self._originalWidthConstraints.count > 0
 		{
-			self._widthConstraint!.constant = 0.0
+			for constraintDescriptor in self._originalWidthConstraints {
+				constraintDescriptor.constraint.constant = 0.0
+			}
 		}
 		else
 		{
@@ -188,9 +166,11 @@ class OptionalViewDescriptor
 	
 	private func expandHorizontally()
 	{
-		if self._originalWidthConstraintConstant != nil
+		if self._originalWidthConstraints.count > 0
 		{
-			self._widthConstraint!.constant = self._originalWidthConstraintConstant!
+			for constraintDescriptor in self._originalWidthConstraints {
+				constraintDescriptor.constraint.constant = constraintDescriptor.originalConstant
+			}
 		}
 		else
 		{
@@ -198,12 +178,14 @@ class OptionalViewDescriptor
 			self._widthConstraint = nil
 		}
 	}
-
+	
 	private func collapseVertically()
 	{
-		if self._originalHeightConstraintConstant != nil
+		if self._originalHeightConstraints.count > 0
 		{
-			self._heightConstraint!.constant = 0.0
+			for constraintDescriptor in self._originalHeightConstraints {
+				constraintDescriptor.constraint.constant = 0.0
+			}
 		}
 		else
 		{
@@ -214,9 +196,11 @@ class OptionalViewDescriptor
 	
 	private func expandVertically()
 	{
-		if self._originalHeightConstraintConstant != nil
+		if self._originalHeightConstraints.count > 0
 		{
-			self._heightConstraint!.constant = self._originalHeightConstraintConstant!
+			for constraintDescriptor in self._originalHeightConstraints {
+				constraintDescriptor.constraint.constant = constraintDescriptor.originalConstant
+			}
 		}
 		else
 		{
