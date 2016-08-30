@@ -18,6 +18,7 @@
 		F747E8931D5C9561006AA9DC /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747E88B1D5C9561006AA9DC /* OptionalViewDescriptor.swift */; };
 		F747E8941D5C9561006AA9DC /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747E88C1D5C9561006AA9DC /* ViewUtils.swift */; };
 		F747E8951D5C9561006AA9DC /* YipYipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747E88D1D5C9561006AA9DC /* YipYipUtils.swift */; };
+		F7C1AFC91D75DA3600D184B0 /* ConstraintDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1AFC81D75DA3600D184B0 /* ConstraintDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F747E88B1D5C9561006AA9DC /* OptionalViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalViewDescriptor.swift; sourceTree = "<group>"; };
 		F747E88C1D5C9561006AA9DC /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		F747E88D1D5C9561006AA9DC /* YipYipUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YipYipUtils.swift; sourceTree = "<group>"; };
+		F7C1AFC81D75DA3600D184B0 /* ConstraintDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		F747E8891D5C9561006AA9DC /* LayoutManager */ = {
 			isa = PBXGroup;
 			children = (
+				F7C1AFC81D75DA3600D184B0 /* ConstraintDescriptor.swift */,
 				F747E88A1D5C9561006AA9DC /* LayoutManager.swift */,
 				F747E88B1D5C9561006AA9DC /* OptionalViewDescriptor.swift */,
 			);
@@ -310,6 +313,7 @@
 				F747E8951D5C9561006AA9DC /* YipYipUtils.swift in Sources */,
 				F747E8921D5C9561006AA9DC /* LayoutManager.swift in Sources */,
 				25933DBD580D7B83CEC92E04361CD176 /* YipYipSwift-dummy.m in Sources */,
+				F7C1AFC91D75DA3600D184B0 /* ConstraintDescriptor.swift in Sources */,
 				F747E8901D5C9561006AA9DC /* JSONUtils.swift in Sources */,
 				F747E8911D5C9561006AA9DC /* TimeUtils.swift in Sources */,
 				F747E88F1D5C9561006AA9DC /* FileUtils.swift in Sources */,
