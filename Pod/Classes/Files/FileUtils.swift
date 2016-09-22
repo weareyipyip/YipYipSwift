@@ -24,7 +24,7 @@ public class FileUtils
             let enumerator = fileManager.enumeratorAtURL(url, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0), errorHandler: nil)
             while let file = enumerator?.nextObject() as? String
             {
-                try! fileManager.removeItemAtURL(url.URLByAppendingPathComponent(file))
+                try! fileManager.removeItemAtURL(url.URLByAppendingPathComponent(file)!)
             }
             try! fileManager.removeItemAtURL(url)
         }
