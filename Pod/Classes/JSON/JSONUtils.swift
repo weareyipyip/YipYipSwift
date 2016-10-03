@@ -9,15 +9,15 @@
 
 import Foundation
 
-public class JSONUtils
+open class JSONUtils
 {
-	public func dictionaryFromData(data:NSData)->[String:AnyObject]?
+	open func dictionaryFromData(_ data:Data)->[String:AnyObject]?
 	{
 		var dictionary:[String:AnyObject]?
 		
 		do
 		{
-			dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String : AnyObject]
+			dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : AnyObject]
 		}
 		catch let error as NSError
 		{
@@ -31,13 +31,13 @@ public class JSONUtils
 		return dictionary
 	}
 	
-	public func dataFromDictionary(dictionary:[String:AnyObject])->NSData?
+	open func dataFromDictionary(_ dictionary:[String:AnyObject])->Data?
 	{
-		var data:NSData?
+		var data:Data?
 		
 		do
 		{
-			data = try NSJSONSerialization.dataWithJSONObject(dictionary, options: NSJSONWritingOptions(rawValue: 0))
+			data = try JSONSerialization.data(withJSONObject: dictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
 		}
 		catch let error as NSError
 		{
@@ -51,20 +51,20 @@ public class JSONUtils
 		return data
 	}
 	
-	public func readDictionaryFromJSONFileAtPath(path:String)->[String:AnyObject]?
+	open func readDictionaryFromJSONFileAtPath(_ path:String)->[String:AnyObject]?
 	{
-		if let data = NSData(contentsOfFile: path)
+		if let data = try? Data(contentsOf: URL(fileURLWithPath: path))
 		{
 			return self.dictionaryFromData(data)
 		}
 		return nil
 	}
 	
-	public func writeDictionaryToJSONFile(dictionary dictionary:[String:AnyObject], destinationPath:String)->Bool
+	open func writeDictionaryToJSONFile(dictionary:[String:AnyObject], destinationPath:String)->Bool
 	{
 		if let data = self.dataFromDictionary(dictionary)
 		{
-			return data.writeToFile(destinationPath, atomically: true)
+			return ((try? data.write(to: URL(fileURLWithPath: destinationPath), options: [.atomic])) != nil)
 		}
 		return false
 	}

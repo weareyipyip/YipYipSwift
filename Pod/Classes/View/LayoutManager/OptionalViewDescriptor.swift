@@ -11,9 +11,9 @@ import UIKit
 
 class OptionalViewDescriptor
 {
-	private (set) var view:UIView
-	private (set) var optionalityDirection:OptionalViewOptionalityDirection
-	private (set) var spacingConstraints = [ConstraintDescriptor]()
+	private var view:UIView
+	private var optionalityDirection:OptionalViewOptionalityDirection
+	private var spacingConstraints = [ConstraintDescriptor]()
 	
 	private var _originalWidthConstraints = [ConstraintDescriptor]()
 	private var _originalHeightConstraints = [ConstraintDescriptor]()
@@ -39,24 +39,24 @@ class OptionalViewDescriptor
 		{
 			switch self.optionalityDirection
 			{
-			case .Horizontal:
-				if constraint.firstAttribute == .Width
+			case .horizontal:
+				if constraint.firstAttribute == .width
 				{
 					self._originalWidthConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
 				
-			case .Vertical:
-				if constraint.firstAttribute == .Height
+			case .vertical:
+				if constraint.firstAttribute == .height
 				{
 					self._originalHeightConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
 				
-			case .HorizontalAndVertical:
-				if constraint.firstAttribute == .Width
+			case .horizontalAndVertical:
+				if constraint.firstAttribute == .width
 				{
 					self._originalWidthConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
-				else if constraint.firstAttribute == .Height
+				else if constraint.firstAttribute == .height
 				{
 					self._originalHeightConstraints.append(ConstraintDescriptor(constraint: constraint))
 				}
@@ -92,17 +92,17 @@ class OptionalViewDescriptor
 					// Expand view itself
 					switch self.optionalityDirection
 					{
-					case .Horizontal:
+					case .horizontal:
 						self.expandHorizontally()
 						
-					case .Vertical:
+					case .vertical:
 						self.expandVertically()
 						
-					case .HorizontalAndVertical:
+					case .horizontalAndVertical:
 						self.expandHorizontally()
 						self.expandVertically()
 					}
-					self.view.hidden = false
+					self.view.isHidden = false
 					
 					// Expand spacingConstraints
 					for constraintDescriptor in self.spacingConstraints
@@ -115,17 +115,17 @@ class OptionalViewDescriptor
 					// Collapse view itself
 					switch self.optionalityDirection
 					{
-					case .Horizontal:
+					case .horizontal:
 						self.collapseHorizontally()
 						
-					case .Vertical:
+					case .vertical:
 						self.collapseVertically()
 						
-					case .HorizontalAndVertical:
+					case .horizontalAndVertical:
 						self.collapseHorizontally()
 						self.collapseVertically()
 					}
-					self.view.hidden = true
+					self.view.isHidden = true
 					
 					// Collapse spacing constraints
 					for constraintDescriptor in self.spacingConstraints
@@ -159,7 +159,7 @@ class OptionalViewDescriptor
 		}
 		else
 		{
-			self._widthConstraint = NSLayoutConstraint(item: self.view, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0)
+			self._widthConstraint = NSLayoutConstraint(item: self.view, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 0.0)
 			self.view.addConstraint(self._widthConstraint!)
 		}
 	}
@@ -189,7 +189,7 @@ class OptionalViewDescriptor
 		}
 		else
 		{
-			self._heightConstraint = NSLayoutConstraint(item: self.view, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0)
+			self._heightConstraint = NSLayoutConstraint(item: self.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 0.0)
 			self.view.addConstraint(self._heightConstraint!)
 		}
 	}

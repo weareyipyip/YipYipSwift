@@ -8,9 +8,9 @@
 
 import Foundation
 
-public class TimeUtils
+open class TimeUtils
 {
-	private var _cachedDateFormatter:NSDateFormatter?
+	private var _cachedDateFormatter:DateFormatter?
     
     
     // -----------------------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ public class TimeUtils
     //
     // -----------------------------------------------------------------------------------------------------------------------
     
-    private var iso8601DateFormatter:NSDateFormatter
+    private var iso8601DateFormatter:DateFormatter
     {
         if let dateFormatter = self._cachedDateFormatter
         {
@@ -27,8 +27,8 @@ public class TimeUtils
         }
         else
         {
-            self._cachedDateFormatter = NSDateFormatter()
-            let enUSPOSIXLocale = NSLocale(localeIdentifier:"en_US_POSIX");
+            self._cachedDateFormatter = DateFormatter()
+            let enUSPOSIXLocale = Locale(identifier:"en_US_POSIX");
             self._cachedDateFormatter!.locale = enUSPOSIXLocale
             self._cachedDateFormatter!.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
             return self._cachedDateFormatter!
@@ -42,8 +42,8 @@ public class TimeUtils
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-	public func dateFromISO8601TimeString(string:String)->NSDate?
+	open func dateFromISO8601TimeString(_ string:String)->Date?
 	{
-		return self.iso8601DateFormatter.dateFromString(string)
+		return self.iso8601DateFormatter.date(from: string)
 	}
 }

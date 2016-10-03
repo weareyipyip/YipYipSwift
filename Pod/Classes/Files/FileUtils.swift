@@ -8,25 +8,25 @@
 
 import Foundation
 
-public class FileUtils
+open class FileUtils
 {
-	public func getDocumentsDirectoryPath()->String
+	open func getDocumentsDirectoryPath()->String
 	{
-		let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+		let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
 		return paths[0]
 	}
     
-    public func deleteDirectory(directoryPath:String)
+    open func deleteDirectory(_ directoryPath:String)
     {
-        if let url = NSURL(string: directoryPath)
+        if let url = URL(string: directoryPath)
         {
-            let fileManager = NSFileManager.defaultManager()
-            let enumerator = fileManager.enumeratorAtURL(url, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0), errorHandler: nil)
+            let fileManager = FileManager.default
+            let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions(rawValue: 0), errorHandler: nil)
             while let file = enumerator?.nextObject() as? String
             {
-                try! fileManager.removeItemAtURL(url.URLByAppendingPathComponent(file)!)
+                try! fileManager.removeItem(at: url.appendingPathComponent(file))
             }
-            try! fileManager.removeItemAtURL(url)
+            try! fileManager.removeItem(at: url)
         }
     }
 }
