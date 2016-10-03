@@ -12,14 +12,14 @@ import UIKit
 
 public enum OptionalViewOptionalityDirection
 {
-	case Horizontal
-	case Vertical
-	case HorizontalAndVertical
+	case horizontal
+	case vertical
+	case horizontalAndVertical
 }
 
-public class LayoutManager
+open class LayoutManager
 {
-	private var _optionalViewsByID = [String:OptionalViewDescriptor]()
+	fileprivate var _optionalViewsByID = [String:OptionalViewDescriptor]()
 	
 	
     // -----------------------------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ public class LayoutManager
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-    public func addOptionalView(view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, hideInitially:Bool)
+    open func addOptionalView(_ view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, hideInitially:Bool)
 	{
 		self._optionalViewsByID[id] = OptionalViewDescriptor(view: view, optionalityDirection: optionalityDirection, spacingConstraints: spacingConstraints)
         
@@ -50,7 +50,7 @@ public class LayoutManager
         }
 	}
 	
-	public func setOptionalViewPresent(viewID:String, present:Bool)
+	open func setOptionalViewPresent(_ viewID:String, present:Bool)
 	{
 		if let optionalView = self._optionalViewsByID[viewID]
 		{
