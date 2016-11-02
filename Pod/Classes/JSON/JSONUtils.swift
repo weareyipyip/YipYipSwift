@@ -31,7 +31,7 @@ open class JSONUtils
 		return dictionary
 	}
 	
-	open func dataFromDictionary(_ dictionary:[String:AnyObject])->Data?
+	open func dataFromDictionary(_ dictionary:Any)->Data?
 	{
 		var data:Data?
 		
@@ -60,7 +60,7 @@ open class JSONUtils
 		return nil
 	}
 	
-	open func writeDictionaryToJSONFile(dictionary:[String:AnyObject], destinationPath:String)->Bool
+	open func writeDictionaryToJSONFile(dictionary:Any, destinationPath:String)->Bool
 	{
 		if let data = self.dataFromDictionary(dictionary)
 		{
