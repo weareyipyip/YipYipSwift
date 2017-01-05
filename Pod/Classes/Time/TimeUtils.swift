@@ -46,4 +46,9 @@ open class TimeUtils
 	{
 		return self.iso8601DateFormatter.date(from: string)
 	}
+    
+    open func iso8601TimeStringFromDate(_ date:Date)->String?
+    {
+        return self.iso8601DateFormatter.string(from: date)
+    }
 }
