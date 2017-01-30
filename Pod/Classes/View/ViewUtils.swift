@@ -33,20 +33,22 @@ open class ViewUtils
 	// MARK: Hairlines
 	// -----------------------------------------------------------
 	
-	open func addHairlineToTopOfView(_ view:UIView, hairlineColor:UIColor)
+	open func addHairlineToTopOfView(_ view:UIView, hairlineColor:UIColor)->UIView
 	{
 		let dividerHeight = self.singlePixelSizeInPoints
 		let newHairline = UIView(frame:CGRect(x: 0, y: 0, width: view.frame.size.width, height: dividerHeight))
 		newHairline.backgroundColor = hairlineColor
 		view.addSubview(newHairline)
+        return newHairline
 	}
 	
-	open func addHairlineToBottomOfView(_ view:UIView, color:UIColor)
+	open func addHairlineToBottomOfView(_ view:UIView, color:UIColor)->UIView
 	{
 		let dividerHeight:CGFloat = self.singlePixelSizeInPoints
 		let newHairline = UIView(frame:CGRect(x: 0, y: view.frame.size.height - dividerHeight, width: view.frame.size.width, height: dividerHeight))
 		newHairline.backgroundColor = color
 		view.addSubview(newHairline)
+        return newHairline
 	}
 	
 	open func removeHairlineFromView(_ view:UIView)->Bool
