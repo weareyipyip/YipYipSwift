@@ -173,6 +173,28 @@ open class ViewUtils
             }
         }
 	}
+    
+    // -----------------------------------------------------------
+    // -- Loading views from Xib
+    // -----------------------------------------------------------
+
+    open func addViewFromNib(nibName name:String, toOwner containerView:UIView) -> UIView
+    {
+        let bundle = Bundle(for: type(of: containerView))
+        let views = UINib(nibName: name, bundle: bundle).instantiate(withOwner: containerView, options: nil) as [AnyObject]
+        
+        var  view = UIView()
+        if let nibView = views[0] as? UIView{
+            view = nibView
+        }
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(view)
+        containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[view]|", options: [], metrics: nil, views: ["view":view]))
+        containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: ["view":view]))
+        
+        return view
+    }
 	
     // -----------------------------------------------------------
     // -- Loading of images
