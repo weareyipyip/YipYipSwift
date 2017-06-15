@@ -27,3 +27,7 @@ Marcel Bloemendaal, m.bloemendaal@yipyip.nl
 ## License
 
 YipYipSwift is available under the MIT license. See the LICENSE file for more info.
+
+## Changelog
+
+* 0.1.26 - Added YipYipNibView, CHanged M_PI to CGFloat.pi
