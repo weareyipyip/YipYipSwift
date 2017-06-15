@@ -10,12 +10,12 @@ import UIKit
 
 open class NibView: UIView {
     
-    var nibView:UIView!
-    var nibFileName:String? {
+    public var nibView:UIView!
+    open var nibFileName:String? {
         return nil
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.nibSetup()
     }
