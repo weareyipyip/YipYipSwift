@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05956CAB1EF266C3003CAFB3 /* YipYipNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05956CAA1EF266C3003CAFB3 /* YipYipNibView.swift */; };
+		05956CAE1EF2716C003CAFB3 /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05956CAD1EF2716C003CAFB3 /* UIView+Storyboard.swift */; };
 		13D2895A68585E44B1EACCA0090FC0B9 /* YipYipSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B41A140F09A72ADAF9F8965453ED7C3 /* YipYipSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25933DBD580D7B83CEC92E04361CD176 /* YipYipSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F443A1727C583C218EEDF19393567AC0 /* YipYipSwift-dummy.m */; };
 		E281E32D57E10C697DBD6EA539A00426 /* YipYipSwift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 761994702682FF68A215E0A8F60A5457 /* YipYipSwift.bundle */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		05956CAA1EF266C3003CAFB3 /* YipYipNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YipYipNibView.swift; sourceTree = "<group>"; };
+		05956CAD1EF2716C003CAFB3 /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		3B41A140F09A72ADAF9F8965453ED7C3 /* YipYipSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-umbrella.h"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		519F041B237068284C2CD4CC5B290127 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 				05956CAA1EF266C3003CAFB3 /* YipYipNibView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		05956CAC1EF2716C003CAFB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05956CAD1EF2716C003CAFB3 /* UIView+Storyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		44427416EA33CAEFF4F7DAB5C1269CB9 /* Products */ = {
@@ -167,6 +177,7 @@
 		F747E8801D5C9561006AA9DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05956CAC1EF2716C003CAFB3 /* Extensions */,
 				F747E8821D5C9561006AA9DC /* Files */,
 				F747E8841D5C9561006AA9DC /* JSON */,
 				F747E8861D5C9561006AA9DC /* Time */,
@@ -328,6 +339,7 @@
 			files = (
 				F747E8941D5C9561006AA9DC /* ViewUtils.swift in Sources */,
 				F747E8951D5C9561006AA9DC /* YipYipUtils.swift in Sources */,
+				05956CAE1EF2716C003CAFB3 /* UIView+Storyboard.swift in Sources */,
 				F747E8921D5C9561006AA9DC /* LayoutManager.swift in Sources */,
 				25933DBD580D7B83CEC92E04361CD176 /* YipYipSwift-dummy.m in Sources */,
 				05956CAB1EF266C3003CAFB3 /* YipYipNibView.swift in Sources */,

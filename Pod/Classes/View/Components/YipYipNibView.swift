@@ -27,7 +27,7 @@ open class YipYipNibView: UIView {
     
     fileprivate func nibSetup() {
         if let nibFileName = self.nibFileName{
-            self.nibView = YipYipUtils.view.loadViewFromNib(name: nibFileName, toView: self)
+            self.nibView = self.loadViewFromNib(name: nibFileName, toView: self)
         } else {
             print("NibView: Property \"nibFileName\" must be override")
         }
