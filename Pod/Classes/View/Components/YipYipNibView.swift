@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class NibView: UIView {
+open class YipYipNibView: UIView {
     
     public var nibView:UIView!
     open var nibFileName:String? {
@@ -25,7 +25,7 @@ open class NibView: UIView {
         self.nibSetup()
     }
     
-    func nibSetup() {
+    fileprivate func nibSetup() {
         if let nibFileName = self.nibFileName{
             self.nibView = YipYipUtils.view.loadViewFromNib(name: nibFileName, toView: self)
         } else {
