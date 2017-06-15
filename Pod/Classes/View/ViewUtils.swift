@@ -322,7 +322,7 @@ open class ViewUtils
     
     open func loadViewFromNib(name:String, toView view:UIView)->UIView {
         
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle.main
         let views = UINib(nibName: name, bundle: bundle).instantiate(withOwner: self, options: nil) as [AnyObject]
         var returnView = UIView()
         if let view = views[0] as? UIView{
