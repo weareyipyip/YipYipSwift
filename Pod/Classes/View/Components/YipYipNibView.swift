@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NibView: UIView {
+open class NibView: UIView {
     
     var nibView:UIView!
     var nibFileName:String? {
@@ -20,7 +20,7 @@ class NibView: UIView {
         self.nibSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.nibSetup()
     }
