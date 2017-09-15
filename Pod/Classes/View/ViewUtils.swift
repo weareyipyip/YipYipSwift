@@ -75,17 +75,17 @@ open class ViewUtils
     
     open func setLabelAttributedTextUsingExistingAttributes(label:UILabel, text:String)
     {
-        var attributes:[String:AnyObject]?
+        var attributes:[NSAttributedStringKey:Any]?
         if let text = label.text
         {
             if text.characters.count > 0
             {
-                attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [String : AnyObject]?
+                attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [NSAttributedStringKey:Any]?
             }
         }
         if attributes == nil
         {
-            attributes = [String:AnyObject]()
+            attributes = [NSAttributedStringKey:Any]()
         }
         label.attributedText = NSAttributedString(string: text, attributes: attributes)
     }
