@@ -11,84 +11,84 @@ import UIKit
 
 open class ViewUtils
 {
-	// -----------------------------------------------------------------------------------------------------------------------
-	//
-	// MARK: Properties
-	//
-	// -----------------------------------------------------------------------------------------------------------------------
-	
-	open var singlePixelSizeInPoints:CGFloat
-	{
-		return CGFloat(1.0 / UIScreen.main.nativeScale)
-	}
-	
-	
-	// -----------------------------------------------------------------------------------------------------------------------
-	//
-	// MARK: Public methods
-	//
-	// -----------------------------------------------------------------------------------------------------------------------
-	
-	// -----------------------------------------------------------
-	// MARK: Hairlines
-	// -----------------------------------------------------------
-	
-	open func addHairlineToTopOfView(_ view:UIView, hairlineColor:UIColor)->UIView
-	{
-		let dividerHeight = self.singlePixelSizeInPoints
-		let newHairline = UIView(frame:CGRect(x: 0, y: 0, width: view.frame.size.width, height: dividerHeight))
-		newHairline.backgroundColor = hairlineColor
-		view.addSubview(newHairline)
+    // -----------------------------------------------------------------------------------------------------------------------
+    //
+    // MARK: Properties
+    //
+    // -----------------------------------------------------------------------------------------------------------------------
+    
+    open var singlePixelSizeInPoints:CGFloat
+    {
+        return CGFloat(1.0 / UIScreen.main.nativeScale)
+    }
+    
+    
+    // -----------------------------------------------------------------------------------------------------------------------
+    //
+    // MARK: Public methods
+    //
+    // -----------------------------------------------------------------------------------------------------------------------
+    
+    // -----------------------------------------------------------
+    // MARK: Hairlines
+    // -----------------------------------------------------------
+    
+    open func addHairlineToTopOfView(_ view:UIView, hairlineColor:UIColor)->UIView
+    {
+        let dividerHeight = self.singlePixelSizeInPoints
+        let newHairline = UIView(frame:CGRect(x: 0, y: 0, width: view.frame.size.width, height: dividerHeight))
+        newHairline.backgroundColor = hairlineColor
+        view.addSubview(newHairline)
         return newHairline
-	}
-	
-	open func addHairlineToBottomOfView(_ view:UIView, color:UIColor)->UIView
-	{
-		let dividerHeight:CGFloat = self.singlePixelSizeInPoints
-		let newHairline = UIView(frame:CGRect(x: 0, y: view.frame.size.height - dividerHeight, width: view.frame.size.width, height: dividerHeight))
-		newHairline.backgroundColor = color
-		view.addSubview(newHairline)
+    }
+    
+    open func addHairlineToBottomOfView(_ view:UIView, color:UIColor)->UIView
+    {
+        let dividerHeight:CGFloat = self.singlePixelSizeInPoints
+        let newHairline = UIView(frame:CGRect(x: 0, y: view.frame.size.height - dividerHeight, width: view.frame.size.width, height: dividerHeight))
+        newHairline.backgroundColor = color
+        view.addSubview(newHairline)
         return newHairline
-	}
-	
-	open func removeHairlineFromView(_ view:UIView)->Bool
-	{
-		if (view is UIImageView && view.bounds.size.height <= 1.0)
-		{
-			view.isHidden = true
-			return true
-		}
-		
-		for subview in view.subviews
-		{
-			if self.removeHairlineFromView(subview)
-			{
-				return true
-			}
-		}
-		return false
-	}
-	
-	// -----------------------------------------------------------
-	// MARK: Attributed text
-	// -----------------------------------------------------------
-	
-	open func setLabelAttributedTextUsingExistingAttributes(label:UILabel, text:String)
-	{
-		var attributes:[String:AnyObject]?
-		if let text = label.text
-		{
-			if text.characters.count > 0
-			{
-				attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [String : AnyObject]?
-			}
-		}
-		if attributes == nil
-		{
-			attributes = [String:AnyObject]()
-		}
-		label.attributedText = NSAttributedString(string: text, attributes: attributes)
-	}
+    }
+    
+    open func removeHairlineFromView(_ view:UIView)->Bool
+    {
+        if (view is UIImageView && view.bounds.size.height <= 1.0)
+        {
+            view.isHidden = true
+            return true
+        }
+        
+        for subview in view.subviews
+        {
+            if self.removeHairlineFromView(subview)
+            {
+                return true
+            }
+        }
+        return false
+    }
+    
+    // -----------------------------------------------------------
+    // MARK: Attributed text
+    // -----------------------------------------------------------
+    
+    open func setLabelAttributedTextUsingExistingAttributes(label:UILabel, text:String)
+    {
+        var attributes:[String:AnyObject]?
+        if let text = label.text
+        {
+            if text.characters.count > 0
+            {
+                attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [String : AnyObject]?
+            }
+        }
+        if attributes == nil
+        {
+            attributes = [String:AnyObject]()
+        }
+        label.attributedText = NSAttributedString(string: text, attributes: attributes)
+    }
     
     open func setLabelTextWithCustomLineSpacing(label:UILabel, text:String, lineSpacing:CGFloat)
     {
@@ -96,48 +96,48 @@ open class ViewUtils
         paragraphStyle.lineSpacing = lineSpacing
         
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         
         label.attributedText = attributedString
     }
-	
-	// -----------------------------------------------------------
-	// MARK: Indicating activity
-	// -----------------------------------------------------------
-	
-	open func indicateActivity(imageView:UIImageView, button:UIButton? = nil)
-	{
-		var animation:CAAnimation
-		
-		if button != nil
-		{
-			button!.setTitle("", for: UIControlState())
-			button!.setTitle("", for: .highlighted)
-			button!.setTitle("", for: .disabled)
-		}
-		let basicAnimation = CABasicAnimation(keyPath: "transform.rotation")
-		basicAnimation.toValue = CGFloat.pi * 2.0
-		basicAnimation.duration = 2.0
-		basicAnimation.repeatCount = 99999999
-		animation = basicAnimation
-		
-		imageView.layer.add(animation, forKey: "rotation")
-		imageView.isHidden = false
-	}
-	
-	open func stopIndicatingActivity(imageView:UIImageView, button:UIButton? = nil, buttonTitle:String? = nil)
-	{
-		imageView.isHidden = true
-		imageView.layer.removeAllAnimations()
-		
-		if button != nil && buttonTitle != nil
-		{
-			button!.setTitle(buttonTitle!, for: UIControlState())
-			button!.setTitle(buttonTitle!, for: .highlighted)
-			button!.setTitle(buttonTitle!, for: .disabled)
-		}
-	}
-	
+    
+    // -----------------------------------------------------------
+    // MARK: Indicating activity
+    // -----------------------------------------------------------
+    
+    open func indicateActivity(imageView:UIImageView, button:UIButton? = nil)
+    {
+        var animation:CAAnimation
+        
+        if button != nil
+        {
+            button!.setTitle("", for: UIControlState())
+            button!.setTitle("", for: .highlighted)
+            button!.setTitle("", for: .disabled)
+        }
+        let basicAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        basicAnimation.toValue = CGFloat.pi * 2.0
+        basicAnimation.duration = 2.0
+        basicAnimation.repeatCount = 99999999
+        animation = basicAnimation
+        
+        imageView.layer.add(animation, forKey: "rotation")
+        imageView.isHidden = false
+    }
+    
+    open func stopIndicatingActivity(imageView:UIImageView, button:UIButton? = nil, buttonTitle:String? = nil)
+    {
+        imageView.isHidden = true
+        imageView.layer.removeAllAnimations()
+        
+        if button != nil && buttonTitle != nil
+        {
+            button!.setTitle(buttonTitle!, for: UIControlState())
+            button!.setTitle(buttonTitle!, for: .highlighted)
+            button!.setTitle(buttonTitle!, for: .disabled)
+        }
+    }
+    
     // -----------------------------------------------------------
     // -- Feedback animations
     // -----------------------------------------------------------
@@ -153,12 +153,12 @@ open class ViewUtils
         view.layer.add(animation, forKey: "position")
     }
     
-	// -----------------------------------------------------------
-	// MARK: Moving views to clear the keyboard
-	// -----------------------------------------------------------
-	
-	open func scrollChild(_ child:UIView, ofScrollView scrollView:UIScrollView, clearOfKeyboardWithDidChangeFrameNotification notification:Notification, andMargin margin:CGFloat)
-	{
+    // -----------------------------------------------------------
+    // MARK: Moving views to clear the keyboard
+    // -----------------------------------------------------------
+    
+    open func scrollChild(_ child:UIView, ofScrollView scrollView:UIScrollView, clearOfKeyboardWithDidChangeFrameNotification notification:Notification, andMargin margin:CGFloat)
+    {
         if let keyboardFrame = ((notification as NSNotification).userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, let window = scrollView.window
         {
             let childFrame = child.convert(child.bounds, to: window)
@@ -172,7 +172,7 @@ open class ViewUtils
                 scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y + additionalContentOffsetY), animated: true)
             }
         }
-	}
+    }
     
     // -----------------------------------------------------------
     // -- Loading views from Xib
@@ -195,7 +195,7 @@ open class ViewUtils
         
         return view
     }
-	
+    
     // -----------------------------------------------------------
     // -- Loading of images
     // -----------------------------------------------------------
