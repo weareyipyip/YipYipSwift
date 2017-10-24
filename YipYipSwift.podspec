@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
     YipYip's Swift library containing utils for commonly used functionalities when building apps.
                        DESC
 
-  s.homepage         = "https://gitlab.com/weareyipyip/YipYipSwift"
+  s.homepage         = "https://github.com/weareyipyip/YipYipSwift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Marcel Bloemendaal" => "m.bloemendaal@yipyip.nl" }
-  s.source           = { :git => "https://gitlab.com/weareyipyip/YipYipSwift.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/weareyipyip/YipYipSwift.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
