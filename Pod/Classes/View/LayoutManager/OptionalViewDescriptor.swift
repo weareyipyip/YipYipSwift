@@ -14,6 +14,7 @@ class OptionalViewDescriptor
 	private var view:UIView
 	private var optionalityDirection:OptionalViewOptionalityDirection
 	private var spacingConstraints = [ConstraintDescriptor]()
+    private (set) var groupID:String?
 	
 	private var _originalWidthConstraints = [ConstraintDescriptor]()
 	private var _originalHeightConstraints = [ConstraintDescriptor]()
@@ -28,11 +29,12 @@ class OptionalViewDescriptor
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-	init(view:UIView, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?)
+    init(view:UIView, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, groupID:String? = nil)
 	{
 		// Store parameters
 		self.view = view
 		self.optionalityDirection = optionalityDirection
+        self.groupID = groupID
 		
 		// Find dimensional constraint in specified direction
 		outerLoop: for constraint in view.constraints
