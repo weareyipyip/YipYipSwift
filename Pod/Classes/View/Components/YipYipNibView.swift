@@ -69,5 +69,4 @@ open class YipYipNibView: UIView {
         
         return returnView
     }
-
 }

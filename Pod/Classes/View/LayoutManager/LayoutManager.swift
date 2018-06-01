@@ -19,7 +19,10 @@ public enum OptionalViewOptionalityDirection
 
 open class LayoutManager
 {
-	fileprivate var _optionalViewsByID = [String:OptionalViewDescriptor]()
+    
+	private var _optionalViewsByID = [String:OptionalViewDescriptor]()
+    private var _groupsByID = [String:[OptionalViewDescriptor]]()
+    private var _ungroupedOptionalViews = [OptionalViewDescriptor]()
 	
 	
     // -----------------------------------------------------------------------------------------------------------------------
@@ -40,13 +43,23 @@ open class LayoutManager
 	//
 	// -----------------------------------------------------------------------------------------------------------------------
 	
-    open func addOptionalView(_ view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, hideInitially:Bool)
+    open func addOptionalView(_ view:UIView, id:String, optionalityDirection:OptionalViewOptionalityDirection, spacingConstraints:[NSLayoutConstraint]?, hideInitially:Bool, groupID:String? = nil)
 	{
-		self._optionalViewsByID[id] = OptionalViewDescriptor(view: view, optionalityDirection: optionalityDirection, spacingConstraints: spacingConstraints)
+        let optionalViewDescriptor = OptionalViewDescriptor(view: view, optionalityDirection: optionalityDirection, spacingConstraints: spacingConstraints, groupID: groupID)
+        self._optionalViewsByID[id] = optionalViewDescriptor
+        if let groupID = groupID {
+            if self._groupsByID[groupID] == nil {
+                self._groupsByID[groupID] = [optionalViewDescriptor]
+            } else {
+                self._groupsByID[groupID]!.append(optionalViewDescriptor)
+            }
+        } else {
+            self._ungroupedOptionalViews.append(optionalViewDescriptor)
+        }
         
         if hideInitially
         {
-            self.setOptionalViewPresent(id, present: false)
+            optionalViewDescriptor.present = false
         }
 	}
 	
@@ -57,4 +70,19 @@ open class LayoutManager
 			optionalView.present = present
 		}
 	}
+    
+    open func setGroupPresent(_ groupID:String?, present:Bool)
+    {
+        var group:[OptionalViewDescriptor]?
+        if let groupID = groupID {
+            group = self._groupsByID[groupID]
+        } else {
+            group = self._ungroupedOptionalViews
+        }
+        if let group = group {
+            for optionalViewDescriptor in group {
+                optionalViewDescriptor.present = present
+            }
+        }
+    }
 }

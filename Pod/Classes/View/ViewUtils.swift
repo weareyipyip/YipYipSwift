@@ -78,7 +78,7 @@ open class ViewUtils
         var attributes:[NSAttributedStringKey:Any]?
         if let text = label.text
         {
-            if text.characters.count > 0
+            if text.count > 0
             {
                 attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [NSAttributedStringKey:Any]?
             }
