@@ -178,10 +178,10 @@ open class ViewUtils
     // -- Loading views from Xib
     // -----------------------------------------------------------
 
-    open func addViewFromNib(nibName name:String, toOwner containerView:UIView) -> UIView
+    open func addViewFromNib(nibName name:String, bundle:Bundle? = nil, toOwner containerView:UIView) -> UIView
     {
-        let bundle = Bundle(for: type(of: containerView))
-        let views = UINib(nibName: name, bundle: bundle).instantiate(withOwner: containerView, options: nil) as [AnyObject]
+        let bundleToUse = bundle == nil ? Bundle(for: type(of: containerView)) : bundle
+        let views = UINib(nibName: name, bundle: bundleToUse).instantiate(withOwner: containerView, options: nil) as [AnyObject]
         
         var  view = UIView()
         if let nibView = views[0] as? UIView{
@@ -194,6 +194,15 @@ open class ViewUtils
         containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: ["view":view]))
         
         return view
+    }
+    
+    open func nibExists(name:String, bundle:Bundle? = nil)->Bool{
+        var exists = false
+        let bundleToUse = bundle == nil ? Bundle.main : bundle
+        if bundleToUse?.path(forResource: name, ofType: "nib") != nil{
+            exists = true
+        }
+        return exists
     }
     
     // -----------------------------------------------------------

@@ -1,17 +1,17 @@
 //
-//  NibView.swift
-//  Commando Training
+//  YipYipNibButton.swift
+//  PersonHelp
 //
-//  Created by Rens Wijnmalen on 15/06/2017.
-//  Copyright © 2017 YipYip. All rights reserved.
+//  Created by Rens Wijnmalen on 01/06/2018.
+//  Copyright © 2018 YipYip. All rights reserved.
 //
 
 import UIKit
 
-open class YipYipNibView: UIView {
+open class YipYipNibButton: UIButton {
     
     public var nibView:UIView!
-    
+
     
     // -----------------------------------------------------------------------------------------------------------------------
     //
@@ -29,7 +29,7 @@ open class YipYipNibView: UIView {
         self.nibSetup()
     }
     
-    
+
     // -----------------------------------------------------------------------------------------------------------------------
     //
     // MARK: - Computed properties
@@ -54,12 +54,11 @@ open class YipYipNibView: UIView {
     // -----------------------------------------------------------
     // MARK: -- View life cycle
     // -----------------------------------------------------------
-    
-    open func viewDidLayout(){
-        
-    }
 
+    open func viewDidLayout(){
+    }
     
+
     // -----------------------------------------------------------------------------------------------------------------------
     //
     // MARK: - Private methods
