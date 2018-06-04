@@ -73,7 +73,6 @@ open class YipYipNibView: UIView {
         } else {
             print("NibView: File does not exist")
         }
-        self.nibView.isUserInteractionEnabled = false
         self.viewDidLayout()
     }
 }
