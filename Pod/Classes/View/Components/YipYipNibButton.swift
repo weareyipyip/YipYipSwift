@@ -1,14 +1,14 @@
 //
-//  NibView.swift
-//  Commando Training
+//  YipYipNibButton.swift
+//  PersonHelp
 //
-//  Created by Rens Wijnmalen on 15/06/2017.
-//  Copyright © 2017 YipYip. All rights reserved.
+//  Created by Rens Wijnmalen on 01/06/2018.
+//  Copyright © 2018 YipYip. All rights reserved.
 //
 
 import UIKit
 
-open class YipYipNibView: UIView {
+class YipYipNibButton: UIButton {
     
     public var nibView:UIView!
     open var nibFileName:String? {
@@ -43,6 +43,7 @@ open class YipYipNibView: UIView {
         else {
             print("NibView: Property \"nibFileName\" must be override")
         }
+        self.nibView.isUserInteractionEnabled = false
         self.viewDidLayout()
     }
     
@@ -72,6 +73,5 @@ open class YipYipNibView: UIView {
     }
     
     open func viewDidLayout(){
-        
     }
 }
