@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YipYipNibButton: UIButton {
+open class YipYipNibButton: UIButton {
     
     public var nibView:UIView!
 
