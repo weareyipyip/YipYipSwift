@@ -78,6 +78,9 @@ open class YipYipServicesBase {
             }
             
             request.httpMethod = method
+            
+            self.addCustomPropertiesToRequest(path: path, method: method, request: &request)
+            
             self.executeURLRequest(urlRequest: request, completion: completion)
         }
     }
@@ -86,6 +89,10 @@ open class YipYipServicesBase {
         if method == "POST"{
             request.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
         }
+    }
+    
+    open func addCustomPropertiesToRequest(path: String, method: String, request: inout URLRequest){
+        
     }
     
     internal func executeURLRequest(urlRequest:URLRequest, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
