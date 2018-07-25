@@ -22,9 +22,9 @@ open class YipYipServicesBase {
     private static let _queryParameterAllowedCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~/?")
     
     private let _operationQueue = OperationQueue()
-    internal var showDebugErrors = true
+    open var showDebugErrors = true
     
-    internal var defaultDateFormatterDateFormat:String{
+    open var defaultDateFormatterDateFormat:String{
         return "yyyy-MM-dd'T'HH:mm:ssZ"
     }
     
@@ -94,7 +94,7 @@ open class YipYipServicesBase {
         
     }
     
-    internal func executeURLRequest(urlRequest:URLRequest, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
+    open func executeURLRequest(urlRequest:URLRequest, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
         let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             let (statusCode, result, errorType) = self.processAPIResponse(data: data, response: response, error: error)
             completion(statusCode, result, errorType)
@@ -181,7 +181,7 @@ open class YipYipServicesBase {
     // MARK: -- Error processing
     // -----------------------------------------------------------
     
-    internal func errorTypeForError(error:Error)->ServicesErrorType {
+    open func errorTypeForError(error:Error)->ServicesErrorType {
         if let urlError = error as? URLError {
             switch urlError.code {
             case .notConnectedToInternet:
@@ -193,7 +193,7 @@ open class YipYipServicesBase {
         return .unknown
     }
     
-    internal func errorReasonTextForError(error:Error)->String {
+    open func errorReasonTextForError(error:Error)->String {
         if let urlError = error as? URLError {
             switch urlError.code {
             case .badURL:
@@ -256,7 +256,7 @@ open class YipYipServicesBase {
         }
     }
     
-    internal func errorReasonTextFor(httpStatusCode:Int)->String {
+    open func errorReasonTextFor(httpStatusCode:Int)->String {
         switch httpStatusCode {
             
         case 400:
