@@ -47,7 +47,7 @@ open class YipYipServicesBase {
     // -- API calls
     // -----------------------------------------------------------
     
-    internal func executeURLRequest(path:String, method:String, queryVariables:String? = nil, jsonVariables:[String:AnyObject]? = nil, extraHeaderFields:[String:String]? = nil, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
+    open func executeURLRequest(path:String, method:String, queryVariables:String? = nil, jsonVariables:[String:AnyObject]? = nil, extraHeaderFields:[String:String]? = nil, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
         
         var fullPath = path
         if method == "GET" {
@@ -82,7 +82,7 @@ open class YipYipServicesBase {
         }
     }
     
-    internal func addDefaultRequestHeadersForMethod(_ method: String, request: inout URLRequest){
+    open func addDefaultRequestHeadersForMethod(_ method: String, request: inout URLRequest){
         if method == "POST"{
             request.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
         }
@@ -100,7 +100,7 @@ open class YipYipServicesBase {
     // MARK: -- Response processing
     // -----------------------------------------------------------
     
-    internal func processAPIResponse(data:Data?, response:URLResponse?, error:Error?)->(statusCode:Int, result:Data?, errorType:ServicesErrorType?) {
+    open func processAPIResponse(data:Data?, response:URLResponse?, error:Error?)->(statusCode:Int, result:Data?, errorType:ServicesErrorType?) {
         
         var statusCode = 0
         var errorType:ServicesErrorType?
@@ -121,7 +121,7 @@ open class YipYipServicesBase {
     // MARK: -- Decoding data
     // -----------------------------------------------------------
     
-    internal func decodeData<T: Decodable>(_ data:Data, forType type:T.Type)->Any?{
+    open func decodeData<T: Decodable>(_ data:Data, forType type:T.Type)->Any?{
         
         let decoder = JSONDecoder()
         if #available(iOS 10.0, *) {
