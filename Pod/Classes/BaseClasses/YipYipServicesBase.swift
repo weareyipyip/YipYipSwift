@@ -80,7 +80,6 @@ open class YipYipServicesBase {
             request.httpMethod = method
             
             self.addCustomPropertiesToRequest(path: path, method: method, request: &request)
-            
             self.executeURLRequest(urlRequest: request, completion: completion)
         }
     }
@@ -130,14 +129,9 @@ open class YipYipServicesBase {
     
     open func decodeData<T: Decodable>(_ data:Data, forType type:T.Type)->Any?{
         
-        let decoder = JSONDecoder()
-        if #available(iOS 10.0, *) {
-            decoder.dateDecodingStrategy = .iso8601
-        } else {
-            let formatter = DateFormatter()
-            formatter.dateFormat = self.defaultDateFormatterDateFormat
-            decoder.dateDecodingStrategy = .formatted(formatter)
-        }
+        var decoder = JSONDecoder()
+        self.addCustomPropertiesToDecoder(decoder: &decoder)
+        
         var returnData:Any?
         do {
             returnData = try decoder.decode(type, from: data)
@@ -166,6 +160,16 @@ open class YipYipServicesBase {
             }
         }
         return returnData
+    }
+    
+    open func addCustomPropertiesToDecoder(decoder: inout JSONDecoder){
+        if #available(iOS 10.0, *) {
+            decoder.dateDecodingStrategy = .iso8601
+        } else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = self.defaultDateFormatterDateFormat
+            decoder.dateDecodingStrategy = .formatted(formatter)
+        }
     }
     
     // -----------------------------------------------------------
