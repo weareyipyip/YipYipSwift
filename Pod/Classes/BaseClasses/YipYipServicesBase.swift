@@ -17,29 +17,12 @@ public enum ServicesErrorType:Int{
     case unknown
 }
 
-public enum ServicesDebugMode:Int{
-    case off
-    case errors
-    case verbose
-}
-
-public enum ServicesDebugLevel:Int{
-    case error
-    case warnimg
-}
-
 open class YipYipServicesBase {
     
     private static let _queryParameterAllowedCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~/?")
     
     private let _operationQueue = OperationQueue()
-    private var _imageCache = NSCache<NSString, UIImage>()
-    private var _isOffline:Bool = true
-    
     internal var showDebugErrors = true
-    public var isOffline:Bool {
-        return self._isOffline
-    }
     
     internal var defaultDateFormatterDateFormat:String{
         return "yyyy-MM-dd'T'HH:mm:ssZ"
