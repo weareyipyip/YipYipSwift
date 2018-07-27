@@ -46,19 +46,31 @@ open class YipYipViewControllerBase: UIViewController {
     }
     
     @objc private func keyboardWillShow(_ notification:NSNotification){
-        guard let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect else { return }
-        guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
-        guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
+        
         if self._keyboardIsShown{
-            self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            self.keyboardWillChange(notification: notification)
         } else {
-            self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            self.keyboardWillEnter(notification: notification)
         }
+        
+        let keyboardSizeWilChange = self._keyboardIsShown
         self._keyboardIsShown = true
-        self._lastKnownKeyboardHeight = keyboardEndFrame.height
+        
+        if let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+            self._lastKnownKeyboardHeight = keyboardEndFrame.height
+            guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+            guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
+            if keyboardSizeWilChange{
+                self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            } else {
+                self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            }
+        } else { return }
     }
     
     @objc private func keyboardWillHide(_ notification:NSNotification){
+        self.keyboardWillHide(notification: notification)
+        
         guard let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect else { return }
         guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
@@ -73,11 +85,22 @@ open class YipYipViewControllerBase: UIViewController {
     open func keyboardWillEnter(keyboardEndFrame:CGRect, animationDuration: TimeInterval, animationCurve: Int){
     }
     
+    open func keyboardWillEnter(notification:NSNotification){
+    }
+    
     open func keyboardWillChange(keyboardEndFrame:CGRect, animationDuration: TimeInterval, animationCurve: Int){
         // keyboardWillEnter will be called by default. If other behavour is required override this method in your controller and do not call the super method.
         self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: animationDuration, animationCurve: animationCurve)
     }
     
+    open func keyboardWillChange(notification:NSNotification){
+        // keyboardWillEnter will be called by default. If other behavour is required override this method in your controller and do not call the super method.
+        self.keyboardWillEnter(notification: notification)
+    }
+    
     open func keyboardWillHide(keyboardEndFrame:CGRect, animationDuration: TimeInterval, animationCurve: Int){
+    }
+    
+    open func keyboardWillHide(notification:NSNotification){
     }
 }
