@@ -9,16 +9,5 @@
 import UIKit
 
 open class YipYipViewModelBase: NSObject {
-
-    open var _loadDataErrorType:ServicesErrorType? = .none
     
-    // -----------------------------------------------------------------------------------------------------------------------
-    //
-    // MARK: Computed properties
-    //
-    // -----------------------------------------------------------------------------------------------------------------------
-    
-    open var hasLoadingError:Bool{
-        return self._loadDataErrorType != nil
-    }
 }
