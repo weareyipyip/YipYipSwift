@@ -29,12 +29,20 @@ open class YipYipViewControllerBase: UIViewController {
     // MARK: - View cycle methods
     // ----------------------------------------------------
     
-    override open func viewDidLoad() {
-        super.viewDidLoad()
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillEnterForground(_:)), name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
     }
     
     // ----------------------------------------------------
