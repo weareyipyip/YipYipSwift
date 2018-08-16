@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "YipYipSwift"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "A collection of utilities"
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Marcel Bloemendaal" => "m.bloemendaal@yipyip.nl" }
-  s.source           = { :git => "https://github.com/weareyipyip/YipYipSwift.git", :tag => s.version.to_s }
+  s.source           = { :git => "git@github.com:weareyipyip/YipYipSwift.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '10.0'

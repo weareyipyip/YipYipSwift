@@ -85,4 +85,13 @@ open class LayoutManager
             }
         }
     }
+    
+    open func isOptionalViewIsPresent(_ id: String) -> Bool
+    {
+		var present = false
+        if let view = self._optionalViewsByID[id] {
+            present = view.present
+        }
+        return present
+    }
 }
