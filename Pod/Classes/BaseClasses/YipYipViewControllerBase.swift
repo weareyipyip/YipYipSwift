@@ -55,27 +55,32 @@ open class YipYipViewControllerBase: UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification){
         
-        if self._keyboardIsShown{
-            self.keyboardWillChange(notification: notification)
-        } else {
-            self.keyboardWillEnter(notification: notification)
-        }
-        
-        let keyboardSizeWilChange = self._keyboardIsShown
-        self._keyboardIsShown = true
-        
         if let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+            
+            if self._keyboardIsShown{
+                if self.lastKnownKeyboardHeight != keyboardEndFrame.height{
+                    self.keyboardWillChange(notification: notification)
+                }
+            } else {
+                self.keyboardWillEnter(notification: notification)
+            }
+            
+            let keyboardSizeWillChange = self._keyboardIsShown
+            self._keyboardIsShown = true
+            
             self._lastKnownKeyboardHeight = keyboardEndFrame.height
             guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
             guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
-            if keyboardSizeWilChange{
-                self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            if keyboardSizeWillChange{
+                if self.lastKnownKeyboardHeight != keyboardEndFrame.height{
+                    self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+                }
             } else {
                 self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
             }
-        } else { return }
+        }
     }
-    
+
     @objc private func keyboardWillHide(_ notification: Notification){
         self.keyboardWillHide(notification: notification)
         
