@@ -23,3 +23,8 @@ pod repo push YipYip-CocoaPods YipYipSwift.podspec
 
 ## Author
 Rens Wijnmalen, r.wijnmalen@yipyip.nl
+
+## Resources
+```
+https://medium.com/@shahabejaz/create-and-distribute-private-libraries-with-cocoapods-5b6507b57a03
+```
