@@ -10,8 +10,8 @@ import Foundation
 
 open class YipYipUtils
 {
-    open static let view = ViewUtils()
-    open static let files = FileUtils()
-    open static let json = JSONUtils()
-    open static let time = TimeUtils()
+    public static let view = ViewUtils()
+    public static let files = FileUtils()
+    public static let json = JSONUtils()
+    public static let time = TimeUtils()
 }

@@ -75,17 +75,17 @@ open class ViewUtils
     
     open func setLabelAttributedTextUsingExistingAttributes(label:UILabel, text:String)
     {
-        var attributes:[NSAttributedStringKey:Any]?
+        var attributes:[NSAttributedString.Key:Any]?
         if let text = label.text
         {
             if text.count > 0
             {
-                attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [NSAttributedStringKey:Any]?
+                attributes = label.attributedText?.attributes(at: 0, effectiveRange: nil) as [NSAttributedString.Key:Any]?
             }
         }
         if attributes == nil
         {
-            attributes = [NSAttributedStringKey:Any]()
+            attributes = [NSAttributedString.Key:Any]()
         }
         label.attributedText = NSAttributedString(string: text, attributes: attributes)
     }
@@ -96,7 +96,7 @@ open class ViewUtils
         paragraphStyle.lineSpacing = lineSpacing
         
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         
         label.attributedText = attributedString
     }
@@ -111,7 +111,7 @@ open class ViewUtils
         
         if button != nil
         {
-            button!.setTitle("", for: UIControlState())
+            button!.setTitle("", for: UIControl.State())
             button!.setTitle("", for: .highlighted)
             button!.setTitle("", for: .disabled)
         }
@@ -132,7 +132,7 @@ open class ViewUtils
         
         if button != nil && buttonTitle != nil
         {
-            button!.setTitle(buttonTitle!, for: UIControlState())
+            button!.setTitle(buttonTitle!, for: UIControl.State())
             button!.setTitle(buttonTitle!, for: .highlighted)
             button!.setTitle(buttonTitle!, for: .disabled)
         }
@@ -159,7 +159,7 @@ open class ViewUtils
     
     open func scrollChild(_ child:UIView, ofScrollView scrollView:UIScrollView, clearOfKeyboardWithDidChangeFrameNotification notification:Notification, andMargin margin:CGFloat)
     {
-        if let keyboardFrame = ((notification as NSNotification).userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, let window = scrollView.window
+        if let keyboardFrame = ((notification as NSNotification).userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, let window = scrollView.window
         {
             let childFrame = child.convert(child.bounds, to: window)
             let keyboardTop = keyboardFrame.minY
@@ -275,8 +275,8 @@ open class ViewUtils
         // Layout
         let views = ["label":label]
         let metrics = ["height": height, "margin": (height - font.pointSize) * 0.5]
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|->=margin-[label(>=8)]->=margin-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(height)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|->=margin-[label(>=8)]->=margin-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: metrics, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(height)]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: metrics, views: views))
         view.addConstraint(NSLayoutConstraint(item: view, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0))
         return view
     }
@@ -310,7 +310,7 @@ open class ViewUtils
         }
         
         // Measure the height
-        let height = view.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+		let height = view.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         
         // Restore view to its original state
         if originalWidthConstraintConstant == nil
