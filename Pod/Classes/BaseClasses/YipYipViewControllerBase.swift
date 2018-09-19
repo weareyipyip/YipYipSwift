@@ -55,7 +55,7 @@ open class YipYipViewControllerBase: UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification){
         
-        if let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+        if let keyboardEndFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             
             let keyboardHeightDidChange = self.lastKnownKeyboardHeight != keyboardEndFrame.height
             if self._keyboardIsShown, keyboardHeightDidChange{
@@ -68,8 +68,8 @@ open class YipYipViewControllerBase: UIViewController {
             self._keyboardIsShown = true
             
             self._lastKnownKeyboardHeight = keyboardEndFrame.height
-            guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
-            guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
+            guard let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+            guard let keyboardAnimationCurve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int else { return }
             if keyboardSizeWillChange, keyboardHeightDidChange{
                 self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
             } else if keyboardHeightDidChange {
