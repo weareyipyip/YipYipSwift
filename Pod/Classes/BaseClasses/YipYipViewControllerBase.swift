@@ -57,11 +57,10 @@ open class YipYipViewControllerBase: UIViewController {
         
         if let keyboardEndFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
             
-            if self._keyboardIsShown{
-                if self.lastKnownKeyboardHeight != keyboardEndFrame.height{
-                    self.keyboardWillChange(notification: notification)
-                }
-            } else {
+            let keyboardHeightDidChange = self.lastKnownKeyboardHeight != keyboardEndFrame.height
+            if self._keyboardIsShown, keyboardHeightDidChange{
+                self.keyboardWillChange(notification: notification)
+            } else if keyboardHeightDidChange {
                 self.keyboardWillEnter(notification: notification)
             }
             
@@ -71,11 +70,9 @@ open class YipYipViewControllerBase: UIViewController {
             self._lastKnownKeyboardHeight = keyboardEndFrame.height
             guard let keyboardAnimationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
             guard let keyboardAnimationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int else { return }
-            if keyboardSizeWillChange{
-                if self.lastKnownKeyboardHeight != keyboardEndFrame.height{
-                    self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
-                }
-            } else {
+            if keyboardSizeWillChange, keyboardHeightDidChange{
+                self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
+            } else if keyboardHeightDidChange {
                 self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
             }
         }
