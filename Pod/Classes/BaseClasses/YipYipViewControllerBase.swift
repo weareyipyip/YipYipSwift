@@ -10,15 +10,12 @@ import UIKit
 
 open class YipYipViewControllerBase: UIViewController {
     
-    private var _keyboardIsShown: Bool = false
+    private var _lastKnownVisableKeyboardRect:CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
+    private var _keyboardIsShown:Bool = false
     
     // ----------------------------------------------------
     // MARK: - Computed properties
     // ----------------------------------------------------
-    
-    public var keyboardIsShown: Bool{
-        return self._keyboardIsShown
-    }
     
     // ----------------------------------------------------
     // MARK: - View cycle methods
@@ -49,7 +46,9 @@ open class YipYipViewControllerBase: UIViewController {
     // Notifications
     
     @objc open func keyboardWillShow(_ notification: Notification){
-        self.adjustForKeyboard(notification: notification)
+        let didChange = self._keyboardIsShown == false
+        self._keyboardIsShown = true
+        self.adjustForKeyboard(notification: notification, willChangeVisability: didChange)
     }
     
     @objc open func keyboardWillChangeFrame(_ notification: Notification){
@@ -57,61 +56,36 @@ open class YipYipViewControllerBase: UIViewController {
     }
     
     @objc open func keyboardWillHide(_ notification: Notification){
-        self.adjustForKeyboard(notification: notification)
+        let didChange = self._keyboardIsShown == true
+        self._keyboardIsShown = false
+        self.adjustForKeyboard(notification: notification, willChangeVisability: didChange)
     }
     
-    @objc private func applicationWillEnterForground(_ notification: Notification){
+    @objc open func applicationWillEnterForground(_ notification: Notification){
         self.dismissKeyboard()
     }
     
-    // Open methods
-    
-    open func adjustForKeyboard(notification: Notification){
+    // Private
+    private func adjustForKeyboard(notification: Notification, willChangeVisability:Bool = false){
         
-        guard let keyboardBeginFrame = notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect else { return }
         guard let keyboardEndFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
         guard let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         guard let keyboardAnimationCurve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int else { return }
+        guard let windowFrame = UIApplication.shared.keyWindow?.frame else { return }
         
-        switch notification.name{
-        case UIResponder.keyboardWillShowNotification:
-            if !self._keyboardIsShown{
-                self._keyboardIsShown = true
-                self.keyboardWillEnter(notification: notification)
-                self.keyboardWillEnter(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
-            }
-        case UIResponder.keyboardWillHideNotification:
-            if self._keyboardIsShown{
-                self._keyboardIsShown = false
-                self.keyboardWillHide(notification: notification)
-                self.keyboardWillHide(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
-            }
-        case UIResponder.keyboardWillChangeFrameNotification:
-            if keyboardBeginFrame.origin.y != keyboardEndFrame.origin.y{
-                self.keyboardWillChange(notification: notification)
-                self.keyboardWillChange(keyboardEndFrame: keyboardEndFrame, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
-            }
-        default:
-            break
+        let newHeight = windowFrame.height - keyboardEndFrame.origin.y
+        let newWidth = keyboardEndFrame.width
+        let newOrgin = self.view.convert(keyboardEndFrame.origin, to: nil)
+        let endVisableKeyboardRect = CGRect(x: newOrgin.x, y: newOrgin.y, width: newWidth, height: newHeight)
+        
+        if willChangeVisability || endVisableKeyboardRect != self._lastKnownVisableKeyboardRect{
+            self._lastKnownVisableKeyboardRect = endVisableKeyboardRect
+            self.keyboardWillUpdate(willBeShown: self._keyboardIsShown, newVisableKeyboardFrame: endVisableKeyboardRect, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
         }
     }
     
-    open func keyboardWillEnter(keyboardEndFrame: CGRect, animationDuration: TimeInterval, animationCurve: Int){
-    }
-    
-    open func keyboardWillEnter(notification: Notification){
-    }
-    
-    open func keyboardWillChange(keyboardEndFrame: CGRect, animationDuration: TimeInterval, animationCurve: Int){
-    }
-    
-    open func keyboardWillChange(notification: Notification){
-    }
-    
-    open func keyboardWillHide(keyboardEndFrame: CGRect, animationDuration: TimeInterval, animationCurve: Int){
-    }
-    
-    open func keyboardWillHide(notification: Notification){
+    // Open methods
+    open func keyboardWillUpdate(willBeShown:Bool, newVisableKeyboardFrame: CGRect, animationDuration:TimeInterval, animationCurve:Int){
     }
     
     open func dismissKeyboard(){
