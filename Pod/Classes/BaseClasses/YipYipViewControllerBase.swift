@@ -10,12 +10,20 @@ import UIKit
 
 open class YipYipViewControllerBase: UIViewController {
     
-    private var _lastKnownVisableKeyboardRect:CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
+    private var _lastKnownVisableKeyboardFrame:CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     private var _keyboardIsShown:Bool = false
     
     // ----------------------------------------------------
     // MARK: - Computed properties
     // ----------------------------------------------------
+    
+    public var lastKnownVisableKeyboardFrame:CGRect{
+        return self._lastKnownVisableKeyboardFrame
+    }
+    
+    public var keyboardIsShown:Bool{
+        return self._keyboardIsShown
+    }
     
     // ----------------------------------------------------
     // MARK: - View cycle methods
@@ -78,8 +86,8 @@ open class YipYipViewControllerBase: UIViewController {
         let newOrgin = self.view.convert(keyboardEndFrame.origin, to: nil)
         let endVisableKeyboardRect = CGRect(x: newOrgin.x, y: newOrgin.y, width: newWidth, height: newHeight)
         
-        if willChangeVisability || endVisableKeyboardRect != self._lastKnownVisableKeyboardRect{
-            self._lastKnownVisableKeyboardRect = endVisableKeyboardRect
+        if willChangeVisability || endVisableKeyboardRect != self._lastKnownVisableKeyboardFrame{
+            self._lastKnownVisableKeyboardFrame = endVisableKeyboardRect
             self.keyboardWillUpdate(willBeShown: self._keyboardIsShown, newVisableKeyboardFrame: endVisableKeyboardRect, animationDuration: keyboardAnimationDuration, animationCurve: keyboardAnimationCurve)
         }
     }
