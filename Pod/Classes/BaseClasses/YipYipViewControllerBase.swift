@@ -17,6 +17,14 @@ open class YipYipViewControllerBase: UIViewController {
     // MARK: - Computed properties
     // ----------------------------------------------------
     
+    public var lastKnownVisableKeyboardRect:CGRect{
+        return self._lastKnownVisableKeyboardRect
+    }
+    
+    public var keyboardIsShown:Bool{
+        return self._keyboardIsShown
+    }
+    
     // ----------------------------------------------------
     // MARK: - View cycle methods
     // ----------------------------------------------------
