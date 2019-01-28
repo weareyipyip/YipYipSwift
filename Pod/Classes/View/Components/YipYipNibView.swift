@@ -72,7 +72,7 @@ open class YipYipNibView: UIView {
         if YipYipUtils.view.nibExists(name: nibFileName, bundle: self.bundle) {
             self.nibView = YipYipUtils.view.addViewFromNib(nibName: nibFileName, bundle: self.bundle, toOwner: self)
         } else {
-            os_log("YipYipNibView >> Filename \"%{PUBLIC}@\" does not exist", log: OSLog.netwerk, type: .error, self.nibFileName)
+            os_log("YipYipNibView >> Filename \"%{PUBLIC}@\" does not exist", log: OSLog.netwerk, type: .error, nibFileName)
         }
         self.viewDidLayout()
     }
