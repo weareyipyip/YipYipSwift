@@ -137,19 +137,19 @@ open class YipYipServicesBase {
         do {
             returnData = try decoder.decode(type, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {
-            os_log("Decode Data >> Missing key: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, key, context.debugDescription)
+            os_log("Decode Data >> Missing key: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, key.debugDescription, context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
         } catch DecodingError.valueNotFound(let type, let context) {
-            os_log("Decode Data: Missing value: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type, context.debugDescription)
+            os_log("Decode Data: Missing value: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type as? String, context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
         } catch DecodingError.typeMismatch(let type, let context) {
-            os_log("Decode Data: Type mismatch: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type, context.debugDescription)
+            os_log("Decode Data: Type mismatch: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type as? String, context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
