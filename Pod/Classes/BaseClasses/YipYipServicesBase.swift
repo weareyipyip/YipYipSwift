@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import os.log
 
 public enum ServicesErrorType:Int{
     case noInternet
@@ -112,9 +113,7 @@ open class YipYipServicesBase {
         var errorType:ServicesErrorType?
         if let error = error {
             errorType = self.errorTypeForError(error: error)
-            if self.showDebugErrors{
-                print(">>>>> Debug >>>>> Error reason: \(self.errorReasonTextForError(error: error))")
-            }
+            os_log("Process API Response >> Response error: %{PUBLIC}@", log: OSLog.netwerk, type: .error, self.errorReasonTextForError(error: error))
         } else {
             if let httpResponse = response as? HTTPURLResponse {
                 statusCode = httpResponse.statusCode
@@ -138,27 +137,34 @@ open class YipYipServicesBase {
         do {
             returnData = try decoder.decode(type, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {
+            os_log("Decode Data >> Missing key: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, key, context.debugDescription)
             if self.showDebugErrors{
-                print(">>>>> Debug >>>>> Missing key: \(key)")
-                print(">>>>> Debug >>>>> Debug description: \(context.debugDescription)")
-                
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
-                print(">>>>> Debug >>>>> JSON: /n\(debugString ?? "not found")")
+                os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
         } catch DecodingError.valueNotFound(let type, let context) {
+            os_log("Decode Data: Missing value: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type, context.debugDescription)
             if self.showDebugErrors{
-                print(">>>>> Debug >>>>> Missing value: \(type)")
-                print(">>>>> Debug >>>>> Debug description: \(context.debugDescription)")
-                
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
-                print(">>>>> Debug >>>>> JSON: /n\(debugString ?? "not found")")
+                os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
+            }
+        } catch DecodingError.typeMismatch(let type, let context) {
+            os_log("Decode Data: Type mismatch: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, type, context.debugDescription)
+            if self.showDebugErrors{
+                let debugString = String(data: data, encoding: String.Encoding.utf8)
+                os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
+            }
+        } catch DecodingError.dataCorrupted(let context){
+            os_log("Decode Data: Data corrupted: %{PUBLIC}@", log: OSLog.parsing, type: .error, context.debugDescription)
+            if self.showDebugErrors{
+                let debugString = String(data: data, encoding: String.Encoding.utf8)
+                os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
         } catch {
+            os_log("Decode Data: Unknown error: %{PUBLIC}@", log: OSLog.parsing, type: .error, error.localizedDescription)
             if self.showDebugErrors{
-                print(">>>>> Debug >>>>> Unknown error: \(error.localizedDescription)")
-                
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
-                print(">>>>> Debug >>>>> JSON: /n\(debugString ?? "not found")")
+                os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
         }
         return returnData

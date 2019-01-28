@@ -311,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7717B6882DABC3B431EDF45E /* Pods-YipYipSwift_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -331,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D41C7A38D012C60016C7D51 /* Pods-YipYipSwift_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

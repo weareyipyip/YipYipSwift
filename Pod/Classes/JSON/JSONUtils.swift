@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import os.log
 
 open class JSONUtils
 {
@@ -21,11 +22,11 @@ open class JSONUtils
 		}
 		catch let error as NSError
 		{
-			print(error.localizedDescription)
+            os_log("JSONUtils >> Error parsing dictionary from data: %{PUBLIC}@", log: OSLog.netwerk, type: .error, error.localizedDescription)
 		}
 		catch
 		{
-			print("Failed to parse json")
+            os_log("JSONUtils: Error parsing dictionary from data: Unknown error", log: OSLog.netwerk, type: .error)
 		}
 		
 		return dictionary
@@ -41,11 +42,11 @@ open class JSONUtils
 		}
 		catch let error as NSError
 		{
-			print(error.description)
+            os_log("JSONUtils >> Error parsing data from dictionary: %{PUBLIC}@", log: OSLog.netwerk, type: .error, error.localizedDescription)
 		}
 		catch
 		{
-			
+			os_log("JSONUtils >> Error parsing data from dictionary: Unknown error", log: OSLog.netwerk, type: .error)
 		}
 		
 		return data
