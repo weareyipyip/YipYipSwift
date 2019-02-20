@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053AA74521FEFF3200F1193F /* OSLog+DefaultLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053AA74421FEFF3200F1193F /* OSLog+DefaultLog.swift */; };
 		0582AB6520C5174100FE0845 /* YipYipNibButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582AB6420C5174100FE0845 /* YipYipNibButton.swift */; };
 		05956CAB1EF266C3003CAFB3 /* YipYipNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05956CAA1EF266C3003CAFB3 /* YipYipNibView.swift */; };
 		05DB11BA210724F3001CA302 /* YipYipViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB11B9210724F3001CA302 /* YipYipViewModelBase.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053AA74421FEFF3200F1193F /* OSLog+DefaultLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+DefaultLog.swift"; sourceTree = "<group>"; };
 		0582AB6420C5174100FE0845 /* YipYipNibButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YipYipNibButton.swift; sourceTree = "<group>"; };
 		05956CAA1EF266C3003CAFB3 /* YipYipNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YipYipNibView.swift; sourceTree = "<group>"; };
 		05DB11B9210724F3001CA302 /* YipYipViewModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YipYipViewModelBase.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053AA74321FEFF2600F1193F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				053AA74421FEFF3200F1193F /* OSLog+DefaultLog.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		05956CA91EF266C3003CAFB3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 		F747E8801D5C9561006AA9DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				053AA74321FEFF2600F1193F /* Extensions */,
 				05DB11B8210724B9001CA302 /* BaseClasses */,
 				F747E8821D5C9561006AA9DC /* Files */,
 				F747E8841D5C9561006AA9DC /* JSON */,
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0582AB6520C5174100FE0845 /* YipYipNibButton.swift in Sources */,
+				053AA74521FEFF3200F1193F /* OSLog+DefaultLog.swift in Sources */,
 				F747E8941D5C9561006AA9DC /* ViewUtils.swift in Sources */,
 				05DB11C121072A3A001CA302 /* YipYipServicesBase.swift in Sources */,
 				05DB11BC2107253A001CA302 /* YipYipViewControllerBase.swift in Sources */,
