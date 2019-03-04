@@ -54,7 +54,7 @@ open class YipYipViewControllerBase: UIViewController {
     // Notifications
     
     @objc open func keyboardWillShow(_ notification: Notification){
-        let didChange = self._keyboardIsShown == false
+        let didChange = !self._keyboardIsShown
         self._keyboardIsShown = true
         self.processKeyboardChange(notification: notification, willChangeVisibility: didChange)
     }
@@ -64,7 +64,7 @@ open class YipYipViewControllerBase: UIViewController {
     }
     
     @objc open func keyboardWillHide(_ notification: Notification){
-        let didChange = self._keyboardIsShown == true
+        let didChange = self._keyboardIsShown
         self._keyboardIsShown = false
         self.processKeyboardChange(notification: notification, willChangeVisibility: didChange)
     }
