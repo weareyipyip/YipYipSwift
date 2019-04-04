@@ -14,7 +14,9 @@ public enum ServicesErrorType:Int{
     case cannotParseData
     case contentNotFound
     case requestNotValid
-    case toManyRequests
+    case tooManyRequests
+    case unauthorized
+    case forbidden
     case unknown
 }
 
@@ -117,6 +119,7 @@ open class YipYipServicesBase {
         } else {
             if let httpResponse = response as? HTTPURLResponse {
                 statusCode = httpResponse.statusCode
+                errorType = self.errorTypeForStatusCode(statusCode: statusCode)
             }
         }
         return (statusCode, data, errorType)
@@ -197,6 +200,25 @@ open class YipYipServicesBase {
             }
         }
         return .unknown
+    }
+    
+    open func errorTypeForStatusCode(statusCode:Int)->ServicesErrorType? {
+        switch statusCode{
+        case 200..<300:
+            return nil
+        case 400:
+            return .requestNotValid
+        case 401:
+            return .unauthorized
+        case 403:
+            return .forbidden
+        case 404:
+            return .contentNotFound
+        case 429:
+            return .tooManyRequests
+        default:
+            return .unknown
+        }
     }
     
     open func errorReasonTextForError(error:Error)->String {
