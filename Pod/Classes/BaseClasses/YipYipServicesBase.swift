@@ -14,7 +14,7 @@ public enum ServicesErrorType:Int{
     case cannotParseData
     case contentNotFound
     case requestNotValid
-    case toManyRequests
+    case tooManyRequests
     case unauthorized
     case forbidden
     case unknown
@@ -215,7 +215,7 @@ open class YipYipServicesBase {
         case 404:
             return .contentNotFound
         case 429:
-            return .toManyRequests
+            return .tooManyRequests
         default:
             return .unknown
         }
