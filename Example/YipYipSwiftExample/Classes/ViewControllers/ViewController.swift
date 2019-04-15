@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import YipYipSwift
 
-class ViewController: UIViewController {
+class ViewController: YipYipViewControllerBase {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
