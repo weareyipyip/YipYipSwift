@@ -2,6 +2,12 @@
 
 Significant changes to the project will be documented here.
 
+## [1.2.3](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.2.3)
+
+- Updated to swift 5.0
+- Changed the way of handling network errors. (Update required!)
+
+
 ## [1.2.2](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.2.2)
 
 - Added 2 new services error type: unauthorized and forbidden. 

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double YipYipSwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char YipYipSwiftVersionString[];
+FOUNDATION_EXPORT double Pods_YipYipSwiftExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_YipYipSwiftExampleVersionString[];
 

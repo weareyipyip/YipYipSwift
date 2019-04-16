@@ -1,25 +1,21 @@
 {
   "name": "YipYipSwift",
-  "version": "0.1.0",
-  "summary": "A short description of YipYipSwift.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/YipYipSwift",
+  "version": "1.2.2",
+  "summary": "A collection of utilities",
+  "description": "YipYip's Swift library containing utils for commonly used functionalities when building apps.",
+  "homepage": "https://github.com/weareyipyip/YipYipSwift",
   "license": "MIT",
   "authors": {
     "Marcel Bloemendaal": "m.bloemendaal@yipyip.nl"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/YipYipSwift.git",
-    "tag": "0.1.0"
+    "git": "git@github.com:weareyipyip/YipYipSwift.git",
+    "tag": "1.2.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
+  "swift_version": "5.0",
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "YipYipSwift": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/**/*"
 }

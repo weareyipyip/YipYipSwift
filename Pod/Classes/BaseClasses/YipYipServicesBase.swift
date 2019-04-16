@@ -9,23 +9,31 @@
 import Foundation
 import os.log
 
-public enum ServicesErrorType:Int{
+public enum NetwerkError: Error{
     case noInternet
     case cannotParseData
-    case contentNotFound
     case requestNotValid
-    case tooManyRequests
+    case contentNotFound
     case unauthorized
     case forbidden
     case unknown
 }
 
+
 open class YipYipServicesBase {
+    
+    // ----------------------------------------------------
+    // MARK: - Stored properties
+    // ----------------------------------------------------
     
     private static let _queryParameterAllowedCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~/?")
     
     private let _operationQueue = OperationQueue()
     open var showDebugErrors = true
+    
+    // ----------------------------------------------------
+    // MARK: - Computed properties
+    // ----------------------------------------------------
     
     open var defaultDateFormatterDateFormat:String{
         return "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -50,7 +58,7 @@ open class YipYipServicesBase {
     // -- API calls
     // -----------------------------------------------------------
     
-    open func executeURLRequest(path:String, method:String, queryVariables:String? = nil, jsonVariables:[String:AnyObject]? = nil, extraHeaderFields:[String:String]? = nil, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
+    open func executeURLRequest(path:String, method:String, queryVariables:String? = nil, jsonVariables:[String:AnyObject]? = nil, extraHeaderFields:[String:String]? = nil, completion:@escaping (Int, Result<Data, NetwerkError>) -> Void) {
         
         var fullPath = path
         if method == "GET" {
@@ -97,10 +105,10 @@ open class YipYipServicesBase {
         
     }
     
-    open func executeURLRequest(urlRequest:URLRequest, completion:@escaping (Int, Data?, ServicesErrorType?) -> Void) {
+    open func executeURLRequest(urlRequest:URLRequest, completion:@escaping (Int, Result<Data, NetwerkError>) -> Void) {
         let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-            let (statusCode, result, errorType) = self.processAPIResponse(data: data, response: response, error: error)
-            completion(statusCode, result, errorType)
+            let (statusCode, result) = self.processAPIResponse(data: data, response: response, error: error)
+            completion(statusCode, result)
         })
         task.resume()
     }
@@ -109,68 +117,85 @@ open class YipYipServicesBase {
     // MARK: -- Response processing
     // -----------------------------------------------------------
     
-    open func processAPIResponse(data:Data?, response:URLResponse?, error:Error?)->(statusCode:Int, result:Data?, errorType:ServicesErrorType?) {
+    open func processAPIResponse(data:Data?, response:URLResponse?, error:Error?)->(statusCode:Int, Result<Data, NetwerkError>) {
         
         var statusCode = 0
-        var errorType:ServicesErrorType?
+        var result:Result<Data, NetwerkError>?
         if let error = error {
-            errorType = self.errorTypeForError(error: error)
+            result = self.resultForError(error: error)
             os_log("Process API Response >> Response error: %{PUBLIC}@", log: OSLog.netwerk, type: .error, self.errorReasonTextForError(error: error))
         } else {
             if let httpResponse = response as? HTTPURLResponse {
                 statusCode = httpResponse.statusCode
-                errorType = self.errorTypeForStatusCode(statusCode: statusCode)
+                result = self.resultForStatusCode(statusCode: statusCode)
             }
         }
-        return (statusCode, data, errorType)
+        
+        if let data = data, result == nil{
+            return (statusCode, .success(data))
+        }
+        else if let result = result{
+            return (statusCode, result)
+        }
+        else {
+            return (statusCode, .failure(.unknown))
+        }
     }
     
     // -----------------------------------------------------------
     // MARK: -- Decoding data
     // -----------------------------------------------------------
     
-    open func decodeData<T: Decodable>(_ data:Data, forType type:T.Type)->Any?{
+    open func decodeData<T: Decodable>(_ data:Data, forType type:T.Type) throws -> Any{
         
         var decoder = JSONDecoder()
         
         self.addDateEncodingToDecoder(decoder: &decoder)
         self.addCustomPropertiesToDecoder(decoder: &decoder)
         
-        var returnData:Any?
         do {
-            returnData = try decoder.decode(type, from: data)
+            return try decoder.decode(type, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {
             os_log("Decode Data >> Missing key: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, key.debugDescription, context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
+            throw DecodingError.keyNotFound(key, context)
+            
         } catch DecodingError.valueNotFound(let type, let context) {
             os_log("Decode Data: Missing value: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, "\(type)", context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
+            throw DecodingError.valueNotFound(type, context)
+            
         } catch DecodingError.typeMismatch(let type, let context) {
             os_log("Decode Data: Type mismatch: %{PUBLIC}@, with description: %{PUBLIC}@", log: OSLog.parsing, type: .error, "\(type)", context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
+            throw DecodingError.typeMismatch(type, context)
+            
         } catch DecodingError.dataCorrupted(let context){
             os_log("Decode Data: Data corrupted: %{PUBLIC}@", log: OSLog.parsing, type: .error, context.debugDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
-        } catch {
+            throw DecodingError.dataCorrupted(context)
+            
+        } catch let error {
             os_log("Decode Data: Unknown error: %{PUBLIC}@", log: OSLog.parsing, type: .error, error.localizedDescription)
             if self.showDebugErrors{
                 let debugString = String(data: data, encoding: String.Encoding.utf8)
                 os_log("Decode Data >> Failed parsed JSON: %{PUBLIC}@", log: OSLog.parsing, type: .debug, debugString ?? "JSON not found")
             }
+            throw error
+            
         }
-        return returnData
     }
     
     open func addDateEncodingToDecoder(decoder: inout JSONDecoder){
@@ -190,34 +215,32 @@ open class YipYipServicesBase {
     // MARK: -- Error processing
     // -----------------------------------------------------------
     
-    open func errorTypeForError(error:Error)->ServicesErrorType {
+    open func resultForError(error:Error) -> Result<Data, NetwerkError> {
         if let urlError = error as? URLError {
             switch urlError.code {
             case .notConnectedToInternet:
-                return .noInternet
+                return .failure(.noInternet)
             default:
-                return .unknown
+                return .failure(.unknown)
             }
         }
-        return .unknown
+        return .failure(.unknown)
     }
     
-    open func errorTypeForStatusCode(statusCode:Int)->ServicesErrorType? {
+    open func resultForStatusCode(statusCode:Int) -> Result<Data, NetwerkError>? {
         switch statusCode{
         case 200..<300:
             return nil
         case 400:
-            return .requestNotValid
+            return .failure(.requestNotValid)
         case 401:
-            return .unauthorized
+            return .failure(.unauthorized)
         case 403:
-            return .forbidden
+            return .failure(.forbidden)
         case 404:
-            return .contentNotFound
-        case 429:
-            return .tooManyRequests
+            return .failure(.contentNotFound)
         default:
-            return .unknown
+            return .failure(.unknown)
         }
     }
     
