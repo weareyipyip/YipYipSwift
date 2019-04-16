@@ -11,8 +11,7 @@ import YipYipSwift
 
 class Services: YipYipServicesBase{
     
-    //Test api calls: ttps://resttesttest.com/
-    
+    //Test api call from: https://resttesttest.com
     func testGetApiCall(completion:@escaping ((Result<TestGetResponse, NetwerkError>)->())) {
         self.executeURLRequest(path: "https://httpbin.org/get", method: "GET") { (statusCode, result) in
             do {

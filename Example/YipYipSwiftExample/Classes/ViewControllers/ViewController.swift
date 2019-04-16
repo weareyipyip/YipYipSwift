@@ -17,9 +17,6 @@ class ViewController: YipYipViewControllerBase {
         super.viewDidLoad()
         
         self.services.testGetApiCall { (result) in
-            
-            print("Return from api call: \(result)")
-            
             do{
                 let response = try result.get()
                  print("Url: \(response.url)")
@@ -27,7 +24,6 @@ class ViewController: YipYipViewControllerBase {
             catch let error{
                 print(error)
             }
-            
         }
         
     }
