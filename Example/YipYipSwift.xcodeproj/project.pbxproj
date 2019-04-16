@@ -7,38 +7,123 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B12244AEA7E1F1FC377ECD0 /* Pods_YipYipSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F962CBE8D2918CF68E3808CE /* Pods_YipYipSwift_Tests.framework */; };
+		05238F222264C1680092DF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F212264C1680092DF07 /* AppDelegate.swift */; };
+		05238F242264C1680092DF07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F232264C1680092DF07 /* ViewController.swift */; };
+		05238F272264C1680092DF07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F252264C1680092DF07 /* Main.storyboard */; };
+		05238F292264C1690092DF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05238F282264C1690092DF07 /* Assets.xcassets */; };
+		05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */; };
+		05238F332264C4340092DF07 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F322264C4340092DF07 /* Services.swift */; };
+		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YipYipSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05238F1F2264C1680092DF07 /* YipYipSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YipYipSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05238F212264C1680092DF07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05238F232264C1680092DF07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05238F262264C1680092DF07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05238F282264C1690092DF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05238F2B2264C1690092DF07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05238F2D2264C1690092DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05238F322264C4340092DF07 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64B787F8F8D0E0809AE804DF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7717B6882DABC3B431EDF45E /* Pods-YipYipSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YipYipSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D41C7A38D012C60016C7D51 /* Pods-YipYipSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YipYipSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8EE817740B6F685C38186925 /* YipYipSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YipYipSwift.podspec; path = ../YipYipSwift.podspec; sourceTree = "<group>"; };
+		8EE817740B6F685C38186925 /* YipYipSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YipYipSwift.podspec; path = ../YipYipSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB3C40829DC8F33B6F107C29 /* Pods-YipYipSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YipYipSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YipYipSwiftExample/Pods-YipYipSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		EFCDB1436146EE17B62D2269 /* Pods-YipYipSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YipYipSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YipYipSwiftExample/Pods-YipYipSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
 		F962CBE8D2918CF68E3808CE /* Pods_YipYipSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YipYipSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05238F1C2264C1680092DF07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE21AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B12244AEA7E1F1FC377ECD0 /* Pods_YipYipSwift_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05238F202264C1680092DF07 /* YipYipSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				05238F342264C45A0092DF07 /* Classes */,
+				05238F352264C4640092DF07 /* UserInterfaces */,
+				05238F382264C4A80092DF07 /* Resources */,
+				05238F2D2264C1690092DF07 /* Info.plist */,
+			);
+			path = YipYipSwiftExample;
+			sourceTree = "<group>";
+		};
+		05238F312264C4190092DF07 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				05238F322264C4340092DF07 /* Services.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		05238F342264C45A0092DF07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05238F212264C1680092DF07 /* AppDelegate.swift */,
+				05238F372264C48B0092DF07 /* ViewControllers */,
+				05238F312264C4190092DF07 /* Service */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		05238F352264C4640092DF07 /* UserInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				05238F362264C4730092DF07 /* Storyboards */,
+			);
+			path = UserInterfaces;
+			sourceTree = "<group>";
+		};
+		05238F362264C4730092DF07 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				05238F252264C1680092DF07 /* Main.storyboard */,
+				05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		05238F372264C48B0092DF07 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05238F232264C1680092DF07 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		05238F382264C4A80092DF07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05238F282264C1690092DF07 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1895EA913FBD3B073657E574 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F962CBE8D2918CF68E3808CE /* Pods_YipYipSwift_Tests.framework */,
+				0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -48,6 +133,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				05238F202264C1680092DF07 /* YipYipSwiftExample */,
 				607FACD11AFB9204008FA782 /* Products */,
 				CD319B345B43849DD490220D /* Pods */,
 				1895EA913FBD3B073657E574 /* Frameworks */,
@@ -58,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */,
+				05238F1F2264C1680092DF07 /* YipYipSwiftExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,8 +179,8 @@
 		CD319B345B43849DD490220D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7717B6882DABC3B431EDF45E /* Pods-YipYipSwift_Tests.debug.xcconfig */,
-				7D41C7A38D012C60016C7D51 /* Pods-YipYipSwift_Tests.release.xcconfig */,
+				EFCDB1436146EE17B62D2269 /* Pods-YipYipSwiftExample.debug.xcconfig */,
+				AB3C40829DC8F33B6F107C29 /* Pods-YipYipSwiftExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,16 +188,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		05238F1E2264C1680092DF07 /* YipYipSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05238F302264C1690092DF07 /* Build configuration list for PBXNativeTarget "YipYipSwiftExample" */;
+			buildPhases = (
+				306F98475FCBC9CB72FE9186 /* [CP] Check Pods Manifest.lock */,
+				05238F1B2264C1680092DF07 /* Sources */,
+				05238F1C2264C1680092DF07 /* Frameworks */,
+				05238F1D2264C1680092DF07 /* Resources */,
+				C0F4802BC105AF9965C1EFD1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YipYipSwiftExample;
+			productName = YipYipSwiftExample;
+			productReference = 05238F1F2264C1680092DF07 /* YipYipSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		607FACE41AFB9204008FA782 /* YipYipSwift_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "YipYipSwift_Tests" */;
 			buildPhases = (
-				3A455E5A48604B4638790062 /* Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				2F35E11A95162F5536BA0DCD /* Embed Pods Frameworks */,
-				89B2CA120875ABAA616938B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,10 +230,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					05238F1E2264C1680092DF07 = {
+						CreatedOnToolsVersion = 10.2;
+						DevelopmentTeam = 7298FDX4Y3;
+						ProvisioningStyle = Automatic;
+					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -142,6 +250,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -151,11 +260,22 @@
 			projectRoot = "";
 			targets = (
 				607FACE41AFB9204008FA782 /* YipYipSwift_Tests */,
+				05238F1E2264C1680092DF07 /* YipYipSwiftExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		05238F1D2264C1680092DF07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */,
+				05238F292264C1690092DF07 /* Assets.xcassets in Resources */,
+				05238F272264C1680092DF07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,54 +286,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F35E11A95162F5536BA0DCD /* Embed Pods Frameworks */ = {
+		306F98475FCBC9CB72FE9186 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YipYipSwiftExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A455E5A48604B4638790062 /* Check Pods Manifest.lock */ = {
+		C0F4802BC105AF9965C1EFD1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YipYipSwiftExample/Pods-YipYipSwiftExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YipYipSwift/YipYipSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YipYipSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		89B2CA120875ABAA616938B9 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YipYipSwift_Tests/Pods-YipYipSwift_Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YipYipSwiftExample/Pods-YipYipSwiftExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05238F1B2264C1680092DF07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05238F242264C1680092DF07 /* ViewController.swift in Sources */,
+				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
+				05238F332264C4340092DF07 /* Services.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,7 +353,102 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		05238F252264C1680092DF07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05238F262264C1680092DF07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05238F2B2264C1690092DF07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		05238F2E2264C1690092DF07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCDB1436146EE17B62D2269 /* Pods-YipYipSwiftExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7298FDX4Y3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = YipYipSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.yipyip.YipYipSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05238F2F2264C1690092DF07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3C40829DC8F33B6F107C29 /* Pods-YipYipSwiftExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7298FDX4Y3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = YipYipSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.yipyip.YipYipSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,7 +533,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7717B6882DABC3B431EDF45E /* Pods-YipYipSwift_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -330,7 +553,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D41C7A38D012C60016C7D51 /* Pods-YipYipSwift_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -348,6 +570,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05238F302264C1690092DF07 /* Build configuration list for PBXNativeTarget "YipYipSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05238F2E2264C1690092DF07 /* Debug */,
+				05238F2F2264C1690092DF07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "YipYipSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
