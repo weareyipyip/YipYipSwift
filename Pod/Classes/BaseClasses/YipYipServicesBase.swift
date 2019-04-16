@@ -9,6 +9,17 @@
 import Foundation
 import os.log
 
+public enum NetwerkError: Error{
+    case noInternet
+    case cannotParseData
+    case requestNotValid
+    case contentNotFound
+    case unauthorized
+    case forbidden
+    case unknown
+}
+
+
 open class YipYipServicesBase {
     
     // ----------------------------------------------------
