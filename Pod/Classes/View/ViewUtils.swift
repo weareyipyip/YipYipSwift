@@ -118,7 +118,7 @@ open class ViewUtils
         let basicAnimation = CABasicAnimation(keyPath: "transform.rotation")
         basicAnimation.toValue = CGFloat.pi * 2.0
         basicAnimation.duration = 2.0
-        basicAnimation.repeatCount = 99999999.0
+        basicAnimation.repeatCount = Float.infinity
         animation = basicAnimation
         
         imageView.layer.add(animation, forKey: "rotation")
