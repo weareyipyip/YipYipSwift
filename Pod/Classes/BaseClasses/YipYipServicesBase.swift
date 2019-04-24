@@ -99,7 +99,6 @@ open class YipYipServicesBase {
     }
     
     open func addHttpBodyForMethod(_ method: String, request: inout URLRequest, jsonVariables: [String:AnyObject]?){
-        
         // By default we will add the json as raw data.
         if method != "GET", let jsonVariables = jsonVariables {
             if let jsonData = YipYipUtils.json.dataFromDictionary(jsonVariables) {
