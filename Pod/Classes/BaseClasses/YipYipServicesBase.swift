@@ -82,11 +82,8 @@ open class YipYipServicesBase {
                 }
             }
             
-            if method != "GET" && jsonVariables != nil {
-                if let jsonData = YipYipUtils.json.dataFromDictionary(jsonVariables!) {
-                    request.httpBody = jsonData
-                }
-            }
+            // Parse json variables to the http body for the request
+            self.addHttpBodyForMethod(method, request: &request, jsonVariables: jsonVariables)
             
             request.httpMethod = method
             
@@ -98,6 +95,16 @@ open class YipYipServicesBase {
     open func addDefaultRequestHeadersForMethod(_ method: String, request: inout URLRequest){
         if method == "POST"{
             request.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
+        }
+    }
+    
+    open func addHttpBodyForMethod(_ method: String, request: inout URLRequest, jsonVariables: [String:AnyObject]?){
+        
+        // By default we will add the json as raw data.
+        if method != "GET", let jsonVariables = jsonVariables {
+            if let jsonData = YipYipUtils.json.dataFromDictionary(jsonVariables) {
+                request.httpBody = jsonData
+            }
         }
     }
     
