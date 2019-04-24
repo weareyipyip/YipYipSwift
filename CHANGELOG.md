@@ -2,7 +2,7 @@
 
 Significant changes to the project will be documented here.
 
-## [*.*.*](https://github.com/weareyipyip/YipYipSwift/releases/tag/*.*.*)
+## [1.2.4](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.2.4)
 
 - Moved adding json variables to the http body to a separate method so it can be overridden if needed
 
