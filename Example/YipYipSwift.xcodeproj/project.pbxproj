@@ -14,6 +14,7 @@
 		05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */; };
 		05238F332264C4340092DF07 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F322264C4340092DF07 /* Services.swift */; };
 		05238F3B2265B7630092DF07 /* TestGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F3A2265B7630092DF07 /* TestGetResponse.swift */; };
+		059285BA22C9FC36007E3B7F /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059285B922C9FC36007E3B7F /* AppStoreReviewManager.swift */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		05238F2D2264C1690092DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05238F322264C4340092DF07 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		05238F3A2265B7630092DF07 /* TestGetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetResponse.swift; sourceTree = "<group>"; };
+		059285B922C9FC36007E3B7F /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		05238F342264C45A0092DF07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				059285B822C9FB88007E3B7F /* Managers */,
 				05238F392265B7040092DF07 /* Model */,
 				05238F212264C1680092DF07 /* AppDelegate.swift */,
 				05238F372264C48B0092DF07 /* ViewControllers */,
@@ -128,6 +131,14 @@
 				05238F3A2265B7630092DF07 /* TestGetResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		059285B822C9FB88007E3B7F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				059285B922C9FC36007E3B7F /* AppStoreReviewManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		1895EA913FBD3B073657E574 /* Frameworks */ = {
@@ -243,7 +254,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = YipYip;
 				TargetAttributes = {
 					05238F1E2264C1680092DF07 = {
 						CreatedOnToolsVersion = 10.2;
@@ -351,6 +362,7 @@
 				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
 				05238F3B2265B7630092DF07 /* TestGetResponse.swift in Sources */,
 				05238F332264C4340092DF07 /* Services.swift in Sources */,
+				059285BA22C9FC36007E3B7F /* AppStoreReviewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
