@@ -1,6 +1,6 @@
 //
 //  ServicesBase.swift
-//  PersonHelp
+//  YipYipSwift
 //
 //  Created by Rens Wijnmalen on 11/05/2018.
 //  Copyright © 2018 YipYip. All rights reserved.
