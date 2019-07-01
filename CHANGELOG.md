@@ -2,6 +2,10 @@
 
 Significant changes to the project will be documented here.
 
+## [1.3.1](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.1)
+
+- Fixed a bug in the AppStoreReviewManager
+
 ## [1.3.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.0)
 
 - Added the AppStoreReviewManager
