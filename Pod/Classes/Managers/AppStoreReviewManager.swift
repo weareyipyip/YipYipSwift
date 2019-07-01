@@ -15,14 +15,14 @@ open class AppStoreReviewManager {
     public static var minimumReviewWorthyActionCount = 3
     public static var appStoreUrlPath:String = "" // example: https://apps.apple.com/app/{id}
     
-    static let reviewWorthyActionCount = "reviewWorthyActionCount"
-    static let lastReviewRequestAppVersion = "lastReviewRequestAppVersion"
+    private static let reviewWorthyActionCount = "reviewWorthyActionCount"
+    private static let lastReviewRequestAppVersion = "lastReviewRequestAppVersion"
     
     // ----------------------------------------------------
     // MARK: - Request for review methods
     // ----------------------------------------------------
     
-    static func requestReviewIfAppropriate() {
+    public static func requestReviewIfAppropriate() {
         
         let defaults = UserDefaults.standard
         let bundle = Bundle.main
@@ -58,7 +58,7 @@ open class AppStoreReviewManager {
         defaults.set(currentVersion, forKey: AppStoreReviewManager.lastReviewRequestAppVersion)
     }
     
-    static func forceRequestReview() {
+    public static func forceRequestReview() {
         
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
@@ -72,7 +72,7 @@ open class AppStoreReviewManager {
     // MARK: - Write review methods
     // ----------------------------------------------------
     
-    static func writeReview(){
+    public static func writeReview(){
         
         guard let appStoreUrl = URL(string: self.appStoreUrlPath) else {
             if self.appStoreUrlPath == ""{
