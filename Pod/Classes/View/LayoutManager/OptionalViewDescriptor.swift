@@ -1,6 +1,6 @@
 //
 //  OptionalViewDescriptor.swift
-//  YourLegalMatch
+//  YipYipSwift
 //
 //  Created by Marcel Bloemendaal on 19/11/15.
 //  Copyright © 2015 YipYip. All rights reserved.

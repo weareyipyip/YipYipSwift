@@ -1,6 +1,6 @@
 //
 //  NibView.swift
-//  Commando Training
+//  YipYipSwift
 //
 //  Created by Rens Wijnmalen on 15/06/2017.
 //  Copyright © 2017 YipYip. All rights reserved.

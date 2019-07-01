@@ -1,6 +1,6 @@
 //
 //  AppStoreReviewManager.swift
-//  Cyclemasters
+//  YipYipSwift
 //
 //  Created by Rens Wijnmalen on 01/07/2019.
 //  Copyright © 2019 YipYip. All rights reserved.

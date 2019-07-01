@@ -1,7 +1,7 @@
 
 //
 //  JSONUtils.swift
-//  Commando Training
+//  YipYipSwift
 //
 //  Created by Marcel Bloemendaal on 21/10/15.
 //  Copyright © 2015 YipYip. All rights reserved.
