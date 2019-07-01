@@ -2,7 +2,7 @@
 //  OSLog+DefaultLog.swift
 //  YipYipSwift
 //
-//  Created by Rens Wijnmalen on 28/01/2019.
+//  Created by YipYip on 28/01/2019.
 //
 
 import Foundation
@@ -23,4 +23,5 @@ extension OSLog {
     
     public static let userLoginFlow = OSLog(subsystem: subsystem, category: "userLoginFlow") // User login flow layer (Discuss)
     public static let analytics = OSLog(subsystem: subsystem, category: "analytics") // Analytics layer  (Discuss)
+    public static let reviewManager = OSLog(subsystem: subsystem, category: "reviewManager") // AppStoreReviewManager
 }

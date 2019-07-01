@@ -1,9 +1,9 @@
 //
 //  ConstraintDescriptor.swift
-//  Pods
+//  YipYipSwift
 //
 //  Created by Marcel Bloemendaal on 30/08/16.
-//
+//  Copyright © 2015 YipYip. All rights reserved.
 //
 
 import Foundation

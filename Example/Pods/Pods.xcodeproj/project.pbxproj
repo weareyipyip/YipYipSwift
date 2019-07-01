@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02BE6BE67C86AF26E222EEDA75D23D56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		059285C322CA07F5007E3B7F /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059285C222CA07F5007E3B7F /* AppStoreReviewManager.swift */; };
 		1EC5B7E144BBA75BDC9EFF896099D546 /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F78D5F9CAB5337B18F5537A347E58 /* OptionalViewDescriptor.swift */; };
 		25545CDDB6BE0582F2BAA6A46AB6CD8C /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D433FD0A87F297BECDD1DCB975632F /* ViewUtils.swift */; };
 		29F3E451A0DBE7CB70EA2AA828DF4830 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1507A021FEE43D5FB71DB113542065 /* TimeUtils.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		059285C222CA07F5007E3B7F /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		05D433FD0A87F297BECDD1DCB975632F /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		098F78D5F9CAB5337B18F5537A347E58 /* OptionalViewDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalViewDescriptor.swift; sourceTree = "<group>"; };
 		143756C40D8975DA385DD504E6751C3A /* YipYipViewModelBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipViewModelBase.swift; sourceTree = "<group>"; };
@@ -98,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059285C122CA07F5007E3B7F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				059285C222CA07F5007E3B7F /* AppStoreReviewManager.swift */,
+			);
+			name = Managers;
+			path = Pod/Classes/Managers;
+			sourceTree = "<group>";
+		};
 		0921BC37A54755EF0006D665EF21036B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +203,7 @@
 			children = (
 				32B5A8257AC63D2DA4085CC601305BAA /* YipYipUtils.swift */,
 				3037577722263254161C5DBEF0802451 /* BaseClasses */,
+				059285C122CA07F5007E3B7F /* Managers */,
 				57409E51B3CAA58FCE2F21AFD1283A60 /* Extensions */,
 				CB203DF9353397AFFE1823D05A3E1BBC /* Files */,
 				C90B8673861CB144D92B863398166330 /* JSON */,
@@ -400,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC5ADA6EB01E42AFA58E55E7A599275 /* Pods-YipYipSwiftExample-dummy.m in Sources */,
+				059285C322CA07F5007E3B7F /* AppStoreReviewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

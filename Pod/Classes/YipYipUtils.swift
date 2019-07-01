@@ -1,9 +1,9 @@
 //
-//  YipYip.swift
-//  Pods
+//  YipYipUtils.swift
+//  YipYipSwift
 //
 //  Created by Marcel Bloemendaal on 15/04/16.
-//
+//  Copyright © 2015 YipYip. All rights reserved.
 //
 
 import Foundation

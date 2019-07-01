@@ -1,6 +1,6 @@
 //
 //  ViewUtil.swift
-//  YipYip Swift Library
+//  YipYipSwift
 //
 //  Created by Marcel Bloemendaal on 22/09/15.
 //  Copyright © 2016 YipYip. All rights reserved.
