@@ -68,7 +68,6 @@
 		B061C34EAF97D7B698F028D6469AAD40 /* ConstraintDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstraintDescriptor.swift; sourceTree = "<group>"; };
 		B41CFC3A3F18A4F13C2FD2F2B0A4CFB8 /* YipYipSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YipYipSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B555854DAE3F4E920E715E08607C89A7 /* YipYipNibButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibButton.swift; sourceTree = "<group>"; };
-		BAA07F0E399D0C0D8EA468122B533CCA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BFC3A7DBC686EF9CACC959C5EA65D636 /* Pods-YipYipSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YipYipSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 		C0D06F0AC4C7044F9E0A5CA50B794C18 /* Pods-YipYipSwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YipYipSwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -236,7 +235,6 @@
 		B7DFE01B8DE8E91A6CEB66D4341B751B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				BAA07F0E399D0C0D8EA468122B533CCA /* LICENSE */,
 				1C58524C682C2C0EDB0518019F42AD9F /* README.md */,
 				B41CFC3A3F18A4F13C2FD2F2B0A4CFB8 /* YipYipSwift.podspec */,
 			);

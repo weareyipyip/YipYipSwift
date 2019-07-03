@@ -6,6 +6,8 @@
 //  Copyright © 2019 YipYip. All rights reserved.
 //
 
+//  Reference: https://www.raywenderlich.com/9009-requesting-app-ratings-and-reviews-tutorial-for-ios
+
 import Foundation
 import StoreKit
 import os.log
