@@ -2,6 +2,8 @@
 
 This is an internal library, not intended for use outside of YipYip.
 
+Current version: 1.3.3
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
