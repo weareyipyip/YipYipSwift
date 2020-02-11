@@ -2,6 +2,10 @@
 
 Significant changes to the project will be documented here.
 
+## [1.3.3](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.3)
+
+- Added Swift Package support
+
 ## [1.3.2](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.2)
 
 - Updated the readme file and removed the license
