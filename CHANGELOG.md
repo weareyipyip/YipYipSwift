@@ -1,5 +1,9 @@
 # Changelog
 
+Added swift extensions  support
+
+## [1.3.4](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.4)
+
 Significant changes to the project will be documented here.
 
 ## [1.3.3](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.3)
