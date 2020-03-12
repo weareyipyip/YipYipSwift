@@ -79,7 +79,7 @@ open class YipYipViewControllerBase: UIViewController {
         guard let keyboardEndFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
         guard let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         guard let keyboardAnimationCurve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int else { return }
-        guard let windowFrame = UIApplication.shared.keyWindow?.frame else { return }
+        guard let windowFrame = self.view.window?.frame else { return }
         
         let newHeight = windowFrame.height - keyboardEndFrame.origin.y
         let newWidth = keyboardEndFrame.width
