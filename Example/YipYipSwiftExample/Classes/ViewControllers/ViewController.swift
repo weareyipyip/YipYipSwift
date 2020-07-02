@@ -9,22 +9,10 @@
 import UIKit
 import YipYipSwift
 
-class ViewController: YipYipViewControllerBase {
-
-    let services = Services()
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.services.testGetApiCall { (result) in
-            do{
-                let response = try result.get()
-                 print("Url: \(response.url)")
-            }
-            catch let error{
-                print(error)
-            }
-        }
         
     }
     

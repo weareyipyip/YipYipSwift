@@ -14,4 +14,5 @@ open class YipYipUtils
     public static let files = FileUtils()
     public static let json = JSONUtils()
     public static let time = TimeUtils()
+    public static let constraints = ConstraintUtils()
 }

@@ -52,7 +52,7 @@ open class AppStoreReviewManager {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
-            os_log("SKStoreReviewController requestReview is not available in iOS versions below 10.3", log: OSLog.reviewManager, type: .debug)
+            os_log("SKStoreReviewController requestReview is not available in iOS versions below 10.3", log: OSLog.AppStoreReviewManager, type: .debug)
         }
         
         // Reset action count and set current app version
@@ -65,7 +65,7 @@ open class AppStoreReviewManager {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
-            os_log("SKStoreReviewController requestReview is not available in iOS versions below 10.3", log: OSLog.reviewManager, type: .debug)
+            os_log("SKStoreReviewController requestReview is not available in iOS versions below 10.3", log: OSLog.AppStoreReviewManager, type: .debug)
         }
         
     }
@@ -77,10 +77,10 @@ open class AppStoreReviewManager {
     public static func writeReview(){
         
         guard let appStoreUrl = URL(string: self.appStoreUrlPath) else {
-            if self.appStoreUrlPath == ""{
-                os_log("You have to configure the appStoreUrlPath for the AppStoreReviewManager. Add this line to your AppDelegate class AppStoreReviewManager.appStoreUrlPath = \"{appstore url}\".", log: OSLog.reviewManager, type: .debug)
+            if self.appStoreUrlPath == "" {
+                os_log("You have to configure the appStoreUrlPath for the AppStoreReviewManager. Add this line to your AppDelegate class AppStoreReviewManager.appStoreUrlPath = \"{appstore url}\".", log: OSLog.AppStoreReviewManager, type: .debug)
             } else {
-                os_log("The appStoreUrlPath you configured is not a valid URL", log: OSLog.reviewManager, type: .debug)
+                os_log("The appStoreUrlPath you configured is not a valid URL", log: OSLog.AppStoreReviewManager, type: .debug)
             }
             return
         }
@@ -96,7 +96,6 @@ open class AppStoreReviewManager {
         }
         
         UIApplication.shared.open(writeReviewURL)
-        
     }
     
 }
