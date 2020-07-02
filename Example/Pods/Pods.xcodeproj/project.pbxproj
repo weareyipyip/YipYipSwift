@@ -7,28 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		035519C1929E070391912D0B826CD3D9 /* YipYipNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7F3EFB8587325CB1D91C78C8E9F52 /* YipYipNibView.swift */; };
-		03C2C7CEF97AAC1695073E334EA5BD5E /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14391F027ECEE7D35F0A9804646245 /* OptionalViewDescriptor.swift */; };
-		05E6D85324AC744B0044A359 /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D85224AC744B0044A359 /* ConstraintUtils.swift */; };
-		0EEF4C6D0E274CD2C4CBD6FDF017E96B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		11D90AA94249F59510A8E436910334D7 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2101BE3418BDBE12833AD23031EA740 /* FileUtils.swift */; };
-		1C5B26F506AA5ACF28AD3013AA52DB11 /* ConstraintDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2919E4A21201A1E33135DF416C0F374A /* ConstraintDescriptor.swift */; };
-		2129C5C77AC36FE54E32ACAA92F77542 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4449BBEB84846E10A03A5E90695560 /* TimeUtils.swift */; };
-		2ACB639D0767A26FF51AF0733BD4214F /* YipYipSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 670CEE4F472EF0315BEF36A1712629E7 /* YipYipSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B9D98EEF5E1D52AD337E57CC9491819 /* YipYipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1759ADBC2BD8ED7CF6D47DDB233B47 /* YipYipUtils.swift */; };
-		34C99517E336AEAE728B4B96F14AE819 /* YipYipServicesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450645A946854E9884F65E446F19E20B /* YipYipServicesBase.swift */; };
-		50B89EA63D60FCE5A37F843A60CBAFA2 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC652DBBF69E6E606E76F2FFEBFE8116 /* JSONUtils.swift */; };
-		8A90178DC0C6D2675CAD1E3B87EDDAB3 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C6D5C4ED6093F89B7B3BA975ECD05 /* AppStoreReviewManager.swift */; };
-		8EA73E1B5D90FFCE1AECEE858C025297 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3134991A160782DCF65811C0F7E1B89 /* LayoutManager.swift */; };
-		9ED8C11A1668317BFB6E277E957DE5B7 /* YipYipViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3680894EC7F0F425C1DED03302CAC1 /* YipYipViewModelBase.swift */; };
-		A8B76C0B72BA2ED4761E730607947934 /* YipYipNibButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EF6047B92F0AAA94A3F3153FD37936 /* YipYipNibButton.swift */; };
-		AB2B9ECEA7824A430FF9E0AA538B75B7 /* OSLog+DefaultLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0FD50876649F70508D069A38ED6B5 /* OSLog+DefaultLog.swift */; };
-		B32E2013DE3676B97AD2CC95E3F746EE /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C718E055F5574254B10199BB85E01 /* ViewUtils.swift */; };
-		C2DB361895F5D7E71300CC7645A36749 /* YipYipViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7453B43CF0D45CF4D8E54E5CA430E /* YipYipViewControllerBase.swift */; };
+		18E0744B787819E23B664D3162BD5781 /* YipYipNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340B554BB1696FA6197A6D0FFB473E0 /* YipYipNibView.swift */; };
+		199E16F7116A14283E3C0B707AA82C6F /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A365E69C983225CB78A3606F139F72 /* JSONUtils.swift */; };
+		4C6ACBE256A16C202E8496CF5741B6D7 /* YipYipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8422141E60AFD1A1D951A0212D6CE /* YipYipUtils.swift */; };
+		56E945BA2CD2C90AA0CB260051E2DA4B /* YipYipSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9318B889D322944D08797AD60037 /* YipYipSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		787E06C0407F0AFDE303520284D65B88 /* OSLog+YipYipSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4EFB90ACE40BD666A254612A87C60 /* OSLog+YipYipSwift.swift */; };
+		7AAB659EE3FE61E7C66C139FB69514B7 /* ConstraintDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC45AB5F4BC0AC1A2400F5DC526007 /* ConstraintDescriptor.swift */; };
+		7D2A0F5E1E15A71908E9D2555FBE423D /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F93FB0ACA9D048271E3B7004B39CE /* ConstraintUtils.swift */; };
+		8D771343C33B6816A87A535A94B53C79 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2DD0804EFD45F11D79A26F16F6E0C8 /* ViewUtils.swift */; };
+		AF00C33F13D3164775B5B14E092EFDC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B398DC8C18F956796559C9D473926BA9 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE70A3699BDE760E0EA38C677448A9 /* AppStoreReviewManager.swift */; };
+		D1076B1B76F30F30F7919FA53B86FE52 /* YipYipSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB055BB3CFDCA726EAEB7A54C653D6 /* YipYipSwift-dummy.m */; };
+		D18CA535D0106A3AED40556F1874BAC7 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C3E4DD4DA8DABDA1D19188D146BE5 /* TimeUtils.swift */; };
+		D4AF5ED0B4C897364825743A12F393BC /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE218219D9E20EE0BC6FBAFF495C2BF9 /* OptionalViewDescriptor.swift */; };
 		D96417A232EF56D6DA594E73A97413C3 /* Pods-YipYipSwiftExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2C8D6A8E1FBAF81A632B34E3B1F3CA /* Pods-YipYipSwiftExample-dummy.m */; };
 		E83797BB329B01C56467A0DB3959D495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EA0B4BDAD67587ABCFA3A1B67C9DA9A6 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C5535424679A2104151E52144E005 /* FileUtils.swift */; };
 		F284D3CEC8529F85156EB7967AE69188 /* Pods-YipYipSwiftExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A324DCB72D362F126FD6451560646E94 /* Pods-YipYipSwiftExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9FAC60B4290629E243EE5A841C8A2CC /* YipYipSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B8B8D72C757C58D4B8ED3DCB2431 /* YipYipSwift-dummy.m */; };
+		F2E91B2360EFB14BD91B5EC7C5D18D08 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27549A3E1CC62337EA9D8C8B8DC45EC /* LayoutManager.swift */; };
+		FBB19E7AFC7323D7A86722AD20D2FCE2 /* YipYipNibButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4976C95B2FE8DD397A6125D472272E /* YipYipNibButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,43 +39,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A15F2B85CF4916AB47EFFD9FB38241 /* Pods_YipYipSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YipYipSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		05E6D85224AC744B0044A359 /* ConstraintUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
-		1B5C6D5C4ED6093F89B7B3BA975ECD05 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		04A15F2B85CF4916AB47EFFD9FB38241 /* Pods_YipYipSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YipYipSwiftExample.framework; path = "Pods-YipYipSwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD4EFB90ACE40BD666A254612A87C60 /* OSLog+YipYipSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "OSLog+YipYipSwift.swift"; sourceTree = "<group>"; };
 		2151594512147FDCBBC92134EDAB3E96 /* Pods-YipYipSwiftExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YipYipSwiftExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		2919E4A21201A1E33135DF416C0F374A /* ConstraintDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstraintDescriptor.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3245EEBA097EB18926883A6D10158655 /* YipYipSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YipYipSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35C3C34D25F47B205BB477C073ECAEB7 /* YipYipSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YipYipSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		36EF6047B92F0AAA94A3F3153FD37936 /* YipYipNibButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibButton.swift; sourceTree = "<group>"; };
-		3E4449BBEB84846E10A03A5E90695560 /* TimeUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
-		450645A946854E9884F65E446F19E20B /* YipYipServicesBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipServicesBase.swift; sourceTree = "<group>"; };
+		3245EEBA097EB18926883A6D10158655 /* YipYipSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YipYipSwift.framework; path = YipYipSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A449DD0D10868241445AFDBA2F46BEA /* Pods-YipYipSwiftExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YipYipSwiftExample-frameworks.sh"; sourceTree = "<group>"; };
-		5224AA7F10605298F5C994C8720473D6 /* YipYipSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-prefix.pch"; sourceTree = "<group>"; };
-		56C7F3EFB8587325CB1D91C78C8E9F52 /* YipYipNibView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibView.swift; sourceTree = "<group>"; };
-		62BB663022F3768BAE5A7877D269C26B /* YipYipSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YipYipSwift-Info.plist"; sourceTree = "<group>"; };
-		63A2B8B8D72C757C58D4B8ED3DCB2431 /* YipYipSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YipYipSwift-dummy.m"; sourceTree = "<group>"; };
-		670CEE4F472EF0315BEF36A1712629E7 /* YipYipSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-umbrella.h"; sourceTree = "<group>"; };
+		4AC4825183336D4703C149B85C3F3C12 /* YipYipSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YipYipSwift.modulemap; sourceTree = "<group>"; };
+		4D6F93FB0ACA9D048271E3B7004B39CE /* ConstraintUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
+		53BB055BB3CFDCA726EAEB7A54C653D6 /* YipYipSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YipYipSwift-dummy.m"; sourceTree = "<group>"; };
+		58EE70A3699BDE760E0EA38C677448A9 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		5D3A9B4AB1779155CF3061FB82DAF5B0 /* YipYipSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.debug.xcconfig; sourceTree = "<group>"; };
+		60B8422141E60AFD1A1D951A0212D6CE /* YipYipUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YipYipUtils.swift; path = Sources/YipYipSwift/Classes/YipYipUtils.swift; sourceTree = "<group>"; };
 		745056ED6B89C6F0948A51EE27F60202 /* Pods-YipYipSwiftExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YipYipSwiftExample.modulemap"; sourceTree = "<group>"; };
-		7B5C718E055F5574254B10199BB85E01 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1A2F4415A0FD8046D67C5B86D3323A7 /* YipYipSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.xcconfig; sourceTree = "<group>"; };
+		74A365E69C983225CB78A3606F139F72 /* JSONUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		8376A7179BB11CCA51A76673B21757B9 /* YipYipSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.release.xcconfig; sourceTree = "<group>"; };
+		982C3E4DD4DA8DABDA1D19188D146BE5 /* TimeUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		9C4976C95B2FE8DD397A6125D472272E /* YipYipNibButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibButton.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A24D54EB1679B21EACAF6A52AAB2B9CE /* Pods-YipYipSwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YipYipSwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3134991A160782DCF65811C0F7E1B89 /* LayoutManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
+		A27549A3E1CC62337EA9D8C8B8DC45EC /* LayoutManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
 		A324DCB72D362F126FD6451560646E94 /* Pods-YipYipSwiftExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YipYipSwiftExample-umbrella.h"; sourceTree = "<group>"; };
+		A340B554BB1696FA6197A6D0FFB473E0 /* YipYipNibView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibView.swift; sourceTree = "<group>"; };
+		A38F9318B889D322944D08797AD60037 /* YipYipSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-umbrella.h"; sourceTree = "<group>"; };
+		A893145753225705898E76F7A135D1C7 /* YipYipSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YipYipSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB2C8D6A8E1FBAF81A632B34E3B1F3CA /* Pods-YipYipSwiftExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YipYipSwiftExample-dummy.m"; sourceTree = "<group>"; };
+		ADFD02BA1EFB3EA93221FDE6B945119C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		AE017B2BD2F294F64DFDED51DC46828E /* Pods-YipYipSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YipYipSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
-		AF3680894EC7F0F425C1DED03302CAC1 /* YipYipViewModelBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipViewModelBase.swift; sourceTree = "<group>"; };
 		B034363C280D24A766FCB05D18348268 /* Pods-YipYipSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YipYipSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
-		BD1759ADBC2BD8ED7CF6D47DDB233B47 /* YipYipUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YipYipUtils.swift; path = Sources/YipYipSwift/Classes/YipYipUtils.swift; sourceTree = "<group>"; };
-		C2101BE3418BDBE12833AD23031EA740 /* FileUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
-		C4E0FD50876649F70508D069A38ED6B5 /* OSLog+DefaultLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "OSLog+DefaultLog.swift"; sourceTree = "<group>"; };
-		C4F7453B43CF0D45CF4D8E54E5CA430E /* YipYipViewControllerBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipViewControllerBase.swift; sourceTree = "<group>"; };
-		D2E7EE9AD565D1609FEBA2C459CE99BB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B80579D5D23A2D53FE62B155CC5DAE5A /* YipYipSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-prefix.pch"; sourceTree = "<group>"; };
+		BDBC45AB5F4BC0AC1A2400F5DC526007 /* ConstraintDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstraintDescriptor.swift; sourceTree = "<group>"; };
+		CA9D8E6DC164ECB90E35DC4FCBEC1703 /* YipYipSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YipYipSwift-Info.plist"; sourceTree = "<group>"; };
 		DB5EED6DB51E5D41DEF2FA2D08A61920 /* Pods-YipYipSwiftExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YipYipSwiftExample-Info.plist"; sourceTree = "<group>"; };
-		EC14391F027ECEE7D35F0A9804646245 /* OptionalViewDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalViewDescriptor.swift; sourceTree = "<group>"; };
-		EEC7B3EC039302E76C96AD123A5780C2 /* YipYipSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YipYipSwift.modulemap; sourceTree = "<group>"; };
-		FC652DBBF69E6E606E76F2FFEBFE8116 /* JSONUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		E09C5535424679A2104151E52144E005 /* FileUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		EE218219D9E20EE0BC6FBAFF495C2BF9 /* OptionalViewDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalViewDescriptor.swift; sourceTree = "<group>"; };
+		EF2DD0804EFD45F11D79A26F16F6E0C8 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,48 +85,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A484998AD3B76A1C6C11AF9057EC408 /* Frameworks */ = {
+		513C619327A423389716234BE788BAED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EEF4C6D0E274CD2C4CBD6FDF017E96B /* Foundation.framework in Frameworks */,
+				AF00C33F13D3164775B5B14E092EFDC5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00739468AC3D667EF71E03EFD41F5384 /* View */ = {
+		111032A58F5076BCD3D51A1225300822 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8AB7DDEEC14C7C4118B237CE11DDA07B /* Components */,
-				78E88B33AA28655CF74A05E56095A95A /* LayoutManager */,
+				4AC4825183336D4703C149B85C3F3C12 /* YipYipSwift.modulemap */,
+				53BB055BB3CFDCA726EAEB7A54C653D6 /* YipYipSwift-dummy.m */,
+				CA9D8E6DC164ECB90E35DC4FCBEC1703 /* YipYipSwift-Info.plist */,
+				B80579D5D23A2D53FE62B155CC5DAE5A /* YipYipSwift-prefix.pch */,
+				A38F9318B889D322944D08797AD60037 /* YipYipSwift-umbrella.h */,
+				5D3A9B4AB1779155CF3061FB82DAF5B0 /* YipYipSwift.debug.xcconfig */,
+				8376A7179BB11CCA51A76673B21757B9 /* YipYipSwift.release.xcconfig */,
 			);
-			name = View;
-			path = Sources/YipYipSwift/Classes/View;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YipYipSwift";
 			sourceTree = "<group>";
 		};
-		05E6D85124AC73D70044A359 /* Utils */ = {
+		18990FC6C99275DBD208CE6BFE3F090D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C2101BE3418BDBE12833AD23031EA740 /* FileUtils.swift */,
-				FC652DBBF69E6E606E76F2FFEBFE8116 /* JSONUtils.swift */,
-				3E4449BBEB84846E10A03A5E90695560 /* TimeUtils.swift */,
-				7B5C718E055F5574254B10199BB85E01 /* ViewUtils.swift */,
-				05E6D85224AC744B0044A359 /* ConstraintUtils.swift */,
+				4D6F93FB0ACA9D048271E3B7004B39CE /* ConstraintUtils.swift */,
+				E09C5535424679A2104151E52144E005 /* FileUtils.swift */,
+				74A365E69C983225CB78A3606F139F72 /* JSONUtils.swift */,
+				982C3E4DD4DA8DABDA1D19188D146BE5 /* TimeUtils.swift */,
+				EF2DD0804EFD45F11D79A26F16F6E0C8 /* ViewUtils.swift */,
 			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		0C98942122668114A359C3CBD8CFCF09 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				450645A946854E9884F65E446F19E20B /* YipYipServicesBase.swift */,
-				C4F7453B43CF0D45CF4D8E54E5CA430E /* YipYipViewControllerBase.swift */,
-				AF3680894EC7F0F425C1DED03302CAC1 /* YipYipViewModelBase.swift */,
-			);
-			name = BaseClasses;
-			path = Sources/YipYipSwift/Classes/BaseClasses;
+			name = Utils;
+			path = Sources/YipYipSwift/Classes/Utils;
 			sourceTree = "<group>";
 		};
 		380211E5827576D3B8CC9015B6AB5274 /* Targets Support Files */ = {
@@ -140,6 +130,15 @@
 				F0D9105C6AFF130245AA1EF921A5040E /* Pods-YipYipSwiftExample */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3C91A0DB7EE2C75EE7B4010E30D4D01D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DD4EFB90ACE40BD666A254612A87C60 /* OSLog+YipYipSwift.swift */,
+			);
+			name = Extensions;
+			path = Sources/YipYipSwift/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		3E3B97FA8733451EE15365D3C11B260A /* Products */ = {
@@ -151,66 +150,56 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40260B6CD10C118EC0BDC697A0AD24F2 /* Managers */ = {
+		3F32D14EB129E41E5028011D6571E088 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B5C6D5C4ED6093F89B7B3BA975ECD05 /* AppStoreReviewManager.swift */,
+				9AF6AB99DB9D10F98B8F8B072E34DD6A /* Components */,
+				D71AE1A0C1349D230BE77457C32C8AC7 /* LayoutManager */,
 			);
-			name = Managers;
-			path = Sources/YipYipSwift/Classes/Managers;
+			name = View;
+			path = Sources/YipYipSwift/Classes/View;
 			sourceTree = "<group>";
 		};
-		72DB31D0814DBA22A0120955786D38CD /* Extensions */ = {
+		649D28B72B84F3076E5B13F5D0E84457 /* YipYipSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C4E0FD50876649F70508D069A38ED6B5 /* OSLog+DefaultLog.swift */,
-			);
-			name = Extensions;
-			path = Sources/YipYipSwift/Classes/Extensions;
-			sourceTree = "<group>";
-		};
-		78E88B33AA28655CF74A05E56095A95A /* LayoutManager */ = {
-			isa = PBXGroup;
-			children = (
-				2919E4A21201A1E33135DF416C0F374A /* ConstraintDescriptor.swift */,
-				A3134991A160782DCF65811C0F7E1B89 /* LayoutManager.swift */,
-				EC14391F027ECEE7D35F0A9804646245 /* OptionalViewDescriptor.swift */,
-			);
-			path = LayoutManager;
-			sourceTree = "<group>";
-		};
-		8AB7DDEEC14C7C4118B237CE11DDA07B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				36EF6047B92F0AAA94A3F3153FD37936 /* YipYipNibButton.swift */,
-				56C7F3EFB8587325CB1D91C78C8E9F52 /* YipYipNibView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		BA9E6B797BD74C7A197CC983CCFD2A59 /* YipYipSwift */ = {
-			isa = PBXGroup;
-			children = (
-				05E6D85124AC73D70044A359 /* Utils */,
-				BD1759ADBC2BD8ED7CF6D47DDB233B47 /* YipYipUtils.swift */,
-				0C98942122668114A359C3CBD8CFCF09 /* BaseClasses */,
-				72DB31D0814DBA22A0120955786D38CD /* Extensions */,
-				40260B6CD10C118EC0BDC697A0AD24F2 /* Managers */,
-				BD317FC0F16EBFD69FF20DF7FC061B40 /* Pod */,
-				DE18132B94A115D59AF740206B43925D /* Support Files */,
-				00739468AC3D667EF71E03EFD41F5384 /* View */,
+				60B8422141E60AFD1A1D951A0212D6CE /* YipYipUtils.swift */,
+				3C91A0DB7EE2C75EE7B4010E30D4D01D /* Extensions */,
+				D604B19160A93136252B8E7E84C2B146 /* Managers */,
+				784856D49D47319B9D075C13C504E55B /* Pod */,
+				111032A58F5076BCD3D51A1225300822 /* Support Files */,
+				18990FC6C99275DBD208CE6BFE3F090D /* Utils */,
+				3F32D14EB129E41E5028011D6571E088 /* View */,
 			);
 			name = YipYipSwift;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		BD317FC0F16EBFD69FF20DF7FC061B40 /* Pod */ = {
+		784856D49D47319B9D075C13C504E55B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D2E7EE9AD565D1609FEBA2C459CE99BB /* README.md */,
-				35C3C34D25F47B205BB477C073ECAEB7 /* YipYipSwift.podspec */,
+				ADFD02BA1EFB3EA93221FDE6B945119C /* README.md */,
+				A893145753225705898E76F7A135D1C7 /* YipYipSwift.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		78E2F0B92F8093C54678ECA17A66F47C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				649D28B72B84F3076E5B13F5D0E84457 /* YipYipSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9AF6AB99DB9D10F98B8F8B072E34DD6A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9C4976C95B2FE8DD397A6125D472272E /* YipYipNibButton.swift */,
+				A340B554BB1696FA6197A6D0FFB473E0 /* YipYipNibView.swift */,
+			);
+			name = Components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -225,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D43957634D67B46E0DB06454971510C7 /* Development Pods */,
+				78E2F0B92F8093C54678ECA17A66F47C /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				3E3B97FA8733451EE15365D3C11B260A /* Products */,
 				380211E5827576D3B8CC9015B6AB5274 /* Targets Support Files */,
@@ -240,26 +229,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D43957634D67B46E0DB06454971510C7 /* Development Pods */ = {
+		D604B19160A93136252B8E7E84C2B146 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				BA9E6B797BD74C7A197CC983CCFD2A59 /* YipYipSwift */,
+				58EE70A3699BDE760E0EA38C677448A9 /* AppStoreReviewManager.swift */,
 			);
-			name = "Development Pods";
+			name = Managers;
+			path = Sources/YipYipSwift/Classes/Managers;
 			sourceTree = "<group>";
 		};
-		DE18132B94A115D59AF740206B43925D /* Support Files */ = {
+		D71AE1A0C1349D230BE77457C32C8AC7 /* LayoutManager */ = {
 			isa = PBXGroup;
 			children = (
-				EEC7B3EC039302E76C96AD123A5780C2 /* YipYipSwift.modulemap */,
-				A1A2F4415A0FD8046D67C5B86D3323A7 /* YipYipSwift.xcconfig */,
-				63A2B8B8D72C757C58D4B8ED3DCB2431 /* YipYipSwift-dummy.m */,
-				62BB663022F3768BAE5A7877D269C26B /* YipYipSwift-Info.plist */,
-				5224AA7F10605298F5C994C8720473D6 /* YipYipSwift-prefix.pch */,
-				670CEE4F472EF0315BEF36A1712629E7 /* YipYipSwift-umbrella.h */,
+				BDBC45AB5F4BC0AC1A2400F5DC526007 /* ConstraintDescriptor.swift */,
+				A27549A3E1CC62337EA9D8C8B8DC45EC /* LayoutManager.swift */,
+				EE218219D9E20EE0BC6FBAFF495C2BF9 /* OptionalViewDescriptor.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/YipYipSwift";
+			name = LayoutManager;
+			path = LayoutManager;
 			sourceTree = "<group>";
 		};
 		F0D9105C6AFF130245AA1EF921A5040E /* Pods-YipYipSwiftExample */ = {
@@ -282,6 +269,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1F80E0624D5D2346B845DA11F63B19EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56E945BA2CD2C90AA0CB260051E2DA4B /* YipYipSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6A34A31DFB2A10FF69A8E45DA7FACCB3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,25 +285,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73A0C21BAE740650E8000AE575206A3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2ACB639D0767A26FF51AF0733BD4214F /* YipYipSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		57EC4788FD47C216D6A71D1708267761 /* YipYipSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F8ADB1EBEA4277105F33F87AC1BA340 /* Build configuration list for PBXNativeTarget "YipYipSwift" */;
+			buildConfigurationList = F29C83EDC0C6F56F2999D44B15EEED68 /* Build configuration list for PBXNativeTarget "YipYipSwift" */;
 			buildPhases = (
-				C73A0C21BAE740650E8000AE575206A3 /* Headers */,
-				4B0261E7281E82DDF05B95616D3959B3 /* Sources */,
-				8A484998AD3B76A1C6C11AF9057EC408 /* Frameworks */,
-				C8354C1602FE198492FE8A2885DDF8F5 /* Resources */,
+				1F80E0624D5D2346B845DA11F63B19EC /* Headers */,
+				A9EEB90641E715EF3A0F153296E1F097 /* Sources */,
+				513C619327A423389716234BE788BAED /* Frameworks */,
+				E17C4CBA49818271DB7F0098ECE3CDA6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -346,11 +333,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					E5012661FA234A557678785E69008F80 = {
-						LastSwiftMigration = 1150;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -358,6 +340,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 3E3B97FA8733451EE15365D3C11B260A /* Products */;
@@ -378,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8354C1602FE198492FE8A2885DDF8F5 /* Resources */ = {
+		E17C4CBA49818271DB7F0098ECE3CDA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,26 +371,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B0261E7281E82DDF05B95616D3959B3 /* Sources */ = {
+		A9EEB90641E715EF3A0F153296E1F097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A90178DC0C6D2675CAD1E3B87EDDAB3 /* AppStoreReviewManager.swift in Sources */,
-				1C5B26F506AA5ACF28AD3013AA52DB11 /* ConstraintDescriptor.swift in Sources */,
-				11D90AA94249F59510A8E436910334D7 /* FileUtils.swift in Sources */,
-				50B89EA63D60FCE5A37F843A60CBAFA2 /* JSONUtils.swift in Sources */,
-				8EA73E1B5D90FFCE1AECEE858C025297 /* LayoutManager.swift in Sources */,
-				03C2C7CEF97AAC1695073E334EA5BD5E /* OptionalViewDescriptor.swift in Sources */,
-				AB2B9ECEA7824A430FF9E0AA538B75B7 /* OSLog+DefaultLog.swift in Sources */,
-				2129C5C77AC36FE54E32ACAA92F77542 /* TimeUtils.swift in Sources */,
-				B32E2013DE3676B97AD2CC95E3F746EE /* ViewUtils.swift in Sources */,
-				A8B76C0B72BA2ED4761E730607947934 /* YipYipNibButton.swift in Sources */,
-				035519C1929E070391912D0B826CD3D9 /* YipYipNibView.swift in Sources */,
-				34C99517E336AEAE728B4B96F14AE819 /* YipYipServicesBase.swift in Sources */,
-				F9FAC60B4290629E243EE5A841C8A2CC /* YipYipSwift-dummy.m in Sources */,
-				2B9D98EEF5E1D52AD337E57CC9491819 /* YipYipUtils.swift in Sources */,
-				C2DB361895F5D7E71300CC7645A36749 /* YipYipViewControllerBase.swift in Sources */,
-				9ED8C11A1668317BFB6E277E957DE5B7 /* YipYipViewModelBase.swift in Sources */,
+				B398DC8C18F956796559C9D473926BA9 /* AppStoreReviewManager.swift in Sources */,
+				7AAB659EE3FE61E7C66C139FB69514B7 /* ConstraintDescriptor.swift in Sources */,
+				7D2A0F5E1E15A71908E9D2555FBE423D /* ConstraintUtils.swift in Sources */,
+				EA0B4BDAD67587ABCFA3A1B67C9DA9A6 /* FileUtils.swift in Sources */,
+				199E16F7116A14283E3C0B707AA82C6F /* JSONUtils.swift in Sources */,
+				F2E91B2360EFB14BD91B5EC7C5D18D08 /* LayoutManager.swift in Sources */,
+				D4AF5ED0B4C897364825743A12F393BC /* OptionalViewDescriptor.swift in Sources */,
+				787E06C0407F0AFDE303520284D65B88 /* OSLog+YipYipSwift.swift in Sources */,
+				D18CA535D0106A3AED40556F1874BAC7 /* TimeUtils.swift in Sources */,
+				8D771343C33B6816A87A535A94B53C79 /* ViewUtils.swift in Sources */,
+				FBB19E7AFC7323D7A86722AD20D2FCE2 /* YipYipNibButton.swift in Sources */,
+				18E0744B787819E23B664D3162BD5781 /* YipYipNibView.swift in Sources */,
+				D1076B1B76F30F30F7919FA53B86FE52 /* YipYipSwift-dummy.m in Sources */,
+				4C6ACBE256A16C202E8496CF5741B6D7 /* YipYipUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E6D85324AC744B0044A359 /* ConstraintUtils.swift in Sources */,
 				D96417A232EF56D6DA594E73A97413C3 /* Pods-YipYipSwiftExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +417,6 @@
 			baseConfigurationReference = B034363C280D24A766FCB05D18348268 /* Pods-YipYipSwiftExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -461,7 +440,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -538,7 +516,6 @@
 			baseConfigurationReference = AE017B2BD2F294F64DFDED51DC46828E /* Pods-YipYipSwiftExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -562,17 +539,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9355653330A1CAE1FB1320F22E81F0BB /* Release */ = {
+		782E457FE70733CB55591CD2E647499D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1A2F4415A0FD8046D67C5B86D3323A7 /* YipYipSwift.xcconfig */;
+			baseConfigurationReference = 8376A7179BB11CCA51A76673B21757B9 /* YipYipSwift.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -602,6 +577,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		81DE6A4464F77B46CD4FBEC108F81DA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D3A9B4AB1779155CF3061FB82DAF5B0 /* YipYipSwift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YipYipSwift/YipYipSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YipYipSwift/YipYipSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YipYipSwift/YipYipSwift.modulemap";
+				PRODUCT_MODULE_NAME = YipYipSwift;
+				PRODUCT_NAME = YipYipSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -656,43 +663,12 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		E371BE085E52A88FE7D7F4B7369847DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1A2F4415A0FD8046D67C5B86D3323A7 /* YipYipSwift.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YipYipSwift/YipYipSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YipYipSwift/YipYipSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YipYipSwift/YipYipSwift.modulemap";
-				PRODUCT_MODULE_NAME = YipYipSwift;
-				PRODUCT_NAME = YipYipSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -715,11 +691,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F8ADB1EBEA4277105F33F87AC1BA340 /* Build configuration list for PBXNativeTarget "YipYipSwift" */ = {
+		F29C83EDC0C6F56F2999D44B15EEED68 /* Build configuration list for PBXNativeTarget "YipYipSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E371BE085E52A88FE7D7F4B7369847DF /* Debug */,
-				9355653330A1CAE1FB1320F22E81F0BB /* Release */,
+				81DE6A4464F77B46CD4FBEC108F81DA6 /* Debug */,
+				782E457FE70733CB55591CD2E647499D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
