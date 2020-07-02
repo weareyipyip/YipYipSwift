@@ -1,6 +1,6 @@
 {
   "name": "YipYipSwift",
-  "version": "1.3.2",
+  "version": "1.3.4",
   "summary": "A collection of utilities",
   "description": "YipYip's Swift library containing utils for commonly used functionalities when building apps.",
   "homepage": "https://github.com/weareyipyip/YipYipSwift",
@@ -10,12 +10,14 @@
   },
   "source": {
     "git": "git@github.com:weareyipyip/YipYipSwift.git",
-    "tag": "1.3.2"
+    "tag": "1.3.4"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "swift_versions": "5.0",
+  "swift_versions": [
+    "5.0"
+  ],
   "requires_arc": true,
   "source_files": "Sources/YipYipSwift/Classes/**/*",
   "swift_version": "5.0"
