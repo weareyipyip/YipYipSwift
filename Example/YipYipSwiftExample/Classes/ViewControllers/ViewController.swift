@@ -27,7 +27,6 @@ class ViewController: YipYipViewControllerBase {
         }
         
     }
-
-
+    
 }
 

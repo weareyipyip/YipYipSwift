@@ -14,6 +14,13 @@
 		05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */; };
 		05238F332264C4340092DF07 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F322264C4340092DF07 /* Services.swift */; };
 		05238F3B2265B7630092DF07 /* TestGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05238F3A2265B7630092DF07 /* TestGetResponse.swift */; };
+		05A8B4FF24AE0FAD009436BE /* PagedTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B4FE24AE0FAD009436BE /* PagedTableView.storyboard */; };
+		05A8B50124AE1080009436BE /* TestTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50024AE1080009436BE /* TestTableViewDataSource.swift */; };
+		05E6D86224AC8A710044A359 /* PagedTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D86124AC8A710044A359 /* PagedTableViewViewController.swift */; };
+		05E6D86524AC8AEA0044A359 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D86424AC8AEA0044A359 /* CustomTableView.swift */; };
+		05E6D86724AC8ECC0044A359 /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D86624AC8ECC0044A359 /* EmptyDataView.swift */; };
+		05E6D86924AC91D90044A359 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E6D86824AC91D90044A359 /* EmptyDataView.xib */; };
+		05E6D86C24AC92BE0044A359 /* TestDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D86B24AC92BE0044A359 /* TestDataViewModel.swift */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +36,13 @@
 		05238F2D2264C1690092DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05238F322264C4340092DF07 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		05238F3A2265B7630092DF07 /* TestGetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetResponse.swift; sourceTree = "<group>"; };
+		05A8B4FE24AE0FAD009436BE /* PagedTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagedTableView.storyboard; sourceTree = "<group>"; };
+		05A8B50024AE1080009436BE /* TestTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewDataSource.swift; sourceTree = "<group>"; };
+		05E6D86124AC8A710044A359 /* PagedTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedTableViewViewController.swift; sourceTree = "<group>"; };
+		05E6D86424AC8AEA0044A359 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		05E6D86624AC8ECC0044A359 /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		05E6D86824AC91D90044A359 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
+		05E6D86B24AC92BE0044A359 /* TestDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataViewModel.swift; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 		05238F342264C45A0092DF07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05E6D86324AC8A810044A359 /* PagedTableVIew */,
 				05238F392265B7040092DF07 /* Model */,
 				05238F212264C1680092DF07 /* AppDelegate.swift */,
 				05238F372264C48B0092DF07 /* ViewControllers */,
@@ -102,6 +117,7 @@
 			children = (
 				05238F252264C1680092DF07 /* Main.storyboard */,
 				05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */,
+				05A8B4FE24AE0FAD009436BE /* PagedTableView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -128,6 +144,19 @@
 				05238F3A2265B7630092DF07 /* TestGetResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05E6D86324AC8A810044A359 /* PagedTableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				05E6D86124AC8A710044A359 /* PagedTableViewViewController.swift */,
+				05E6D86424AC8AEA0044A359 /* CustomTableView.swift */,
+				05E6D86624AC8ECC0044A359 /* EmptyDataView.swift */,
+				05E6D86824AC91D90044A359 /* EmptyDataView.xib */,
+				05E6D86B24AC92BE0044A359 /* TestDataViewModel.swift */,
+				05A8B50024AE1080009436BE /* TestTableViewDataSource.swift */,
+			);
+			path = PagedTableVIew;
 			sourceTree = "<group>";
 		};
 		1895EA913FBD3B073657E574 /* Frameworks */ = {
@@ -282,6 +311,8 @@
 			files = (
 				05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */,
 				05238F292264C1690092DF07 /* Assets.xcassets in Resources */,
+				05A8B4FF24AE0FAD009436BE /* PagedTableView.storyboard in Resources */,
+				05E6D86924AC91D90044A359 /* EmptyDataView.xib in Resources */,
 				05238F272264C1680092DF07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,10 +374,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E6D86C24AC92BE0044A359 /* TestDataViewModel.swift in Sources */,
+				05E6D86224AC8A710044A359 /* PagedTableViewViewController.swift in Sources */,
 				05238F242264C1680092DF07 /* ViewController.swift in Sources */,
 				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
 				05238F3B2265B7630092DF07 /* TestGetResponse.swift in Sources */,
 				05238F332264C4340092DF07 /* Services.swift in Sources */,
+				05A8B50124AE1080009436BE /* TestTableViewDataSource.swift in Sources */,
+				05E6D86724AC8ECC0044A359 /* EmptyDataView.swift in Sources */,
+				05E6D86524AC8AEA0044A359 /* CustomTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
