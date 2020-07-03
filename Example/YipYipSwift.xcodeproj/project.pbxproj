@@ -12,7 +12,14 @@
 		05238F272264C1680092DF07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F252264C1680092DF07 /* Main.storyboard */; };
 		05238F292264C1690092DF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05238F282264C1690092DF07 /* Assets.xcassets */; };
 		05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */; };
-		05A8B51624AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */; };
+		05A8B50B24AE2E6E009436BE /* PagedTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50524AE2E6E009436BE /* PagedTableViewViewController.swift */; };
+		05A8B50C24AE2E6E009436BE /* TestDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50624AE2E6E009436BE /* TestDataViewModel.swift */; };
+		05A8B50D24AE2E6E009436BE /* TestTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50724AE2E6E009436BE /* TestTableViewDataSource.swift */; };
+		05A8B50E24AE2E6E009436BE /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50824AE2E6E009436BE /* EmptyDataView.swift */; };
+		05A8B50F24AE2E6E009436BE /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B50924AE2E6E009436BE /* EmptyDataView.xib */; };
+		05A8B51024AE2E6E009436BE /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50A24AE2E6E009436BE /* CustomTableView.swift */; };
+		05A8B51224AE2E7B009436BE /* PagedTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */; };
+		05A8B51824AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +33,14 @@
 		05238F282264C1690092DF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05238F2B2264C1690092DF07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05238F2D2264C1690092DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutConstraintViewController.swift; sourceTree = "<group>"; };
+		05A8B50524AE2E6E009436BE /* PagedTableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedTableViewViewController.swift; sourceTree = "<group>"; };
+		05A8B50624AE2E6E009436BE /* TestDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataViewModel.swift; sourceTree = "<group>"; };
+		05A8B50724AE2E6E009436BE /* TestTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewDataSource.swift; sourceTree = "<group>"; };
+		05A8B50824AE2E6E009436BE /* EmptyDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		05A8B50924AE2E6E009436BE /* EmptyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
+		05A8B50A24AE2E6E009436BE /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PagedTableView.storyboard; sourceTree = "<group>"; };
+		05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutConstraintViewController.swift; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +85,7 @@
 		05238F342264C45A0092DF07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05E6D86324AC8A810044A359 /* PagedTableVIew */,
 				05238F392265B7040092DF07 /* Model */,
 				05238F212264C1680092DF07 /* AppDelegate.swift */,
 				05238F372264C48B0092DF07 /* ViewControllers */,
@@ -89,6 +104,7 @@
 		05238F362264C4730092DF07 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */,
 				05238F252264C1680092DF07 /* Main.storyboard */,
 				05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */,
 			);
@@ -98,8 +114,8 @@
 		05238F372264C48B0092DF07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */,
 				05238F232264C1680092DF07 /* ViewController.swift */,
-				05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +133,19 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05E6D86324AC8A810044A359 /* PagedTableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				05A8B50A24AE2E6E009436BE /* CustomTableView.swift */,
+				05A8B50824AE2E6E009436BE /* EmptyDataView.swift */,
+				05A8B50924AE2E6E009436BE /* EmptyDataView.xib */,
+				05A8B50524AE2E6E009436BE /* PagedTableViewViewController.swift */,
+				05A8B50624AE2E6E009436BE /* TestDataViewModel.swift */,
+				05A8B50724AE2E6E009436BE /* TestTableViewDataSource.swift */,
+			);
+			path = PagedTableVIew;
 			sourceTree = "<group>";
 		};
 		1895EA913FBD3B073657E574 /* Frameworks */ = {
@@ -271,6 +300,8 @@
 			files = (
 				05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */,
 				05238F292264C1690092DF07 /* Assets.xcassets in Resources */,
+				05A8B51224AE2E7B009436BE /* PagedTableView.storyboard in Resources */,
+				05A8B50F24AE2E6E009436BE /* EmptyDataView.xib in Resources */,
 				05238F272264C1680092DF07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,9 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A8B50C24AE2E6E009436BE /* TestDataViewModel.swift in Sources */,
+				05A8B51824AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */,
+				05A8B50D24AE2E6E009436BE /* TestTableViewDataSource.swift in Sources */,
+				05A8B50E24AE2E6E009436BE /* EmptyDataView.swift in Sources */,
 				05238F242264C1680092DF07 /* ViewController.swift in Sources */,
+				05A8B51024AE2E6E009436BE /* CustomTableView.swift in Sources */,
 				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
-				05A8B51624AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */,
+				05A8B50B24AE2E6E009436BE /* PagedTableViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
