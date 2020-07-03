@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bcn-4g-Ad2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Safe Area Layout Constraint View Controller-->
+        <scene sceneID="CfH-RN-ZIv">
+            <objects>
+                <viewController id="bcn-4g-Ad2" customClass="SafeAreaLayoutConstraintViewController" customModule="YipYipSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Itb-T0-eRD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMN-kQ-AXT">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-Hg-EpM">
+                                        <rect key="frame" x="20" y="20" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9hp-Hg-EpM" secondAttribute="trailing" constant="20" id="GLm-1Z-Nog"/>
+                                    <constraint firstItem="9hp-Hg-EpM" firstAttribute="top" secondItem="hMN-kQ-AXT" secondAttribute="top" constant="20" id="nYm-3s-s0Q"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9hp-Hg-EpM" secondAttribute="bottom" constant="20" id="oKf-5F-Tjl"/>
+                                    <constraint firstItem="9hp-Hg-EpM" firstAttribute="leading" secondItem="hMN-kQ-AXT" secondAttribute="leading" constant="20" id="pgE-7O-hJw"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-Ff-t3c">
+                                <rect key="frame" x="360" y="64" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="userDidTapBackButton:" destination="bcn-4g-Ad2" eventType="touchUpInside" id="BcO-9K-KG1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fL5-dB-Koy" firstAttribute="trailing" secondItem="TDD-Ff-t3c" secondAttribute="trailing" constant="20" id="JCY-1B-43l"/>
+                            <constraint firstItem="TDD-Ff-t3c" firstAttribute="top" secondItem="fL5-dB-Koy" secondAttribute="top" constant="20" id="Nye-Fh-lTj"/>
+                            <constraint firstItem="hMN-kQ-AXT" firstAttribute="top" secondItem="fL5-dB-Koy" secondAttribute="top" constant="20" id="Qiu-cr-MI7" customClass="YipYipSafeAreaLayoutConstraint" customModule="YipYipSwift">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="safeAreaConstant">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="noSafeAreaConstant">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="positionName" value="top"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="fL5-dB-Koy" firstAttribute="bottom" secondItem="hMN-kQ-AXT" secondAttribute="bottom" id="YRh-cX-ms9" customClass="YipYipSafeAreaLayoutConstraint" customModule="YipYipSwift">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="positionName" value="bottom"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="safeAreaConstant">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="noSafeAreaConstant">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="fL5-dB-Koy" firstAttribute="trailing" secondItem="hMN-kQ-AXT" secondAttribute="trailing" id="aO8-su-o9K" customClass="YipYipSafeAreaLayoutConstraint" customModule="YipYipSwift">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="positionName" value="right"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="safeAreaConstant">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="noSafeAreaConstant">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="hMN-kQ-AXT" firstAttribute="leading" secondItem="fL5-dB-Koy" secondAttribute="leading" id="xH8-k1-XfR" customClass="YipYipSafeAreaLayoutConstraint" customModule="YipYipSwift">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="positionName" value="left"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="safeAreaConstant">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="noSafeAreaConstant">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fL5-dB-Koy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkX-Kd-Mh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>

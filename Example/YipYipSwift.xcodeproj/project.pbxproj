@@ -20,6 +20,7 @@
 		05A8B51024AE2E6E009436BE /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B50A24AE2E6E009436BE /* CustomTableView.swift */; };
 		05A8B51224AE2E7B009436BE /* PagedTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */; };
 		05A8B51824AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */; };
+		05A8B51A24AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		05A8B50A24AE2E6E009436BE /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PagedTableView.storyboard; sourceTree = "<group>"; };
 		05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutConstraintViewController.swift; sourceTree = "<group>"; };
+		05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafeAreaLayoutConstraint.storyboard; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				05A8B51124AE2E7B009436BE /* PagedTableView.storyboard */,
 				05238F252264C1680092DF07 /* Main.storyboard */,
 				05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */,
+				05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7298FDX4Y3;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -303,6 +307,7 @@
 				05A8B51224AE2E7B009436BE /* PagedTableView.storyboard in Resources */,
 				05A8B50F24AE2E6E009436BE /* EmptyDataView.xib in Resources */,
 				05238F272264C1680092DF07 /* Main.storyboard in Resources */,
+				05A8B51A24AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +593,7 @@
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7298FDX4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -601,6 +606,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YipYipSwift_Example.app/YipYipSwift_Example";
 			};
 			name = Debug;
@@ -608,7 +614,7 @@
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7298FDX4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -617,6 +623,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YipYipSwift_Example.app/YipYipSwift_Example";
 			};
 			name = Release;

@@ -16,4 +16,13 @@ public class SafeAreaLayoutConstraintViewController: UIViewController {
         
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    @IBAction func userDidTapBackButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
