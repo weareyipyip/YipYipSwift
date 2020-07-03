@@ -4,6 +4,8 @@ use_frameworks!
 
 target 'YipYipSwiftExample' do
     pod 'YipYipSwift', :path => '../'
-
-  
+end
+    
+target 'YipYipSwift_Tests' do
+    pod 'YipYipSwift', :path => '../'
 end

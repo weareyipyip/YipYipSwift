@@ -11,6 +11,7 @@ import Foundation
 open class YipYipUtils
 {
     public static let view = ViewUtils()
+    public static let documents = DocumentsFileUtils()
     public static let files = FileUtils()
     public static let json = JSONUtils()
     public static let time = TimeUtils()
