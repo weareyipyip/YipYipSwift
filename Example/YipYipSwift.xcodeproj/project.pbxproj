@@ -88,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				05E6D86324AC8A810044A359 /* PagedTableVIew */,
-				05238F392265B7040092DF07 /* Model */,
 				05238F212264C1680092DF07 /* AppDelegate.swift */,
 				05238F372264C48B0092DF07 /* ViewControllers */,
 			);
@@ -129,13 +128,6 @@
 				05238F282264C1690092DF07 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		05238F392265B7040092DF07 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		05E6D86324AC8A810044A359 /* PagedTableVIew */ = {

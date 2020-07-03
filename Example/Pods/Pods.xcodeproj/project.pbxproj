@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00B12573238C19FE0D18C3B4B3E235CA /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410AB937FC87461F7A517F2BBE68B5D /* AppStoreReviewManager.swift */; };
 		01AA79DEE33E8EC24892C9B53F926CB1 /* ConstraintDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A126D2405FF38ADCFC40BDC4A00692E /* ConstraintDescriptor.swift */; };
+		050C3C8524AF0CF8004AFF42 /* YipYipContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C3C8424AF0CF8004AFF42 /* YipYipContentSizedTableView.swift */; };
+		050C3C8724AF0E4E004AFF42 /* YipYipContentSizedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C3C8624AF0E4E004AFF42 /* YipYipContentSizedCollectionView.swift */; };
 		06D6F26E872301C582893DB99EC1FDE6 /* YipYipPagedTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED25998EF2B470AED6051DD6C5AA92 /* YipYipPagedTableViewHelper.swift */; };
 		149BBE1F4D54F05E2EEFC0F6EBC7927C /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331E2C9950701DCBBA06CA547186888 /* TimeUtils.swift */; };
 		1F7597D0FB06DAACE1B11A5C3CBE24FA /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6A54F1F3E5DD1DBB082ADA42988464 /* LayoutManager.swift */; };
@@ -46,7 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A15F2B85CF4916AB47EFFD9FB38241 /* Pods_YipYipSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YipYipSwiftExample.framework; path = "Pods-YipYipSwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A15F2B85CF4916AB47EFFD9FB38241 /* Pods_YipYipSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YipYipSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		050C3C8424AF0CF8004AFF42 /* YipYipContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YipYipContentSizedTableView.swift; sourceTree = "<group>"; };
+		050C3C8624AF0E4E004AFF42 /* YipYipContentSizedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YipYipContentSizedCollectionView.swift; sourceTree = "<group>"; };
 		0616E3D730C9415A5741509B0EBD2BF2 /* YipYipSafeAreaConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipSafeAreaConstraint.swift; sourceTree = "<group>"; };
 		1496A3D1DF00C6456F94FB9BFDD89A5C /* OSLog+YipYipSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "OSLog+YipYipSwift.swift"; sourceTree = "<group>"; };
 		2151594512147FDCBBC92134EDAB3E96 /* Pods-YipYipSwiftExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YipYipSwiftExample-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -55,7 +59,7 @@
 		30B558E10D2A56FD36A74B03E856DE73 /* YipYipSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-umbrella.h"; sourceTree = "<group>"; };
 		3146EB8052242AE60EA395940C031A92 /* YipYipSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YipYipSwift-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3245EEBA097EB18926883A6D10158655 /* YipYipSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YipYipSwift.framework; path = YipYipSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3245EEBA097EB18926883A6D10158655 /* YipYipSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YipYipSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A126D2405FF38ADCFC40BDC4A00692E /* ConstraintDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstraintDescriptor.swift; sourceTree = "<group>"; };
 		3BCCD6D13A4931B72F6B0AF9A05BB57D /* YipYipNibView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibView.swift; sourceTree = "<group>"; };
 		3C88C32C2F043ACB677AC191E48BA298 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
@@ -68,14 +72,14 @@
 		5AC649D7C6DF14DBEFB03AC849ED637A /* YipYipTableViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipTableViewModel.swift; sourceTree = "<group>"; };
 		5DD309D768575301DDAE56CE1BF6E27A /* FileUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		670419CE841B44E7B4A6971F240EE4B9 /* YipYipSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.release.xcconfig; sourceTree = "<group>"; };
-		6870D0FB824C00C998B3F5984AAADBA6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6870D0FB824C00C998B3F5984AAADBA6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C0CA73C1E790CEA28399DD5E36E9545 /* YipYipSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YipYipSwift.modulemap; sourceTree = "<group>"; };
 		6C6DE883B360820A4EAF1B67BB51EE37 /* YipYipSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YipYipSwift-Info.plist"; sourceTree = "<group>"; };
 		745056ED6B89C6F0948A51EE27F60202 /* Pods-YipYipSwiftExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YipYipSwiftExample.modulemap"; sourceTree = "<group>"; };
 		749914F110AC284DDE80EBC8641A3D58 /* YipYipNibButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipNibButton.swift; sourceTree = "<group>"; };
-		8DBE7752E412BCF9B855743F5751B64E /* YipYipSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YipYipSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8DBE7752E412BCF9B855743F5751B64E /* YipYipSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YipYipSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9331E2C9950701DCBBA06CA547186888 /* TimeUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EDC5CA7D5B59E5B85B097C315B886D0 /* YipYipSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YipYipSwift-prefix.pch"; sourceTree = "<group>"; };
 		A24D54EB1679B21EACAF6A52AAB2B9CE /* Pods-YipYipSwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YipYipSwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A324DCB72D362F126FD6451560646E94 /* Pods-YipYipSwiftExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YipYipSwiftExample-umbrella.h"; sourceTree = "<group>"; };
@@ -147,7 +151,6 @@
 			children = (
 				51FE736C846E0FD5D4C8D9F70ECAA457 /* KeyboardViewHelper.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -157,8 +160,9 @@
 				749914F110AC284DDE80EBC8641A3D58 /* YipYipNibButton.swift */,
 				3BCCD6D13A4931B72F6B0AF9A05BB57D /* YipYipNibView.swift */,
 				0616E3D730C9415A5741509B0EBD2BF2 /* YipYipSafeAreaConstraint.swift */,
+				050C3C8424AF0CF8004AFF42 /* YipYipContentSizedTableView.swift */,
+				050C3C8624AF0E4E004AFF42 /* YipYipContentSizedCollectionView.swift */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -171,7 +175,6 @@
 				A4AD57430B9D6958297B29C3C5A8ABAA /* YipYipPagedTableViewModel.swift */,
 				5AC649D7C6DF14DBEFB03AC849ED637A /* YipYipTableViewModel.swift */,
 			);
-			name = PagedTableView;
 			path = PagedTableView;
 			sourceTree = "<group>";
 		};
@@ -235,7 +238,6 @@
 				2F6A54F1F3E5DD1DBB082ADA42988464 /* LayoutManager.swift */,
 				40110FB0B1D495DF50AF7C5D2C40E5D5 /* OptionalViewDescriptor.swift */,
 			);
-			name = LayoutManager;
 			path = LayoutManager;
 			sourceTree = "<group>";
 		};
@@ -418,11 +420,13 @@
 				01AA79DEE33E8EC24892C9B53F926CB1 /* ConstraintDescriptor.swift in Sources */,
 				CD0DE1E509D1F40FBEFF57CB739B242A /* ConstraintUtils.swift in Sources */,
 				EBD49164719C88960F04CFD22E2BC0C2 /* FileUtils.swift in Sources */,
+				050C3C8724AF0E4E004AFF42 /* YipYipContentSizedCollectionView.swift in Sources */,
 				2C34C70224C24DC4CCDE72F34CB2144F /* JSONUtils.swift in Sources */,
 				34FA7412CE5BC82886D98323FF3C2234 /* KeyboardViewHelper.swift in Sources */,
 				1F7597D0FB06DAACE1B11A5C3CBE24FA /* LayoutManager.swift in Sources */,
 				3D6A1C015AF06157D9C0632E9534E4E4 /* OptionalViewDescriptor.swift in Sources */,
 				269E23E6E3AD1FC8CC14FFEC9A14001B /* OSLog+YipYipSwift.swift in Sources */,
+				050C3C8524AF0CF8004AFF42 /* YipYipContentSizedTableView.swift in Sources */,
 				149BBE1F4D54F05E2EEFC0F6EBC7927C /* TimeUtils.swift in Sources */,
 				2C66A073107F56CA335C6F119889136F /* ViewUtils.swift in Sources */,
 				7AF6C27008803DC0BE1B7B8A54FA6439 /* YipYipActivityStatusTableView.swift in Sources */,
@@ -677,8 +681,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
