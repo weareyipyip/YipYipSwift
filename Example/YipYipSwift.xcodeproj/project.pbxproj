@@ -12,6 +12,7 @@
 		05238F272264C1680092DF07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F252264C1680092DF07 /* Main.storyboard */; };
 		05238F292264C1690092DF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05238F282264C1690092DF07 /* Assets.xcassets */; };
 		05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */; };
+		05A8B51624AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		05238F282264C1690092DF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05238F2B2264C1690092DF07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05238F2D2264C1690092DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutConstraintViewController.swift; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				05238F232264C1680092DF07 /* ViewController.swift */,
+				05A8B51524AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				05238F242264C1680092DF07 /* ViewController.swift in Sources */,
 				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
+				05A8B51624AEF7DC009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
