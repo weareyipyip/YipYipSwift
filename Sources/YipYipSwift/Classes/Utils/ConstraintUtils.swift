@@ -13,14 +13,14 @@ public class ConstraintUtils {
      Returns the height layoutconstraint of the view
      */
     public func heightConstraint(for view: UIView) -> NSLayoutConstraint? {
-        return ConstraintUtils.constraint(for: view, withFirstAttribute: .height)
+        return self.constraint(for: view, withFirstAttribute: .height)
     }
     
     /**
      Returns the width layout constraint of the view
      */
     public func widthConstraint(for view: UIView) -> NSLayoutConstraint? {
-        return ConstraintUtils.constraint(for: view, withFirstAttribute: .width)
+        return self.constraint(for: view, withFirstAttribute: .width)
     }
     
     /**
