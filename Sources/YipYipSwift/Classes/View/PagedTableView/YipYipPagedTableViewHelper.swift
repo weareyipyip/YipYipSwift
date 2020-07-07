@@ -9,6 +9,11 @@ import UIKit
 
 public class YipYipPagedTableViewHelper {
     
+    public enum EmptyViewState {
+        case noEntries
+        case failed
+    }
+    
     private let loadMargin: Int
     private var tableView: YipYipActivityStatusTableView
     private var viewModel: YipYipPagedTableViewModel
@@ -63,14 +68,14 @@ public class YipYipPagedTableViewHelper {
             self.tableView.isHidden = false
 
             if success {
-                if self.viewModel.hasLoadedItems, self.viewModel.numberOfItemsForSection(0) == 0 {
-                    self.showNoItemsView()
+                if self.viewModel.numberOfItemsForSection(0) == 0 {
+                    self.showEmptyView(forState: .noEntries)
                 } else {
                     self.hideEmptyView()
                 }
             } else {
                 if !self.viewModel.hasLoadedItems {
-                    self.showDataNotLoadedView()
+                    self.showEmptyView(forState: .failed)
                 } else {
                     self.hideEmptyView()
                 }
@@ -78,20 +83,21 @@ public class YipYipPagedTableViewHelper {
         }
     }
     
-    public func showDataNotLoadedView() {
-        self.tableView.isUserInteractionEnabled = false
-        self.tableView.showEmptyDataView(title: self.viewModel.dataFailedTitle,
-                                         message: self.viewModel.dataFailedMessage,
-                                         actionButtonTitle: self.viewModel.dataFailedRetryButtonTitle,
-                                         delegate: self)
-    }
-    
-    public func showNoItemsView() {
-        self.tableView.isUserInteractionEnabled = false
-        self.tableView.showEmptyDataView(title: self.viewModel.emptyTitle,
-                                         message: self.viewModel.emptyMessage,
-                                         actionButtonTitle: nil,
-                                         delegate: nil)
+    public func showEmptyView(forState state: EmptyViewState) {
+        switch state {
+        case .noEntries:
+            self.tableView.isUserInteractionEnabled = false
+            self.tableView.showEmptyDataView(title: self.viewModel.emptyTitle,
+                                             message: self.viewModel.emptyMessage,
+                                             actionButtonTitle: nil,
+                                             delegate: nil)
+        case .failed:
+            self.tableView.isUserInteractionEnabled = false
+            self.tableView.showEmptyDataView(title: self.viewModel.dataFailedTitle,
+                                             message: self.viewModel.dataFailedMessage,
+                                             actionButtonTitle: self.viewModel.dataFailedRetryButtonTitle,
+                                             delegate: self)
+        }
     }
     
     public func hideEmptyView() {
