@@ -44,7 +44,7 @@ public class YipYipContentSizedCollectionView: UICollectionView {
         }
         
         if heightDidChange {
-            self.layoutIfNeeded()
+            self.setNeedsLayout()
         }
         
     }

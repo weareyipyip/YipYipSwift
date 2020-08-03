@@ -38,7 +38,7 @@ public class YipYipContentSizedTableView: UITableView {
         }
         
         if heightDidChange {
-            self.layoutIfNeeded()
+            self.setNeedsLayout()
         }
         
     }
