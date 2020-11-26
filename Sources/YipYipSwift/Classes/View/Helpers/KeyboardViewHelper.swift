@@ -35,7 +35,7 @@ open class KeyboardViewHelper {
     // MARK: - Initializers
     // ----------------------------------------------------
     
-    init(mainView: UIView) {
+    public init(mainView: UIView) {
         self._mainView = mainView
     }
     
