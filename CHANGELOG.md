@@ -2,7 +2,7 @@
 
 Added swift extensions  support
 
-## [2.0.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.4)
+## [2.0.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.0)
 
 - Removed all yipyip base classes
 - Removed services base code (now the app has to implement this for his own)
