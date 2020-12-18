@@ -4,6 +4,15 @@ Added swift extensions  support
 
 ## [1.3.4](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.4)
 
+- Removed all yipyip base classes
+- Removed services base code (now the app has to implement this for his own)
+- Added YipYipContentSizedCollectionView and YipYipContentSizedTableView
+- Added YipYipSafeAreaLayoutConstraint 
+- Added KeyboardViewHelper
+- Added PagedTableView functionality
+
+## [1.3.4](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.4)
+
 Significant changes to the project will be documented here.
 
 ## [1.3.3](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.3)
