@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "YipYipSwift"
-  s.version          = "1.3.3"
+  s.version          = "1.3.4"
   s.summary          = "A collection of utilities"
 
 # This description is used to generate tags and improve search results.
