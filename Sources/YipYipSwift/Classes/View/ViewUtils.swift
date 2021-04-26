@@ -180,6 +180,7 @@ open class ViewUtils
 
     open func addViewFromNib(nibName name:String, bundle:Bundle? = nil, toOwner containerView:UIView) -> UIView
     {
+        containerView.translatesAutoresizingMaskIntoConstraints = false
         let bundleToUse = bundle == nil ? Bundle(for: type(of: containerView)) : bundle
         let views = UINib(nibName: name, bundle: bundleToUse).instantiate(withOwner: containerView, options: nil) as [AnyObject]
         
