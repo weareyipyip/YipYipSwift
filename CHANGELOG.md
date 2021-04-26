@@ -2,6 +2,10 @@
 
 Significant changes to the project will be documented here.
 
+## [1.3.4](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.4)
+
+- Added a fix to ViewUtils that sets the container's translatesAutoresizingMaskIntoConstraints to false in addViewFromNib method
+
 ## [1.3.3](https://github.com/weareyipyip/YipYipSwift/releases/tag/1.3.3)
 
 - Added Swift Package support
