@@ -2,6 +2,10 @@
 
 Added swift extensions  support
 
+## [2.0.1](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.1)
+
+- Added a fix to ViewUtils that sets the container's translatesAutoresizingMaskIntoConstraints to false in addViewFromNib method
+
 ## [2.0.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.0)
 
 - Removed all yipyip base classes
