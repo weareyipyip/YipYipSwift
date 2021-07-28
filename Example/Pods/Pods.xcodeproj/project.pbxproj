@@ -23,7 +23,6 @@
 		7456E3837536C9296BBA40C11CE642B1 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD309D768575301DDAE56CE1BF6E27A /* FileUtils.swift */; };
 		8005C3D41DF1D55AB963F4A53820D791 /* OptionalViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E5438465ECF1C8867836E7F35ED76 /* OptionalViewDescriptor.swift */; };
 		81A002B27588CA30EA3A959EADC8C580 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A307CD004D10745306FBFE2EE88D53 /* JSONUtils.swift */; };
-		84B1A2C2BFCD52D227EC2457C057F791 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410AB937FC87461F7A517F2BBE68B5D /* AppStoreReviewManager.swift */; };
 		A4BA474DAD0D05E069941F2017921A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B21397BF3D0241F87FD59D265A4DDA87 /* YipYipSafeAreaConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E090DD619F416E25B59C299FE8DD2 /* YipYipSafeAreaConstraint.swift */; };
 		BE71A01E4344BB6F45DC76F8BA213BE4 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331E2C9950701DCBBA06CA547186888 /* TimeUtils.swift */; };
@@ -89,7 +88,6 @@
 		B2A307CD004D10745306FBFE2EE88D53 /* JSONUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		BDD89A6E9AAC0416B1A2B65C169AA54E /* YipYipSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YipYipSwift.debug.xcconfig; sourceTree = "<group>"; };
 		DB5EED6DB51E5D41DEF2FA2D08A61920 /* Pods-YipYipSwiftExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YipYipSwiftExample-Info.plist"; sourceTree = "<group>"; };
-		E410AB937FC87461F7A517F2BBE68B5D /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		E6FC2D3CA5A30AC892508C16DC8ECCDD /* YipYipPagedTableViewHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipPagedTableViewHelper.swift; sourceTree = "<group>"; };
 		F2312FF9954ED56F046F4BE8871833B8 /* YipYipActivityStatusTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YipYipActivityStatusTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +129,6 @@
 			children = (
 				55E6DB285598FE9457CF645B97DB2556 /* YipYipUtils.swift */,
 				F17B065D2BA454457A13CA1ABD6E6B7A /* Extensions */,
-				5CBA2C07DE92BB406D963E83C05A45AC /* Managers */,
 				DEB57B52608082F0DD93EA451562BD24 /* Pod */,
 				88DF184A5892E038B9895C4E4B050EA1 /* Support Files */,
 				9B7F84F32431050DE7087C8028F6FAD5 /* Utils */,
@@ -186,15 +183,6 @@
 				1A4E090DD619F416E25B59C299FE8DD2 /* YipYipSafeAreaConstraint.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		5CBA2C07DE92BB406D963E83C05A45AC /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				E410AB937FC87461F7A517F2BBE68B5D /* AppStoreReviewManager.swift */,
-			);
-			name = Managers;
-			path = Sources/YipYipSwift/Classes/Managers;
 			sourceTree = "<group>";
 		};
 		78E2F0B92F8093C54678ECA17A66F47C /* Development Pods */ = {
@@ -416,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B1A2C2BFCD52D227EC2457C057F791 /* AppStoreReviewManager.swift in Sources */,
 				E3B2A4BC521D710EAC03D6139C246F35 /* ConstraintDescriptor.swift in Sources */,
 				0E6DF9B1BFC6A9DAB56729DF401B982F /* ConstraintUtils.swift in Sources */,
 				7456E3837536C9296BBA40C11CE642B1 /* FileUtils.swift in Sources */,
