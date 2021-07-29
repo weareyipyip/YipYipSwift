@@ -1,6 +1,0 @@
-framework module YipYipSwift {
-  umbrella header "YipYipSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
