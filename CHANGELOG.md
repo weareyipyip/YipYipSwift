@@ -2,6 +2,10 @@
 
 Added swift extensions  support
 
+## [2.0.2](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.1)
+
+- Removed AppStoreReviewManager
+
 ## [2.0.1](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.1)
 
 - Added a fix to ViewUtils that sets the container's translatesAutoresizingMaskIntoConstraints to false in addViewFromNib method
