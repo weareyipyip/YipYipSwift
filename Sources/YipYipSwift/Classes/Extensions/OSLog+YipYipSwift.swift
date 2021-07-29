@@ -17,5 +17,5 @@ extension OSLog {
     
     public static let YipYipNibView = OSLog(subsystem: subsystem, category: "YipYipNibView")
     public static let JSONUtils = OSLog(subsystem: subsystem, category: "JSONUtils")
-    public static let AppStoreReviewManager = OSLog(subsystem: subsystem, category: "AppStoreReviewManager")
+
 }

@@ -1,6 +1,0 @@
-framework module Pods_YipYipSwiftExample {
-  umbrella header "Pods-YipYipSwiftExample-umbrella.h"
-
-  export *
-  module * { export * }
-}
