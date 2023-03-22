@@ -20,6 +20,15 @@ public protocol YipYipHostingController where Self: UIViewController {
 extension YipYipHostingController {
     
     public func placeContentView() {
+        
+        // Remove the hostingController that may have been setup before
+        if let hostingController = self.hostingController {
+            hostingController.willMove(toParent: nil)
+            hostingController.removeFromParent()
+            hostingController.view.removeFromSuperview()
+        }
+        
+        // Setup the new HostingController
         let hostingController = UIHostingController(
             rootView: self.createContentView()
         )
