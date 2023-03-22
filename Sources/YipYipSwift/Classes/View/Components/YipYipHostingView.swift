@@ -1,0 +1,37 @@
+//
+//  YipYipHostingView.swift
+//  Pods-YipYipSwiftExample
+//
+//  Created by Lars Moesman on 22/03/2023.
+//
+
+import UIKit
+import SwiftUI
+
+@available(iOS 13.0, *)
+public protocol YipYipHostingView where Self: UIView {
+    associatedtype ContentView: View
+    var hostingController: UIHostingController<ContentView>? { get set }
+    func createContentView() -> ContentView
+    func placeContentView()
+}
+
+@available(iOS 13.0, *)
+extension YipYipHostingView {
+    
+    public func placeContentView() {
+        let hostingController = UIHostingController(rootView: self.createContentView())
+        
+        self.hostingController = hostingController
+        self.addSubview(hostingController.view)
+        
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: self.topAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
+    }
+    
+}
