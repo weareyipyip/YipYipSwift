@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class YipYipIntrinsicContainerViewBase<ContentView: UIView>: UIView {
+open class YipYipIntrinsicContainerViewBase<ContentView: UIView>: UIView {
     
     // ----------------------------------------------------
     // MARK: - Stored properties
@@ -19,7 +19,7 @@ public class YipYipIntrinsicContainerViewBase<ContentView: UIView>: UIView {
     // MARK: - Computed properties
     // ----------------------------------------------------
     
-    override public var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         fatalError("Property 'intrinsicContentSize', must be overriden by subclass of 'YipYipIntrinsicContainerViewBase'!")
     }
     
@@ -58,7 +58,7 @@ public class YipYipIntrinsicContainerViewBase<ContentView: UIView>: UIView {
     }
     
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("'init(coder:)' has not been implemented!")
     }
     
