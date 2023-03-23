@@ -17,6 +17,9 @@ internal struct SwiftUIMain: View {
     
     @ObservedObject private var state: SwiftUIMainState = SwiftUIMainState()
     
+    private let mainPadding: CGFloat = 32
+    private let subPadding: CGFloat = 16
+    
     internal weak var delegate: SwiftUIMainDelegate?
     
     internal var body: some View {
@@ -33,7 +36,7 @@ internal struct SwiftUIMain: View {
                                 }
                                 .padding(EdgeInsets(
                                     top: 0,
-                                    leading: 16,
+                                    leading: self.subPadding,
                                     bottom: 0,
                                     trailing: 0
                                 ))
@@ -42,13 +45,13 @@ internal struct SwiftUIMain: View {
                             
                         }
                         .padding(EdgeInsets(
-                            top: 16 + geometry.safeAreaInsets.top,
+                            top: self.subPadding + geometry.safeAreaInsets.top,
                             leading: 0,
-                            bottom: 16,
+                            bottom: self.subPadding,
                             trailing: 0
                         ))
                         .frame(maxWidth: .infinity)
-                        .background(Color.gray)
+                        .background(Color.black)
                         .foregroundColor(Color.white)
                         
                         ButtonView(
@@ -64,7 +67,7 @@ internal struct SwiftUIMain: View {
                         VStack {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text("UIKit View Intrinsic Height:")
-
+                                
                                 CardViewIntrinsicHeightRepresentable(
                                     title: "Test",
                                     subtitle: String(
@@ -75,12 +78,17 @@ internal struct SwiftUIMain: View {
                                 )
                                 .fixedSize(horizontal: false,vertical: true) // Use the smallest size possible vertically
                                 .background(Color.yellow)
-                                .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
+                                .padding(EdgeInsets(
+                                    top: 0,
+                                    leading: self.mainPadding,
+                                    bottom: 0,
+                                    trailing: self.mainPadding
+                                ))
                             }
-
+                            
                             VStack(spacing: 8) {
                                 Text("UIKit View Intrinsic Width:")
-
+                                
                                 CardViewIntrinsicWidthRepresentable(
                                     title: "Test",
                                     subtitle: String(
@@ -88,23 +96,35 @@ internal struct SwiftUIMain: View {
                                         count: self.state.showLongTextUIKitView ? Int.random(in: 3...10) : 1
                                     ),
                                     maxLines: 1,
-                                    maxWidth: geometry.size.width - 64 // Cap the width on the screen width, otherwise it will layout out of bounds
+                                    maxWidth: geometry.size.width - (self.mainPadding * 2) - (self.subPadding * 2)
                                 )
                                 .frame(height: 50) // Set fixed height to be able to determine width
                                 .fixedSize(horizontal: true, vertical: false) // Use the smallest size possible horizontally
                                 .background(Color.yellow)
-                                .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
+                                .padding(EdgeInsets(
+                                    top: 0,
+                                    leading: self.mainPadding,
+                                    bottom: 0,
+                                    trailing: self.mainPadding
+                                ))
+                                
                             }
-
+                            
                             Toggle(isOn: self.$state.showLongTextUIKitView) {
                                 Text("Show long subtitle")
                             }
-
+                            
                             Toggle(isOn: self.$state.enableMultilineUIKitView) {
                                 Text("Multiline subtitle")
                             }
-
+                            
                         }
+                        .padding(EdgeInsets(
+                            top: 0,
+                            leading: self.subPadding,
+                            bottom: 0,
+                            trailing: self.subPadding
+                        ))
                         .background(Color.green)
                         .foregroundColor(Color.black)
                         

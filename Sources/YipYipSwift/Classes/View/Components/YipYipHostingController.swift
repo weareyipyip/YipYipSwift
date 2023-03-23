@@ -38,6 +38,7 @@ extension YipYipHostingController {
         self.view.addSubview(hostingController.view)
         hostingController.didMove(toParent: self)
         
+        hostingController.view.backgroundColor = .clear
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: self.view.topAnchor),

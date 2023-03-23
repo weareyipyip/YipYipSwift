@@ -11,7 +11,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 public protocol YipYipHostingView where Self: UIView {
     associatedtype ContentView: View
-    var hostingController: UIHostingController<ContentView>? { get set }
+    var hostingController: YipYipEmbeddedHostingController<ContentView>? { get set }
     func createContentView() -> ContentView
     func placeContentView()
 }
@@ -27,11 +27,12 @@ extension YipYipHostingView {
         }
         
         // Setup the new HostingController
-        let hostingController = UIHostingController(rootView: self.createContentView())
+        let hostingController = YipYipEmbeddedHostingController(rootView: self.createContentView())
         
         self.hostingController = hostingController
         self.addSubview(hostingController.view)
         
+        hostingController.view.backgroundColor = .clear
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: self.topAnchor),

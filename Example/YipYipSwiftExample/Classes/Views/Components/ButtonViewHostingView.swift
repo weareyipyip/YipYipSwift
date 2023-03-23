@@ -11,7 +11,7 @@ import SwiftUI
 import YipYipSwift
 
 internal class ButtonViewHostingView: UIView, YipYipHostingView {
-    internal var hostingController: UIHostingController<ButtonView>?
+    internal var hostingController: YipYipEmbeddedHostingController<ButtonView>?
     internal var buttonConfiguration: ButtonView.Configuration!
     
     internal func createContentView() -> ButtonView {
