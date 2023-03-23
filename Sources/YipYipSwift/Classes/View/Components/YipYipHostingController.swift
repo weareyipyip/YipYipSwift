@@ -11,7 +11,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 public protocol YipYipHostingController where Self: UIViewController {
     associatedtype ContentView: View
-    var hostingController: UIHostingController<ContentView>? { get set }
+    var hostingController: YipYipEmbeddedHostingController<ContentView>? { get set }
     func createContentView() -> ContentView
     func placeContentView()
 }
@@ -29,7 +29,7 @@ extension YipYipHostingController {
         }
         
         // Setup the new HostingController
-        let hostingController = UIHostingController(
+        let hostingController = YipYipEmbeddedHostingController(
             rootView: self.createContentView()
         )
         self.hostingController = hostingController

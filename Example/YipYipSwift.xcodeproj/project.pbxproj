@@ -22,6 +22,19 @@
 		05A8B51824AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */; };
 		05A8B51A24AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */; };
 		0693E0DBCD8ED665E2209539 /* Pods_YipYipSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */; };
+		4626D8F229CB53000046145C /* SwiftUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4626D8F129CB53000046145C /* SwiftUI.storyboard */; };
+		4626D8F429CB534D0046145C /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D8F329CB534D0046145C /* SwiftUIViewController.swift */; };
+		4626D8FA29CB56C10046145C /* SwiftUIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D8F929CB56C10046145C /* SwiftUIMain.swift */; };
+		4626D8FD29CB691B0046145C /* SwiftUIMainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D8FC29CB691B0046145C /* SwiftUIMainState.swift */; };
+		4626D8FF29CB6AC90046145C /* PagedTableViewViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D8FE29CB6AC90046145C /* PagedTableViewViewControllerRepresentable.swift */; };
+		4626D90229CB6B190046145C /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D90129CB6B190046145C /* ViewControllerFactory.swift */; };
+		4626D90729CB72CF0046145C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D90629CB72CF0046145C /* ButtonView.swift */; };
+		4626D90929CB74280046145C /* SwiftUIDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D90829CB74280046145C /* SwiftUIDemoViewController.swift */; };
+		4626D90B29CB762B0046145C /* ButtonViewHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D90A29CB762A0046145C /* ButtonViewHostingView.swift */; };
+		4626D90E29CB784B0046145C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4626D90D29CB784B0046145C /* CardView.xib */; };
+		4626D91029CB785B0046145C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626D90F29CB785B0046145C /* CardView.swift */; };
+		4661D60329CB7A21005D952D /* CardViewIntrinsicHeightRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661D60229CB7A21005D952D /* CardViewIntrinsicHeightRepresentable.swift */; };
+		4661D60629CC5589005D952D /* CardViewIntrinsicWidthRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661D60529CC5589005D952D /* CardViewIntrinsicWidthRepresentable.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +57,19 @@
 		05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutConstraintViewController.swift; sourceTree = "<group>"; };
 		05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafeAreaLayoutConstraint.storyboard; sourceTree = "<group>"; };
 		369E2EB3C09D72D233EE0E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4626D8F129CB53000046145C /* SwiftUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwiftUI.storyboard; sourceTree = "<group>"; };
+		4626D8F329CB534D0046145C /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		4626D8F929CB56C10046145C /* SwiftUIMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMain.swift; sourceTree = "<group>"; };
+		4626D8FC29CB691B0046145C /* SwiftUIMainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMainState.swift; sourceTree = "<group>"; };
+		4626D8FE29CB6AC90046145C /* PagedTableViewViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedTableViewViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		4626D90129CB6B190046145C /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		4626D90629CB72CF0046145C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		4626D90829CB74280046145C /* SwiftUIDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoViewController.swift; sourceTree = "<group>"; };
+		4626D90A29CB762A0046145C /* ButtonViewHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewHostingView.swift; sourceTree = "<group>"; };
+		4626D90D29CB784B0046145C /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		4626D90F29CB785B0046145C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4661D60229CB7A21005D952D /* CardViewIntrinsicHeightRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewIntrinsicHeightRepresentable.swift; sourceTree = "<group>"; };
+		4661D60529CC5589005D952D /* CardViewIntrinsicWidthRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewIntrinsicWidthRepresentable.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* YipYipSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YipYipSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -77,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				05238F342264C45A0092DF07 /* Classes */,
-				05238F352264C4640092DF07 /* UserInterfaces */,
 				05238F382264C4A80092DF07 /* Resources */,
 				05238F2D2264C1690092DF07 /* Info.plist */,
 			);
@@ -87,19 +112,12 @@
 		05238F342264C45A0092DF07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				05E6D86324AC8A810044A359 /* PagedTableVIew */,
+				4626D90029CB6B080046145C /* Factory */,
 				05238F212264C1680092DF07 /* AppDelegate.swift */,
-				05238F372264C48B0092DF07 /* ViewControllers */,
+				05E6D86324AC8A810044A359 /* PagedTableVIew */,
+				4626D8F529CB54D30046145C /* Views */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		05238F352264C4640092DF07 /* UserInterfaces */ = {
-			isa = PBXGroup;
-			children = (
-				05238F362264C4730092DF07 /* Storyboards */,
-			);
-			path = UserInterfaces;
 			sourceTree = "<group>";
 		};
 		05238F362264C4730092DF07 /* Storyboards */ = {
@@ -109,17 +127,21 @@
 				05238F252264C1680092DF07 /* Main.storyboard */,
 				05238F2A2264C1690092DF07 /* LaunchScreen.storyboard */,
 				05A8B51924AEFA0A009436BE /* SafeAreaLayoutConstraint.storyboard */,
+				4626D8F129CB53000046145C /* SwiftUI.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		05238F372264C48B0092DF07 /* ViewControllers */ = {
+		05238F372264C48B0092DF07 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				05A8B51724AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift */,
+				05A8B50524AE2E6E009436BE /* PagedTableViewViewController.swift */,
 				05238F232264C1680092DF07 /* ViewController.swift */,
+				4626D8F329CB534D0046145C /* SwiftUIViewController.swift */,
+				4626D90829CB74280046145C /* SwiftUIDemoViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		05238F382264C4A80092DF07 /* Resources */ = {
@@ -136,7 +158,6 @@
 				05A8B50A24AE2E6E009436BE /* CustomTableView.swift */,
 				05A8B50824AE2E6E009436BE /* EmptyDataView.swift */,
 				05A8B50924AE2E6E009436BE /* EmptyDataView.xib */,
-				05A8B50524AE2E6E009436BE /* PagedTableViewViewController.swift */,
 				05A8B50624AE2E6E009436BE /* TestDataViewModel.swift */,
 				05A8B50724AE2E6E009436BE /* TestTableViewDataSource.swift */,
 			);
@@ -150,6 +171,72 @@
 				0093EE8721362ED0B08A7E01 /* Pods_YipYipSwiftExample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4626D8F529CB54D30046145C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4626D90329CB72AE0046145C /* Components */,
+				4626D8FB29CB68F90046145C /* States */,
+				4626D8F729CB56840046145C /* Interfaces */,
+				05238F372264C48B0092DF07 /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4626D8F729CB56840046145C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4626D90C29CB782A0046145C /* Nibs */,
+				4626D8F829CB56A90046145C /* SwiftUI */,
+				05238F362264C4730092DF07 /* Storyboards */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		4626D8F829CB56A90046145C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4626D8F929CB56C10046145C /* SwiftUIMain.swift */,
+				4626D8FE29CB6AC90046145C /* PagedTableViewViewControllerRepresentable.swift */,
+				4661D60229CB7A21005D952D /* CardViewIntrinsicHeightRepresentable.swift */,
+				4661D60529CC5589005D952D /* CardViewIntrinsicWidthRepresentable.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		4626D8FB29CB68F90046145C /* States */ = {
+			isa = PBXGroup;
+			children = (
+				4626D8FC29CB691B0046145C /* SwiftUIMainState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		4626D90029CB6B080046145C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				4626D90129CB6B190046145C /* ViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		4626D90329CB72AE0046145C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4626D90629CB72CF0046145C /* ButtonView.swift */,
+				4626D90A29CB762A0046145C /* ButtonViewHostingView.swift */,
+				4626D90F29CB785B0046145C /* CardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4626D90C29CB782A0046145C /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				4626D90D29CB784B0046145C /* CardView.xib */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -296,6 +383,8 @@
 			files = (
 				05238F2C2264C1690092DF07 /* LaunchScreen.storyboard in Resources */,
 				05238F292264C1690092DF07 /* Assets.xcassets in Resources */,
+				4626D90E29CB784B0046145C /* CardView.xib in Resources */,
+				4626D8F229CB53000046145C /* SwiftUI.storyboard in Resources */,
 				05A8B51224AE2E7B009436BE /* PagedTableView.storyboard in Resources */,
 				05A8B50F24AE2E6E009436BE /* EmptyDataView.xib in Resources */,
 				05238F272264C1680092DF07 /* Main.storyboard in Resources */,
@@ -360,14 +449,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4626D8FD29CB691B0046145C /* SwiftUIMainState.swift in Sources */,
+				4626D90929CB74280046145C /* SwiftUIDemoViewController.swift in Sources */,
+				4626D8FA29CB56C10046145C /* SwiftUIMain.swift in Sources */,
 				05A8B50C24AE2E6E009436BE /* TestDataViewModel.swift in Sources */,
+				4626D90B29CB762B0046145C /* ButtonViewHostingView.swift in Sources */,
 				05A8B51824AEF9D2009436BE /* SafeAreaLayoutConstraintViewController.swift in Sources */,
 				05A8B50D24AE2E6E009436BE /* TestTableViewDataSource.swift in Sources */,
+				4626D90229CB6B190046145C /* ViewControllerFactory.swift in Sources */,
+				4626D90729CB72CF0046145C /* ButtonView.swift in Sources */,
+				4626D8FF29CB6AC90046145C /* PagedTableViewViewControllerRepresentable.swift in Sources */,
 				05A8B50E24AE2E6E009436BE /* EmptyDataView.swift in Sources */,
+				4661D60329CB7A21005D952D /* CardViewIntrinsicHeightRepresentable.swift in Sources */,
+				4661D60629CC5589005D952D /* CardViewIntrinsicWidthRepresentable.swift in Sources */,
 				05238F242264C1680092DF07 /* ViewController.swift in Sources */,
 				05A8B51024AE2E6E009436BE /* CustomTableView.swift in Sources */,
 				05238F222264C1680092DF07 /* AppDelegate.swift in Sources */,
 				05A8B50B24AE2E6E009436BE /* PagedTableViewViewController.swift in Sources */,
+				4626D91029CB785B0046145C /* CardView.swift in Sources */,
+				4626D8F429CB534D0046145C /* SwiftUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +528,7 @@
 				DEVELOPMENT_TEAM = 7298FDX4Y3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = YipYipSwiftExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -466,7 +566,7 @@
 				DEVELOPMENT_TEAM = 7298FDX4Y3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = YipYipSwiftExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.yipyip.YipYipSwiftExample;

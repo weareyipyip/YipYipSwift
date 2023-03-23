@@ -30,7 +30,7 @@ public class YipYipIntrinsicWidthContainerView<ContentView: UIView>: YipYipIntri
             targetSize,
             withHorizontalFittingPriority: .fittingSizeLevel,
             verticalFittingPriority: .defaultHigh
-        ).height
+        ).width
         
         // If a maxWidth has been set, check if the calculated width complies to the set value
         if let maxWidth {
