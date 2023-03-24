@@ -2,7 +2,7 @@
 
 This is an internal library, not intended for use outside of YipYip.
 
-Current version: 1.3.3
+Current version: 2.1.0
 
 ## Usage
 

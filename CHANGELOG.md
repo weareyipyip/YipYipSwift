@@ -2,6 +2,15 @@
 
 Added swift extensions  support
 
+## [2.1.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.1.0)
+
+- Added YipYipEmbeddedHostingController
+- Added YipYipHostingController
+- Added YipYipHostingView
+- Added YipYIpIntrinsicHeightViewRepresentable and YipYipIntrinsicHeightContainerView
+- Added YipYIpIntrinsicWidthViewRepresentable and YipYipIntrinsicWidthContainerView
+- Updated README
+
 ## [2.0.2](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.0.1)
 
 - Removed AppStoreReviewManager
