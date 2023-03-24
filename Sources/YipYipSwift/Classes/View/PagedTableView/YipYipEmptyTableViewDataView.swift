@@ -5,7 +5,7 @@
 //  Created by Rens Wijnmalen on 01/07/2020.
 //
 
-import Foundation
+import UIKit
 
 public protocol EmptyTableViewDataViewDelegate: AnyObject {
     

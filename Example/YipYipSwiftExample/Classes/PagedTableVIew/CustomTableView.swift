@@ -36,7 +36,7 @@ public class CustomTableView: UITableView, YipYipActivityStatusTableView {
     // ----------------------------------------------------
     
     private func setupActivityIndicator() -> UIActivityIndicatorView {
-        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        let activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicatorView.hidesWhenStopped = true
         self.superview?.addSubview(activityIndicatorView)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gkQ-t7-fjm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gkQ-t7-fjm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LuB-1E-Odt">
-                                <rect key="frame" x="20" y="108" width="374" height="90"/>
+                                <rect key="frame" x="20" y="112" width="374" height="135"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcK-lJ-Yep">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcK-lJ-Yep">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="6LF-AL-adU"/>
@@ -29,7 +29,7 @@
                                             <segue destination="yJc-S2-Pqd" kind="show" id="UFZ-hS-ptD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhO-66-Cqs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhO-66-Cqs">
                                         <rect key="frame" x="0.0" y="45" width="374" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Tff-Sk-zOf"/>
@@ -39,16 +39,26 @@
                                             <segue destination="dTm-Ti-RYb" kind="show" id="aXj-dV-mrP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUp-Th-kVS">
+                                        <rect key="frame" x="0.0" y="90" width="374" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Gmh-8L-hRy"/>
+                                        </constraints>
+                                        <state key="normal" title="SwiftUI"/>
+                                        <connections>
+                                            <segue destination="TNv-DR-W7a" kind="show" id="cfd-5W-lra"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LuB-1E-Odt" secondAttribute="trailing" constant="20" id="Cpn-Hk-twl"/>
                             <constraint firstItem="LuB-1E-Odt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WRR-3A-LlX"/>
                             <constraint firstItem="LuB-1E-Odt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cSK-qn-07m"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OnX-EG-cHJ"/>
                 </viewController>
@@ -64,7 +74,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmS-f0-38F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="-114"/>
+            <point key="canvasLocation" x="1070" y="-168"/>
         </scene>
         <!--SafeAreaLayoutConstraint-->
         <scene sceneID="Ghx-uV-kI5">
@@ -74,14 +84,24 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bku-UL-85F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="77"/>
+            <point key="canvasLocation" x="1113" y="-125"/>
+        </scene>
+        <!--SwiftUI-->
+        <scene sceneID="CeP-55-dup">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SwiftUI" id="TNv-DR-W7a" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dpc-5r-IXV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTM-ie-yjA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="-84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cls-dj-jhu">
             <objects>
                 <navigationController id="gkQ-t7-fjm" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6fR-dn-Kjj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
