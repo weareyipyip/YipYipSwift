@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.author           = { "Marcel Bloemendaal" => "m.bloemendaal@yipyip.nl" }
   s.source           = { :git => "git@github.com:weareyipyip/YipYipSwift.git", :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
   s.swift_versions = ['5.0']
   s.requires_arc = true
 
