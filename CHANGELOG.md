@@ -2,6 +2,11 @@
 
 Added swift extensions  support
 
+## [2.2.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.2.0)
+
+- Fixed (deprecation) warnings/errors
+- Updated minimum deployment target to iOS 15
+
 ## [2.1.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.1.0)
 
 - Added YipYipEmbeddedHostingController
