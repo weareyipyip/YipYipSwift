@@ -14,7 +14,7 @@ class OptionalViewDescriptor
 	private var view:UIView
 	private var optionalityDirection:OptionalViewOptionalityDirection
 	private var spacingConstraints = [ConstraintDescriptor]()
-    private (set) var groupID:String?
+    private(set) var groupID:String?
 	
 	private var _originalWidthConstraints = [ConstraintDescriptor]()
 	private var _originalHeightConstraints = [ConstraintDescriptor]()

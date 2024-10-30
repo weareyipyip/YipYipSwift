@@ -5,8 +5,6 @@
 //  Created by Rens Wijnmalen on 03/07/2020.
 //
 
-import Foundation
-
 import UIKit
 
 public class YipYipSafeAreaLayoutConstraint: NSLayoutConstraint {
@@ -54,13 +52,30 @@ public class YipYipSafeAreaLayoutConstraint: NSLayoutConstraint {
     // MARK: - Computed properties
     // ----------------------------------------------------
     
-    private var safeAreaInsets: UIEdgeInsets? {
-        if #available(iOS 11.0, *) {
-            let windows = UIApplication.shared.windows
-            guard windows.count > 0 else {
-                return nil
+    @available(iOS 13.0, *)
+    private var windowScene: UIWindowScene? {
+        let allScenes = UIApplication.shared.connectedScenes
+        for scene in allScenes {
+            guard let windowScene = scene as? UIWindowScene else { continue }
+            return windowScene
+        }
+        return nil
+    }
+    
+    private var window: UIWindow? {
+        if #available(iOS 13.0, *) {
+            if let windowScene = self.windowScene {
+                return windowScene.windows.first(where: { $0.isKeyWindow })
             }
-            let window = windows[0]
+        } else {
+            let windows = UIApplication.shared.windows
+            return windows.first(where: { $0.isKeyWindow })
+        }
+        return nil
+    }
+    
+    private var safeAreaInsets: UIEdgeInsets? {
+        if let window {
             return window.safeAreaInsets
         }
         return nil
