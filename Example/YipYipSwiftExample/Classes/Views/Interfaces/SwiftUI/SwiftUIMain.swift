@@ -23,7 +23,7 @@ internal struct SwiftUIMain: View {
     internal weak var delegate: SwiftUIMainDelegate?
     
     internal var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 GeometryReader { geometry in
                     VStack(spacing: 16) {
@@ -133,15 +133,16 @@ internal struct SwiftUIMain: View {
                     .background(Color.blue)
                     .edgesIgnoringSafeArea(.top)
                 }
+                
+                NavigationLink(
+                    destination: PagedTableViewViewControllerRepresentable(),
+                    isActive: self.$state.showPagedTableView
+                ) {
+                    EmptyView()
+                }
+                .navigationBarTitleDisplayMode(.inline)
             }
             .navigationBarHidden(true)
-            .navigationDestination(
-                isPresented: self.$state.showPagedTableView,
-                destination: {
-                    PagedTableViewViewControllerRepresentable()
-                        .navigationBarTitleDisplayMode(.inline)
-                }
-            )
         }
     }
     
