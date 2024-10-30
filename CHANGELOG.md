@@ -2,6 +2,11 @@
 
 Added swift extensions  support
 
+## [2.2.1](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.2.1)
+
+- Fixed example project
+- Updated minimum deployment target to iOS 15 for pod
+
 ## [2.2.0](https://github.com/weareyipyip/YipYipSwift/releases/tag/2.2.0)
 
 - Fixed (deprecation) warnings/errors
